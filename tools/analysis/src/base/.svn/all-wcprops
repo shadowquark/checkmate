@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/basic/checkmate/!svn/ver/1605/trunk/alpha/tools/analysis/src/base
+END
+template_CR_atlas.cc.raw
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/src/base/template_CR_atlas.cc.raw
+END
+AnalysisBase.cc
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/basic/checkmate/!svn/ver/1605/trunk/alpha/tools/analysis/src/base/AnalysisBase.cc
+END
+FinalStateObject.cc
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/src/base/FinalStateObject.cc
+END
+Units.cc
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/src/base/Units.cc
+END
+template.cc.raw
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/src/base/template.cc.raw
+END
+ETMiss.cc
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/src/base/ETMiss.cc
+END
+template_cms.cc.raw
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/src/base/template_cms.cc.raw
+END
+template_CR.cc.raw
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/src/base/template_CR.cc.raw
+END
+template_atlas.cc.raw
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/src/base/template_atlas.cc.raw
+END
+template_CR_cms.cc.raw
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/src/base/template_CR_cms.cc.raw
+END

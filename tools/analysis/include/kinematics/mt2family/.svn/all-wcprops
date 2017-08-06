@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/include/kinematics/mt2family
+END
+mt2bl_bisect.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/include/kinematics/mt2family/mt2bl_bisect.h
+END
+mt2_bisect.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/include/kinematics/mt2family/mt2_bisect.h
+END
+mt2w_bisect.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/analysis/include/kinematics/mt2family/mt2w_bisect.h
+END

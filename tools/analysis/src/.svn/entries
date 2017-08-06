@@ -1,0 +1,40 @@
+9
+
+dir
+1876
+https://svn.physik.uni-bonn.de/basic/checkmate/trunk/alpha/tools/analysis/src
+https://svn.physik.uni-bonn.de/basic/checkmate
+
+
+
+2017-03-03T16:49:55.384443Z
+1802
+rolbiecki
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8f8511ce-d5fa-11e3-abfa-cd5eac3f4aa8
+
+analyses
+dir
+
+global
+dir
+
+kinematics
+dir
+
+base
+dir
+

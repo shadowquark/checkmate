@@ -1,0 +1,1 @@
+../SubProcesses/P1_gg_gogo/maxamps.inc

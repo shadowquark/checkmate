@@ -1,0 +1,14 @@
+#    Information about the process      #
+#########################################
+ grouped_matrix = True 
+ nb_channel = 23 
+ has_loops = False 
+ ninitial = 2 
+ has_isr = False 
+ nexternal = 4 
+ bias_module = None 
+ colored_pdgs = [1, 2, 3, 4, 5, 6, 21, 1000001, 1000002, 1000003, 1000004, 1000005, 1000006, 1000021, 2000001, 2000002, 2000003, 2000004, 2000005, 2000006] 
+ has_fsr = False 
+ complex_mass_scheme = False 
+ max_n_matched_jets = 0 
+ loop_induced = False 

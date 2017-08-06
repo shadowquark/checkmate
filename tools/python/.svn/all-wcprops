@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/basic/checkmate/!svn/ver/1876/trunk/alpha/tools/python
+END
+detectorsettings.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/python/detectorsettings.py
+END
+info.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/basic/checkmate/!svn/ver/1788/trunk/alpha/tools/python/info.py
+END
+example.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/python/example.py
+END
+checkmate_core.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/python/checkmate_core.py
+END
+initialize.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/basic/checkmate/!svn/ver/1788/trunk/alpha/tools/python/initialize.py
+END
+evaluator.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/python/evaluator.py
+END
+events.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/basic/checkmate/!svn/ver/1613/trunk/alpha/tools/python/events.py
+END
+process.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/basic/checkmate/!svn/ver/1605/trunk/alpha/tools/python/process.py
+END
+get_s95.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/basic/checkmate/!svn/ver/1876/trunk/alpha/tools/python/get_s95.py
+END
+AnalysisManager.raw
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/python/AnalysisManager.raw
+END
+cls.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/python/cls.py
+END
+resultcollector.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/python/resultcollector.py
+END
+CheckMATE.raw
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/python/CheckMATE.raw
+END
+analysismanager_core.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/basic/checkmate/!svn/ver/1743/trunk/alpha/tools/python/analysismanager_core.py
+END
+advprint.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/python/advprint.py
+END

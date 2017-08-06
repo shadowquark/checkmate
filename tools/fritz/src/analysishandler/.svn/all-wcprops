@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/basic/checkmate/!svn/ver/1871/trunk/alpha/tools/fritz/src/analysishandler
+END
+AnalysisHandlerATLAS_7TeV.cc
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/basic/checkmate/!svn/ver/1871/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerATLAS_7TeV.cc
+END
+AnalysisHandlerATLAS_8TeV.cc
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/basic/checkmate/!svn/ver/1871/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerATLAS_8TeV.cc
+END
+AnalysisHandlerATLAS_14TeV_HL_FlatBtagger.cc
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerATLAS_14TeV_HL_FlatBtagger.cc
+END
+AnalysisHandler.cc
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandler.cc
+END
+AnalysisHandlerCMS.cc
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/basic/checkmate/!svn/ver/1871/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerCMS.cc
+END
+AnalysisHandlerATLAS.cc
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/basic/checkmate/!svn/ver/1871/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerATLAS.cc
+END
+AnalysisHandlerCMS_13TeV.cc
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/basic/checkmate/!svn/ver/1714/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerCMS_13TeV.cc
+END
+AnalysisHandlerCMS_14TeV_projected.cc
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerCMS_14TeV_projected.cc
+END
+AnalysisHandlerATLAS_13TeV.cc
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/basic/checkmate/!svn/ver/1678/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerATLAS_13TeV.cc
+END
+AnalysisHandlerATLAS_14TeV_projected.cc
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerATLAS_14TeV_projected.cc
+END
+AnalysisHandlerCMS_7TeV.cc
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/basic/checkmate/!svn/ver/1871/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerCMS_7TeV.cc
+END
+AnalysisHandlerCMS_8TeV.cc
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/basic/checkmate/!svn/ver/1871/trunk/alpha/tools/fritz/src/analysishandler/AnalysisHandlerCMS_8TeV.cc
+END

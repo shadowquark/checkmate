@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/basic/checkmate/!svn/ver/1694/trunk/alpha/data/cards
+END
+mg5_default_me5_configuration.txt.raw
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/basic/checkmate/!svn/ver/1613/trunk/alpha/data/cards/mg5_default_me5_configuration.txt.raw
+END
+pythia_mg5minimal_default_card.in
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/cards/pythia_mg5minimal_default_card.in
+END
+delphes_skimmed_CMS.tcl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/cards/delphes_skimmed_CMS.tcl
+END
+mg5_default_run_card.dat
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/cards/mg5_default_run_card.dat
+END
+pythia_default_card.in
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/cards/pythia_default_card.in
+END
+delphes_skimmed_ATLAS.tcl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/cards/delphes_skimmed_ATLAS.tcl
+END
+delphes_skimmed_CMS_13TeV.tcl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/cards/delphes_skimmed_CMS_13TeV.tcl
+END
+delphes_skimmed_ATLAS_13TeV.tcl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/cards/delphes_skimmed_ATLAS_13TeV.tcl
+END
+delphes_skimmed_ATLAS_14TeV.tcl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/basic/checkmate/!svn/ver/1694/trunk/alpha/data/cards/delphes_skimmed_ATLAS_14TeV.tcl
+END
+pythia_default_LHE_card.in
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/cards/pythia_default_LHE_card.in
+END

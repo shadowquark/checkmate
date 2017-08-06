@@ -1,0 +1,9 @@
+Fritz: Initialising handlers from file /home/shadowquark/code/checkmate/results/example/fritz/process.ini
+PythiaHandler 'process': read mgProcCard =/home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process_proc_card.dat
+PythiaHandler 'process': read mgParamCard =example_run_cards/auxiliary/testspectrum.slha-wp8
+PythiaHandler 'process': read mgRunCard =/home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process_run_card.dat
+PythiaHandler 'process': read mgConfigCard =/home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process_me5_configuration.txt
+PythiaHandler 'process': Pythia8 output redirected to /home/shadowquark/code/checkmate/results/example/pythia/pythia_process.log
+PythiaHandler 'process': reading MG5_aMC@NLO command line'import model mssm; generate p p > go go;'
+PythiaHandler 'process': setting MG5_aMC@NLO seed to 0
+PythiaHandler 'process': Initializing Pythia8 with /home/shadowquark/code/checkmate/results/example/pythia/process_showercard.in

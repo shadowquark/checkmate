@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/basic/checkmate/!svn/ver/1876/trunk/alpha
+END
+VERSION
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/basic/checkmate/!svn/ver/1840/trunk/alpha/VERSION
+END
+AUTHORS
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/basic/checkmate/!svn/ver/1595/trunk/alpha/AUTHORS
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/basic/checkmate/!svn/ver/1840/trunk/alpha/ChangeLog
+END
+depcomp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/basic/checkmate/!svn/ver/1676/trunk/alpha/depcomp
+END
+compile
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/basic/checkmate/!svn/ver/1595/trunk/alpha/compile
+END
+config.guess
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/basic/checkmate/!svn/ver/1676/trunk/alpha/config.guess
+END
+ltmain.sh
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/basic/checkmate/!svn/ver/1676/trunk/alpha/ltmain.sh
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/basic/checkmate/!svn/ver/1595/trunk/alpha/README
+END
+config.sub
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/basic/checkmate/!svn/ver/1676/trunk/alpha/config.sub
+END
+configure.ac
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/basic/checkmate/!svn/ver/1605/trunk/alpha/configure.ac
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/basic/checkmate/!svn/ver/1676/trunk/alpha/INSTALL
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/basic/checkmate/!svn/ver/1595/trunk/alpha/COPYING
+END
+missing
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/basic/checkmate/!svn/ver/1676/trunk/alpha/missing
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/basic/checkmate/!svn/ver/1613/trunk/alpha/Makefile.am
+END
+NEWS
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/basic/checkmate/!svn/ver/1595/trunk/alpha/NEWS
+END
+aclocal.m4
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/basic/checkmate/!svn/ver/1720/trunk/alpha/aclocal.m4
+END
+install-sh
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/basic/checkmate/!svn/ver/1676/trunk/alpha/install-sh
+END

@@ -1,0 +1,27 @@
+#ATLAS
+#ATLAS-CONF-2013-089
+#2 leptons, razor
+#sqrt(s) = 8 TeV
+#int(L) = 20.3 fb^-1
+
+Inputfile:
+XSect:           2.61412e-06 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   2.61412e-06
+ SumOfWeights2:  6.83362e-15
+ NormEvents:     5.30666e-05
+
+SR       Sum_W        Sum_W2       Acc    N_Norm     
+DROF     0            0            0      0          
+DROFOS   0            0            0      0          
+DRSF     0            0            0      0          
+DRSFOS   0            0            0      0          
+SR1OF    0            0            0      0          
+SR1OFOS  0            0            0      0          
+SR1SF    7.84236e-09  2.05009e-17  0.003  1.592e-07  
+SR1SFOS  7.84236e-09  2.05009e-17  0.003  1.592e-07  
+SR2OF    0            0            0      0          
+SR2OFOS  0            0            0      0          
+SR2SF    0            0            0      0          
+SR2SFOS  0            0            0      0          

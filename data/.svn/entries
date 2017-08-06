@@ -1,0 +1,34 @@
+9
+
+dir
+1876
+https://svn.physik.uni-bonn.de/basic/checkmate/trunk/alpha/data
+https://svn.physik.uni-bonn.de/basic/checkmate
+
+
+
+2017-02-28T09:06:22.902865Z
+1781
+tattersall@physik.rwth-aachen.de
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8f8511ce-d5fa-11e3-abfa-cd5eac3f4aa8
+
+cards
+dir
+
+analysis_info
+dir
+

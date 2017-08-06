@@ -1,0 +1,143 @@
+#ATLAS
+#ATLAS-CONF-2013-089
+#2 leptons, razor
+#sqrt(s) = 8 TeV
+#int(L) = 20.3 fb^-1
+
+Inputfile:
+XSect:           1.81756 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   1.81756
+ SumOfWeights2:  0.00330353
+ NormEvents:     36.8965
+
+Cut                          Sum_W       Sum_W2       Acc    N_Norm     
+0                            1.81756     0.00330353   1      36.8965    
+1                            1.81393     0.00329693   0.998  36.8227    
+2                            0.123594    0.00022464   0.068  2.50896    
+3                            0.101783    0.000184998  0.056  2.0662     
+4                            0.0981484   0.000178391  0.054  1.99241    
+a_Lep_1_ee                   0           0            0      0          
+a_Lep_1_emu                  0           0            0      0          
+a_Lep_1_mumu                 0.0981484   0.000178391  0.054  1.99241    
+a_Lep_2_ee                   0           0            0      0          
+a_Lep_2_emu                  0           0            0      0          
+a_Lep_2_mumu                 0.0945132   0.000171784  0.052  1.91862    
+a_Lep_3_ee                   0           0            0      0          
+a_Lep_3_emu                  0           0            0      0          
+a_Lep_3_mumu                 0.0945132   0.000171784  0.052  1.91862    
+b_Jet_ee_J2                  0           0            0      0          
+b_Jet_ee_J3                  0           0            0      0          
+b_Jet_emu_J2                 0           0            0      0          
+b_Jet_emu_J3                 0           0            0      0          
+b_Jet_mumu_J2                0.0926957   0.00016848   0.051  1.88172    
+b_Jet_mumu_J3                0.00181756  3.30353e-06  0.001  0.0368965  
+c_Z_ee_J2_Z                  0           0            0      0          
+c_Z_ee_J2_noZ                0           0            0      0          
+c_Z_ee_J3_Z                  0           0            0      0          
+c_Z_ee_J3_noZ                0           0            0      0          
+c_Z_emu_J2_Z                 0           0            0      0          
+c_Z_emu_J2_noZ               0           0            0      0          
+c_Z_emu_J3_Z                 0           0            0      0          
+c_Z_emu_J3_noZ               0           0            0      0          
+c_Z_mumu_J2_Z                0.0926957   0.00016848   0.051  1.88172    
+c_Z_mumu_J2_noZ              0.0708849   0.000128838  0.039  1.43896    
+c_Z_mumu_J3_Z                0.00181756  3.30353e-06  0.001  0.0368965  
+c_Z_mumu_J3_noZ              0.00181756  3.30353e-06  0.001  0.0368965  
+d_R05_ee_J2_Z_R035           0           0            0      0          
+d_R05_ee_J2_Z_R05            0           0            0      0          
+d_R05_ee_J2_noZ_R035         0           0            0      0          
+d_R05_ee_J2_noZ_R05          0           0            0      0          
+d_R05_ee_J3_Z_R035           0           0            0      0          
+d_R05_ee_J3_Z_R05            0           0            0      0          
+d_R05_ee_J3_noZ_R035         0           0            0      0          
+d_R05_ee_J3_noZ_R05          0           0            0      0          
+d_R05_emu_J2_Z_R035          0           0            0      0          
+d_R05_emu_J2_Z_R05           0           0            0      0          
+d_R05_emu_J2_noZ_R035        0           0            0      0          
+d_R05_emu_J2_noZ_R05         0           0            0      0          
+d_R05_emu_J3_Z_R035          0           0            0      0          
+d_R05_emu_J3_Z_R05           0           0            0      0          
+d_R05_emu_J3_noZ_R035        0           0            0      0          
+d_R05_emu_J3_noZ_R05         0           0            0      0          
+d_R05_mumu_J2_Z_R035         0.058162    0.000105713  0.032  1.18069    
+d_R05_mumu_J2_Z_R05          0.0399864   7.26777e-05  0.022  0.811723   
+d_R05_mumu_J2_noZ_R035       0.0399864   7.26777e-05  0.022  0.811723   
+d_R05_mumu_J2_noZ_R05        0.0272634   4.9553e-05   0.015  0.553448   
+d_R05_mumu_J3_Z_R035         0           0            0      0          
+d_R05_mumu_J3_Z_R05          0           0            0      0          
+d_R05_mumu_J3_noZ_R035       0           0            0      0          
+d_R05_mumu_J3_noZ_R05        0           0            0      0          
+e_MR_ee_J2_Z_R035_MR400      0           0            0      0          
+e_MR_ee_J2_Z_R035_MR600      0           0            0      0          
+e_MR_ee_J2_Z_R035_MR800      0           0            0      0          
+e_MR_ee_J2_Z_R05_MR400       0           0            0      0          
+e_MR_ee_J2_Z_R05_MR600       0           0            0      0          
+e_MR_ee_J2_Z_R05_MR800       0           0            0      0          
+e_MR_ee_J2_noZ_R035_MR400    0           0            0      0          
+e_MR_ee_J2_noZ_R035_MR600    0           0            0      0          
+e_MR_ee_J2_noZ_R035_MR800    0           0            0      0          
+e_MR_ee_J2_noZ_R05_MR400     0           0            0      0          
+e_MR_ee_J2_noZ_R05_MR600     0           0            0      0          
+e_MR_ee_J2_noZ_R05_MR800     0           0            0      0          
+e_MR_ee_J3_Z_R035_MR400      0           0            0      0          
+e_MR_ee_J3_Z_R035_MR600      0           0            0      0          
+e_MR_ee_J3_Z_R035_MR800      0           0            0      0          
+e_MR_ee_J3_Z_R05_MR400       0           0            0      0          
+e_MR_ee_J3_Z_R05_MR600       0           0            0      0          
+e_MR_ee_J3_Z_R05_MR800       0           0            0      0          
+e_MR_ee_J3_noZ_R035_MR400    0           0            0      0          
+e_MR_ee_J3_noZ_R035_MR600    0           0            0      0          
+e_MR_ee_J3_noZ_R035_MR800    0           0            0      0          
+e_MR_ee_J3_noZ_R05_MR400     0           0            0      0          
+e_MR_ee_J3_noZ_R05_MR600     0           0            0      0          
+e_MR_ee_J3_noZ_R05_MR800     0           0            0      0          
+e_MR_emu_J2_Z_R035_MR400     0           0            0      0          
+e_MR_emu_J2_Z_R035_MR600     0           0            0      0          
+e_MR_emu_J2_Z_R035_MR800     0           0            0      0          
+e_MR_emu_J2_Z_R05_MR400      0           0            0      0          
+e_MR_emu_J2_Z_R05_MR600      0           0            0      0          
+e_MR_emu_J2_Z_R05_MR800      0           0            0      0          
+e_MR_emu_J2_noZ_R035_MR400   0           0            0      0          
+e_MR_emu_J2_noZ_R035_MR600   0           0            0      0          
+e_MR_emu_J2_noZ_R035_MR800   0           0            0      0          
+e_MR_emu_J2_noZ_R05_MR400    0           0            0      0          
+e_MR_emu_J2_noZ_R05_MR600    0           0            0      0          
+e_MR_emu_J2_noZ_R05_MR800    0           0            0      0          
+e_MR_emu_J3_Z_R035_MR400     0           0            0      0          
+e_MR_emu_J3_Z_R035_MR600     0           0            0      0          
+e_MR_emu_J3_Z_R035_MR800     0           0            0      0          
+e_MR_emu_J3_Z_R05_MR400      0           0            0      0          
+e_MR_emu_J3_Z_R05_MR600      0           0            0      0          
+e_MR_emu_J3_Z_R05_MR800      0           0            0      0          
+e_MR_emu_J3_noZ_R035_MR400   0           0            0      0          
+e_MR_emu_J3_noZ_R035_MR600   0           0            0      0          
+e_MR_emu_J3_noZ_R035_MR800   0           0            0      0          
+e_MR_emu_J3_noZ_R05_MR400    0           0            0      0          
+e_MR_emu_J3_noZ_R05_MR600    0           0            0      0          
+e_MR_emu_J3_noZ_R05_MR800    0           0            0      0          
+e_MR_mumu_J2_Z_R035_MR400    0           0            0      0          
+e_MR_mumu_J2_Z_R035_MR600    0           0            0      0          
+e_MR_mumu_J2_Z_R035_MR800    0           0            0      0          
+e_MR_mumu_J2_Z_R05_MR400     0           0            0      0          
+e_MR_mumu_J2_Z_R05_MR600     0           0            0      0          
+e_MR_mumu_J2_Z_R05_MR800     0           0            0      0          
+e_MR_mumu_J2_noZ_R035_MR400  0           0            0      0          
+e_MR_mumu_J2_noZ_R035_MR600  0           0            0      0          
+e_MR_mumu_J2_noZ_R035_MR800  0           0            0      0          
+e_MR_mumu_J2_noZ_R05_MR400   0           0            0      0          
+e_MR_mumu_J2_noZ_R05_MR600   0           0            0      0          
+e_MR_mumu_J2_noZ_R05_MR800   0           0            0      0          
+e_MR_mumu_J3_Z_R035_MR400    0           0            0      0          
+e_MR_mumu_J3_Z_R035_MR600    0           0            0      0          
+e_MR_mumu_J3_Z_R035_MR800    0           0            0      0          
+e_MR_mumu_J3_Z_R05_MR400     0           0            0      0          
+e_MR_mumu_J3_Z_R05_MR600     0           0            0      0          
+e_MR_mumu_J3_Z_R05_MR800     0           0            0      0          
+e_MR_mumu_J3_noZ_R035_MR400  0           0            0      0          
+e_MR_mumu_J3_noZ_R035_MR600  0           0            0      0          
+e_MR_mumu_J3_noZ_R035_MR800  0           0            0      0          
+e_MR_mumu_J3_noZ_R05_MR400   0           0            0      0          
+e_MR_mumu_J3_noZ_R05_MR600   0           0            0      0          
+e_MR_mumu_J3_noZ_R05_MR800   0           0            0      0          

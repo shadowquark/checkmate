@@ -1,0 +1,17 @@
+#Opposite sign leptons
+#3+ b-jets
+#Gluino -> Stop decay search
+
+Inputfile:
+XSect:           1.81756 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   1.81756
+ SumOfWeights2:  0.00330353
+ NormEvents:     35.4425
+
+Cut           Sum_W      Sum_W2       Acc    N_Norm    
+a_Input       1.81756    0.00330353   1      35.4425   
+b_2lep        1.74122    0.00316478   0.958  33.9539   
+c_OppSignLep  1.74122    0.00316478   0.958  33.9539   
+d_Met180      0.0418039  7.59813e-05  0.023  0.815177  

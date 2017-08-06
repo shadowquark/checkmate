@@ -1,0 +1,15 @@
+#search fro stops in monojet channel and charm jet
+#targets two-body decay to charm and 4-body decays
+#charm SRs not implemented
+#8 TeV, 20/fb
+
+Inputfile:
+XSect:           1.81756 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   1.81756
+ SumOfWeights2:  0.00330353
+ NormEvents:     36.8965
+
+Cut         Sum_W     Sum_W2      Acc    N_Norm   
+00_trigger  0.185391  0.00033696  0.102  3.76344  

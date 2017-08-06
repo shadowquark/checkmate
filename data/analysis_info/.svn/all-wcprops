@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/basic/checkmate/!svn/ver/1781/trunk/alpha/data/analysis_info
+END
+check_consistency_of_ref_and_var.py
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/check_consistency_of_ref_and_var.py
+END
+CMS_13TeV_analyses.txt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/basic/checkmate/!svn/ver/1781/trunk/alpha/data/analysis_info/CMS_13TeV_analyses.txt
+END
+ATLAS_13TeV_analyses.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/basic/checkmate/!svn/ver/1781/trunk/alpha/data/analysis_info/ATLAS_13TeV_analyses.txt
+END
+CMS_7TeV_analyses.txt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/basic/checkmate/!svn/ver/1781/trunk/alpha/data/analysis_info/CMS_7TeV_analyses.txt
+END
+CMS_8TeV_analyses.txt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/basic/checkmate/!svn/ver/1781/trunk/alpha/data/analysis_info/CMS_8TeV_analyses.txt
+END
+ATLAS_7TeV_analyses.txt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/basic/checkmate/!svn/ver/1781/trunk/alpha/data/analysis_info/ATLAS_7TeV_analyses.txt
+END
+ATLAS_8TeV_analyses.txt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/basic/checkmate/!svn/ver/1781/trunk/alpha/data/analysis_info/ATLAS_8TeV_analyses.txt
+END
+CMS_14TeV_HighLumi_analyses.txt
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/CMS_14TeV_HighLumi_analyses.txt
+END
+update_varj_file.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/update_varj_file.py
+END
+ATLAS_14TeV_HighLumi_analyses.txt
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/basic/checkmate/!svn/ver/1776/trunk/alpha/data/analysis_info/ATLAS_14TeV_HighLumi_analyses.txt
+END

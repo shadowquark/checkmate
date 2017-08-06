@@ -1,0 +1,23 @@
+#Search for direct top-squark pair production in final states with two leptons in pp collisions at \sqrt{s}=8 TeV with the ATLAS detector
+
+Inputfile:
+XSect:           2.61412e-06 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   2.61412e-06
+ SumOfWeights2:  6.83362e-15
+ NormEvents:     5.30666e-05
+
+SR    Sum_W        Sum_W2       Acc    N_Norm       
+H160  0            0            0      0            
+L100  0            0            0      0            
+L110  1.04565e-08  2.73345e-17  0.004  2.12267e-07  
+L120  2.35271e-08  6.15026e-17  0.009  4.776e-07    
+L90   2.87553e-08  7.51698e-17  0.011  5.83733e-07  
+SR1   0            0            0      0            
+SR2   0            0            0      0            
+SR3   0            0            0      0            
+SR4   5.22824e-09  1.36672e-17  0.002  1.06133e-07  
+SR5   0            0            0      0            
+SR6   5.22824e-09  1.36672e-17  0.002  1.06133e-07  
+SR7   1.82988e-08  4.78354e-17  0.007  3.71466e-07  

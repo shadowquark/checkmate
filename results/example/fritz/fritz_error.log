@@ -1,0 +1,11 @@
+Command "generate_events run" interrupted with error:
+KeyError : 'stopmix'
+Please report this bug on https://bugs.launchpad.net/mg5amcnlo
+More information is found in '/home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process/run_tag_1_debug.log'.
+Please attach this file to your report.
+sh: line 0: cd: /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process/Events/run: 沒有此一檔案或目錄
+gzip: unweighted_events.lhe.gz: No such file or directory
+
+ERROR IN FRITZ - MODULE: PythiaHandler 'process'
+                MESSAGE: could not initialise Pythia for MG5. Is MadGraph correctly installed at /home/shadowquark/code/checkmate/tools/madgraph ?
+-----> IMMEDIATE ABORT!

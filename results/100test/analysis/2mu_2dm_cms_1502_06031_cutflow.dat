@@ -1,0 +1,33 @@
+# cms
+# cms_1502_06031
+# two leptons, jets, missingET
+# sqrt()[D
+# sqrt(s))=8TeV
+# int(L)=19.4 fb^-1
+
+Inputfile:
+XSect:           2.61412e-06 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   2.61412e-06
+ SumOfWeights2:  6.83362e-15
+ NormEvents:     5.07139e-05
+
+Cut                       Sum_W        Sum_W2       Acc    N_Norm       
+CR00_all                  2.61412e-06  6.83362e-15  1      5.07139e-05  
+CR01_GE2lep               1.41947e-06  3.71066e-15  0.543  2.75377e-05  
+CR02_mll                  7.11041e-07  1.85875e-15  0.272  1.37942e-05  
+CR03_GE2jets              6.79671e-08  1.77674e-16  0.026  1.31856e-06  
+CR03_GE2jets_a.lowMET     2.87553e-08  7.51698e-17  0.011  5.57853e-07  
+CR03_GE2jets_b.mediumMET  1.04565e-08  2.73345e-17  0.004  2.02856e-07  
+CR03_GE2jets_c.highMET    2.61412e-09  6.83362e-18  0.001  5.07139e-08  
+CR04_GE3jets              1.56847e-08  4.10017e-17  0.006  3.04284e-07  
+CR04_GE3jets_a.lowMET     1.04565e-08  2.73345e-17  0.004  2.02856e-07  
+CR04_GE3jets_b.mediumMET  7.84236e-09  2.05009e-17  0.003  1.52142e-07  
+CR04_GE3jets_c.highMET    2.61412e-09  6.83362e-18  0.001  5.07139e-08  
+SR01_GE2jets_a.lowMET     1.82988e-08  4.78354e-17  0.007  3.54997e-07  
+SR01_GE2jets_b.mediumMET  7.84236e-09  2.05009e-17  0.003  1.52142e-07  
+SR01_GE2jets_c.highMET    2.61412e-09  6.83362e-18  0.001  5.07139e-08  
+SR02_GE3jets_a.lowMET     2.61412e-09  6.83362e-18  0.001  5.07139e-08  
+SR02_GE3jets_b.mediumMET  5.22824e-09  1.36672e-17  0.002  1.01428e-07  
+SR02_GE3jets_c.highMET    2.61412e-09  6.83362e-18  0.001  5.07139e-08  

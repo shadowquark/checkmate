@@ -1,0 +1,246 @@
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.5.5                 2017-05-26         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process/.mg5/mg5_configuration.txt
+load MG5 configuration from ../tools/madgraph/input/mg5_configuration.txt
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable.
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process/generate.py
+The import format was not given, so we guess it as command
+import model mssm; generate p p > go go;
+import model_v4 mssm
+INFO: load particles
+INFO: load interactions
+INFO: Change particles name to pass to MG5 convention
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g d u s c d~ u~ s~ c~ a e- mu- ve vm vt e+ mu+ ve~ vm~ vt~ go dl dr ul ur sl sr cl cr b1 b2 t1 t2 dl~ dr~ ul~ ur~ sl~ sr~ cl~ cr~ b1~ b2~ t1~ t2~ b t b~ t~ el- er- mul- mur- ta1- ta2- sve svm svt z w+ h1 h2 h3 h+ el+ er+ mul+ mur+ ta1+ ta2+ sve~ svm~ svt~ w- h- ta- n1 n2 n3 n4 x1+ x2+ ta+ x1- x2-
+INFO: Checking for minimal orders which gives processes.
+INFO: Please specify coupling orders to bypass this step.
+INFO: Trying coupling order WEIGHTED<=2: WEIGTHED IS 2*QED+QCD
+INFO: Trying process: g g > go go WEIGHTED<=2 @1
+INFO: Process has 3 diagrams
+INFO: Trying process: u u > go go WEIGHTED<=2 @1
+INFO: Trying process: u c > go go WEIGHTED<=2 @1
+INFO: Trying process: u d > go go WEIGHTED<=2 @1
+INFO: Trying process: u s > go go WEIGHTED<=2 @1
+INFO: Trying process: u u~ > go go WEIGHTED<=2 @1
+INFO: Process has 5 diagrams
+INFO: Trying process: u c~ > go go WEIGHTED<=2 @1
+INFO: Trying process: u d~ > go go WEIGHTED<=2 @1
+INFO: Trying process: u s~ > go go WEIGHTED<=2 @1
+INFO: Trying process: c c > go go WEIGHTED<=2 @1
+INFO: Trying process: c d > go go WEIGHTED<=2 @1
+INFO: Trying process: c s > go go WEIGHTED<=2 @1
+INFO: Trying process: c u~ > go go WEIGHTED<=2 @1
+INFO: Trying process: c c~ > go go WEIGHTED<=2 @1
+INFO: Process has 5 diagrams
+INFO: Trying process: c d~ > go go WEIGHTED<=2 @1
+INFO: Trying process: c s~ > go go WEIGHTED<=2 @1
+INFO: Trying process: d d > go go WEIGHTED<=2 @1
+INFO: Trying process: d s > go go WEIGHTED<=2 @1
+INFO: Trying process: d u~ > go go WEIGHTED<=2 @1
+INFO: Trying process: d c~ > go go WEIGHTED<=2 @1
+INFO: Trying process: d d~ > go go WEIGHTED<=2 @1
+INFO: Process has 5 diagrams
+INFO: Trying process: d s~ > go go WEIGHTED<=2 @1
+INFO: Trying process: s s > go go WEIGHTED<=2 @1
+INFO: Trying process: s u~ > go go WEIGHTED<=2 @1
+INFO: Trying process: s c~ > go go WEIGHTED<=2 @1
+INFO: Trying process: s d~ > go go WEIGHTED<=2 @1
+INFO: Trying process: s s~ > go go WEIGHTED<=2 @1
+INFO: Process has 5 diagrams
+INFO: Process u~ u > go go added to mirror process u u~ > go go
+INFO: Trying process: u~ u~ > go go WEIGHTED<=2 @1
+INFO: Trying process: u~ c~ > go go WEIGHTED<=2 @1
+INFO: Trying process: u~ d~ > go go WEIGHTED<=2 @1
+INFO: Trying process: u~ s~ > go go WEIGHTED<=2 @1
+INFO: Process c~ c > go go added to mirror process c c~ > go go
+INFO: Trying process: c~ c~ > go go WEIGHTED<=2 @1
+INFO: Trying process: c~ d~ > go go WEIGHTED<=2 @1
+INFO: Trying process: c~ s~ > go go WEIGHTED<=2 @1
+INFO: Process d~ d > go go added to mirror process d d~ > go go
+INFO: Trying process: d~ d~ > go go WEIGHTED<=2 @1
+INFO: Trying process: d~ s~ > go go WEIGHTED<=2 @1
+INFO: Process s~ s > go go added to mirror process s s~ > go go
+INFO: Trying process: s~ s~ > go go WEIGHTED<=2 @1
+5 processes with 23 diagrams generated in 0.323 s
+Total: 5 processes with 23 diagrams
+output /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process -f -nojpeg
+INFO: initialize a new directory: process
+INFO: remove old information in process
+INFO: Organizing processes into subprocess groups
+INFO: Generating Helas calls for process: u u~ > go go WEIGHTED<=2 @1
+INFO: Processing color information for process: u u~ > go go @1
+INFO: Generating Helas calls for process: c c~ > go go WEIGHTED<=2 @1
+INFO: Reusing existing color information for process: c c~ > go go @1
+INFO: Generating Helas calls for process: d d~ > go go WEIGHTED<=2 @1
+INFO: Reusing existing color information for process: d d~ > go go @1
+INFO: Generating Helas calls for process: s s~ > go go WEIGHTED<=2 @1
+INFO: Reusing existing color information for process: s s~ > go go @1
+INFO: Generating Helas calls for process: g g > go go WEIGHTED<=2 @1
+INFO: Processing color information for process: g g > go go @1
+INFO: Creating files in directory P1_qq_gogo
+INFO: Generating Feynman diagrams for Process: u u~ > go go WEIGHTED<=2 @1
+INFO: Generating Feynman diagrams for Process: c c~ > go go WEIGHTED<=2 @1
+INFO: Generating Feynman diagrams for Process: d d~ > go go WEIGHTED<=2 @1
+INFO: Generating Feynman diagrams for Process: s s~ > go go WEIGHTED<=2 @1
+INFO: Finding symmetric diagrams for subprocess group qq_gogo
+INFO: Creating files in directory P1_gg_gogo
+INFO: Generating Feynman diagrams for Process: g g > go go WEIGHTED<=2 @1
+INFO: Finding symmetric diagrams for subprocess group gg_gogo
+History written to /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process/Cards/proc_card_mg5.dat
+Generated helas calls for 5 subprocesses (23 diagrams) in 0.055 s
+Wrote files for 74 helas calls in 0.153 s
+Copy mssm_v4 model files to directory /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process
+save configuration file to /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process/Cards/me5_configuration.txt
+INFO: Use Fortran compiler gfortran
+INFO: Use c++ compiler g++
+INFO: Generate web pages
+Output to directory /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process done.
+Type "launch" to generate events from this process, or see
+/home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process/README
+Run "open index.html" to see more information about this process.
+quit
+
+
+
+
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.5.5                 2017-05-26         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../tools/madgraph/input/mg5_configuration.txt
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable.
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process/launch.py
+The import format was not given, so we guess it as command
+launch /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process -n run
+************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.5.5                 2017-05-26         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process/Cards/me5_configuration.txt
+INFO: load configuration from /home/shadowquark/code/checkmate/tools/madgraph/input/mg5_configuration.txt
+INFO: load configuration from /home/shadowquark/code/checkmate/results/example/mg5amcatnlo/process/Cards/me5_configuration.txt
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid td path found
+No valid MadAnalysis path found
+generate_events run
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  1. param : param_card.dat                                 |
+|  2. run   : run_card.dat                                   |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [0, done, 1, param, 2, run, enter path]
+The answer to the previous question is not set in your input file
+Use 0 value
+INFO: Update the dependent parameter of the param_card.dat
+WARNING: Failed to update dependent parameter. This might create trouble for external program (like MadSpin/shower/...) 
+Generating 500 events with run name run
+survey  run
+INFO: compile directory
+INFO:
+
+INFO:
+
+quit
+INFO:
+
+INFO:
+
+quit
+
+
+
+

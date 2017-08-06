@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/basic/checkmate/!svn/ver/1720/trunk/alpha/m4
+END
+python.m4
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/basic/checkmate/!svn/ver/1595/trunk/alpha/m4/python.m4
+END
+madgraph.m4
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/basic/checkmate/!svn/ver/1595/trunk/alpha/m4/madgraph.m4
+END
+root.m4
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/basic/checkmate/!svn/ver/1595/trunk/alpha/m4/root.m4
+END
+cpp11.m4
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/basic/checkmate/!svn/ver/1595/trunk/alpha/m4/cpp11.m4
+END
+delphes.m4
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/basic/checkmate/!svn/ver/1595/trunk/alpha/m4/delphes.m4
+END
+hepmc.m4
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/basic/checkmate/!svn/ver/1595/trunk/alpha/m4/hepmc.m4
+END
+pythia.m4
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/basic/checkmate/!svn/ver/1720/trunk/alpha/m4/pythia.m4
+END

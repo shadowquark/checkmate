@@ -1,0 +1,101 @@
+Fritz: Initialising handlers from file /home/shadowquark/code/checkmate/results/100test/fritz/4mu.ini
+PythiaHandler '4mu': Pythia8 output redirected to /home/shadowquark/code/checkmate/results/100test/pythia/pythia_4mu.log
+PythiaHandler '4mu': Initializing Pythia8 with /home/shadowquark/code/checkmate/results/100test/pythia/4mucard_0.in
+PythiaHandler '4mu': Pythia8 successfully initialized!
+PythiaHandler '4mu': Pythia8 successfully initialised!
+DelphesHandler 'atlas8tev': Initialising Delphes via linking to PythiaHandler '4mu'
+DelphesHandler 'atlas8tev': Initialising settings from /home/shadowquark/code/checkmate/data/cards/delphes_skimmed_ATLAS.tcl
+DelphesHandler 'atlas8tev': Delphes successfully initialised!
+DelphesHandler 'cms8tev': Initialising Delphes via linking to PythiaHandler '4mu'
+DelphesHandler 'cms8tev': Initialising settings from /home/shadowquark/code/checkmate/data/cards/delphes_skimmed_CMS.tcl
+DelphesHandler 'cms8tev': Delphes successfully initialised!
+AnalysisHandler 'atlas8tev': Initialising AnalysisHandler
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1308_1841
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1308_1841
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1308_2631
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1308_2631
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1402_7029
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1402_7029
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1403_4853
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1403_4853
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1403_5222
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1403_5222
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1404_2500
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1404_2500
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1405_7875
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1405_7875
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1407_0583
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1407_0583
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1407_0608
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1407_0608
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1411_1559
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1411_1559
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1501_07110
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1501_07110
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1502_01518
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1502_01518
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1503_03290
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1503_03290
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_1506_08616
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_1506_08616
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_conf_2012_104
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_conf_2012_104
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_conf_2013_024
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_conf_2013_024
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_conf_2013_049
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_conf_2013_049
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_conf_2013_061
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_conf_2013_061
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_conf_2013_089
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_conf_2013_089
+AnalysisHandler 'atlas8tev': Loading Analysis atlas_conf_2015_004
+AnalysisHandler 'atlas8tev': Successfully loaded analysis atlas_conf_2015_004
+AnalysisHandler 'atlas8tev': Linking to DelphesHandler 'atlas8tev' tree
+AnalysisHandler 'atlas8tev': AnalysisHandler successfully linked to DelphesHandler 'atlas8tev'
+AnalysisHandler 'cms8tev': Initialising AnalysisHandler
+AnalysisHandler 'cms8tev': Loading Analysis cms_1303_2985
+AnalysisHandler 'cms8tev': Successfully loaded analysis cms_1303_2985
+AnalysisHandler 'cms8tev': Loading Analysis cms_1408_3583
+AnalysisHandler 'cms8tev': Successfully loaded analysis cms_1408_3583
+AnalysisHandler 'cms8tev': Loading Analysis cms_1410_6679_ee
+AnalysisHandler 'cms8tev': Successfully loaded analysis cms_1410_6679_ee
+AnalysisHandler 'cms8tev': Loading Analysis cms_1502_06031
+AnalysisHandler 'cms8tev': Successfully loaded analysis cms_1502_06031
+AnalysisHandler 'cms8tev': Loading Analysis cms_1504_03198
+AnalysisHandler 'cms8tev': Successfully loaded analysis cms_1504_03198
+AnalysisHandler 'cms8tev': Loading Analysis cms_exo_14_014
+AnalysisHandler 'cms8tev': Successfully loaded analysis cms_exo_14_014
+AnalysisHandler 'cms8tev': Loading Analysis cms_sus_13_016
+AnalysisHandler 'cms8tev': Successfully loaded analysis cms_sus_13_016
+AnalysisHandler 'cms8tev': Linking to DelphesHandler 'cms8tev' tree
+AnalysisHandler 'cms8tev': AnalysisHandler successfully linked to DelphesHandler 'cms8tev'
+Fritz: Fritz successfully loaded command line parameters!
+Fritz:  >> Successfully initialized and linked all handlers! <<
+Fritz: Starting event loop!
+Fritz: Progress: 100 Events
+Fritz: Progress: 200 Events
+Fritz: Progress: 300 Events
+Fritz: Progress: 400 Events
+Fritz: Progress: 500 Events
+Fritz: Progress: 600 Events
+Fritz: Progress: 700 Events
+Fritz: Progress: 800 Events
+Fritz: Progress: 900 Events
+Fritz: Progress: 1000 Events
+Fritz:  >> Finalising after 1000 events. <<
+AnalysisHandler 'atlas8tev': Asking DelphesHandler 'atlas8tev' for cross section information
+DelphesHandler 'atlas8tev': Asking PythiaHandler '4mu' for cross section information
+PythiaHandler '4mu': Pythia8 returned cross section of 1.81756 fb
+PythiaHandler '4mu': Pythia8 returned cross section error of 0 fb
+AnalysisHandler 'atlas8tev': Analyses updated with sigma = 1.81756 fb and dSigma = 0 fb
+AnalysisHandler 'atlas8tev': Analyses successfully finished!
+AnalysisHandler 'cms8tev': Asking DelphesHandler 'cms8tev' for cross section information
+DelphesHandler 'cms8tev': Asking PythiaHandler '4mu' for cross section information
+PythiaHandler '4mu': Pythia8 returned cross section of 1.81756 fb
+PythiaHandler '4mu': Pythia8 returned cross section error of 0 fb
+AnalysisHandler 'cms8tev': Analyses updated with sigma = 1.81756 fb and dSigma = 0 fb
+AnalysisHandler 'cms8tev': Analyses successfully finished!
+DelphesHandler 'atlas8tev': Delphes successfully finished!
+DelphesHandler 'cms8tev': Delphes successfully finished!
+PythiaHandler '4mu': Pythia8 successfully finished!
+Fritz:  >> Done <<

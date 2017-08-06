@@ -1,0 +1,20 @@
+# ATLAS
+# arXiv:1502.01518
+# CERN-PH-EP-2014-299
+# Monojet and missing energy
+# Energy: 8 TeV
+# Luminosity: 20.3 fb^-1
+
+Inputfile:
+XSect:           1.81756 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   1.81756
+ SumOfWeights2:  0.00330353
+ NormEvents:     36.8965
+
+Cut                    Sum_W      Sum_W2       Acc    N_Norm    
+a_trigger              0.196297   0.000356782  0.108  3.98482   
+b_EtMiss_150           0.0599796  0.000109017  0.033  1.21759   
+c_jetquality_(photon)  0.0545269  9.9106e-05   0.03   1.1069    
+d_leadingjet>30        0.0272634  4.9553e-05   0.015  0.553448  

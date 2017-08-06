@@ -1,0 +1,10 @@
+[Parameters]
+Name: 100test
+Analyses: 8TeV
+
+[4mu]
+Events:../test/100test/4mu_8TeV.lhe
+
+[2mu_2dm]
+Events:../test/100test/2mu_2dm_8TeV.lhe
+

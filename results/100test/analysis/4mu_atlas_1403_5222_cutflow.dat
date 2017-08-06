@@ -1,0 +1,19 @@
+# stop production at 8 TeV with SFOS leptons consistent with Z
+# plus b-jets and missing transverse energy
+# constraints for stop_2 -> Z stop_1 -> Z t neu1 and
+# GMSB with stop_1 -> t neu1 -> t Z gravitino
+
+Inputfile:
+XSect:           1.81756 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   1.81756
+ SumOfWeights2:  0.00330353
+ NormEvents:     36.8965
+
+Cut                Sum_W      Sum_W2       Acc    N_Norm    
+00                 1.81756    0.00330353   1      36.8965   
+01_trigger         1.8012     0.0032738    0.991  36.5644   
+3lAll_02_3leptons  0.576167   0.00104722   0.317  11.6962   
+3lAll_03_Zwindow   0.219925   0.000399727  0.121  4.46448   
+mumu_02_SFOS       0.0145405  2.64283e-05  0.008  0.295172  

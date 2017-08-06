@@ -1,0 +1,214 @@
+
+ *------------------------------------------------------------------------------------* 
+ |                                                                                    | 
+ |  *------------------------------------------------------------------------------*  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  |   PPP   Y   Y  TTTTT  H   H  III    A      Welcome to the Lund Monte Carlo!  |  | 
+ |  |   P  P   Y Y     T    H   H   I    A A     This is PYTHIA version 8.226      |  | 
+ |  |   PPP     Y      T    HHHHH   I   AAAAA    Last date of change: 26 Apr 2017  |  | 
+ |  |   P       Y      T    H   H   I   A   A                                      |  | 
+ |  |   P       Y      T    H   H  III  A   A    Now is 06 Aug 2017 at 22:30:33    |  | 
+ |  |                                                                              |  | 
+ |  |   Torbjorn Sjostrand;  Department of Astronomy and Theoretical Physics,      |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: torbjorn@thep.lu.se                                             |  | 
+ |  |   Nishita Desai;  Laboratoire Charles Coulomb (L2C),                         |  | 
+ |  |      CNRS-Universite de Montpellier, 34090 Montpellier, France;              |  | 
+ |  |      e-mail: nishita.desai@umontpellier.fr                                   |  | 
+ |  |   Nadine Fischer;  School of Physics,                                        |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: nadine.fischer@monash.edu                                       |  | 
+ |  |   Ilkka Helenius;  Institute for Theoretical Physics,                        |  | 
+ |  |     Tuebingen University, Auf der Morgenstelle 14, 72076 Tuebingen, Germany; |  | 
+ |  |      e-mail: ilkka.helenius@uni-tuebingen.de                                 |  | 
+ |  |   Philip Ilten;  Massachusetts Institute of Technology,                      |  | 
+ |  |      77 Massachusetts Ave, Cambridge, MA 02139, USA;                         |  | 
+ |  |      e-mail: philten@cern.ch                                                 |  | 
+ |  |   Leif Lonnblad;  Department of Astronomy and Theoretical Physics,           |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: leif.lonnblad@thep.lu.se                                        |  | 
+ |  |   Stephen Mrenna;  Computing Division, Simulations Group,                    |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: mrenna@fnal.gov                                                 |  | 
+ |  |   Stefan Prestel;  Theoretical Physics Department,                           |  | 
+ |  |      Fermi National Accelerator Laboratory, MS 106, Batavia, IL 60510, USA;  |  | 
+ |  |      e-mail: sprestel@fnal.gov                                               |  | 
+ |  |   Christine O. Rasmussen;  Department of Astronomy and Theoretical Physics,  |  | 
+ |  |      Lund University, Solvegatan 14A, SE-223 62 Lund, Sweden;                |  | 
+ |  |      e-mail: christine.rasmussen@thep.lu.se                                  |  | 
+ |  |   Peter Skands;  School of Physics,                                          |  | 
+ |  |      Monash University, PO Box 27, 3800 Melbourne, Australia;                |  | 
+ |  |      e-mail: peter.skands@monash.edu                                         |  | 
+ |  |                                                                              |  | 
+ |  |   The main program reference is 'An Introduction to PYTHIA 8.2',             |  | 
+ |  |   T. Sjostrand et al, Comput. Phys. Commun. 191 (2015) 159                   |  | 
+ |  |   [arXiv:1410.3012 [hep-ph]]                                                 |  | 
+ |  |                                                                              |  | 
+ |  |   The main physics reference is the 'PYTHIA 6.4 Physics and Manual',         |  | 
+ |  |   T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026 [hep-ph/0603175]  |  | 
+ |  |                                                                              |  | 
+ |  |   An archive of program versions and documentation is found on the web:      |  | 
+ |  |   http://www.thep.lu.se/Pythia                                               |  | 
+ |  |                                                                              |  | 
+ |  |   This program is released under the GNU General Public Licence version 2.   |  | 
+ |  |   Please respect the MCnet Guidelines for Event Generator Authors and Users. |  | 
+ |  |                                                                              |  | 
+ |  |   Disclaimer: this program comes without any guarantees.                     |  | 
+ |  |   Beware of errors and use common sense when interpreting results.           |  | 
+ |  |                                                                              |  | 
+ |  |   Copyright (C) 2017 Torbjorn Sjostrand                                      |  | 
+ |  |                                                                              |  | 
+ |  |                                                                              |  | 
+ |  *------------------------------------------------------------------------------*  | 
+ |                                                                                    | 
+ *------------------------------------------------------------------------------------* 
+
+ *-----------------------  SusyLesHouches SUSY/BSM Interface  ------------------------*
+ | Last Change 12 Apr 2017 - P. Skands
+ | Parsing: /home/shadowquark/code/checkmate/test/100test/2mu_2dm_8TeV.lhe
+ | (SLHA::readFile) line 413 - storing non-SLHA(2) block: ckmblock
+ | (SLHA::readFile) line 449 - storing non-SLHA(2) block: npinputs
+ | (SLHA::readFile) line 478 - storing non-SLHA(2) block: yukawa
+ | (SLHA::readFile) line 520 - storing QNUMBERS for id = 10000 zp 
+ | (SLHA::readFile) line 525 - storing QNUMBERS for id = 10001 hmt 
+ | (SLHA::readFile) line 530 - storing QNUMBERS for id = 10002 dm 
+ *------------------------------------------------------------------------------------*
+ PYTHIA Info from SLHAinterface::initSLHA: No MODSEL found, keeping internal SUSY switched off  
+ PYTHIA Warning in SLHAinterface::initSLHA: using QNUMBERS for id codes < 1000000 may clash with SM.  
+ PYTHIA Info from SLHAinterface::initSLHA: importing MASS entries for id = [25,10000,10001,10002]
+ PYTHIA Warning in SLHAinterface::initSLHA: ignoring MASS entries for id = [1,2,3,4,5,6,11,12,13,14,15,16,21,22,23,24] (SLHA:keepSM. Use id > 1000000 for new particles)
+ PYTHIA Warning in SLHAinterface::initSLHA: ignoring DECAY tables for id = [6,23,24,1,2,3,4,5,11,12,13,14,15,16,21,22] (SLHA:keepSM. Use id > 1000000 for new particles)
+ PYTHIA Warning in SLHAinterface::initSLHA: ignoring empty DECAY tables for id = [25,10000] (total width provided but no Branching Ratios)
+
+ *-------  PYTHIA Process Initialization  --------------------------*
+ |                                                                  |
+ | We collide p+ with p+ at a CM energy of 8.000e+03 GeV            |
+ |                                                                  |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Subprocess                                    Code |   Estimated |
+ |                                                    |    max (mb) |
+ |                                                    |             |
+ |------------------------------------------------------------------|
+ |                                                    |             |
+ | Les Houches User Process(es)                  9999 |   1.000e-09 |
+ |                                                                  |
+ *-------  End PYTHIA Process Initialization -----------------------*
+
+ *-------  PYTHIA Multiparton Interactions Initialization  ---------* 
+ |                                                                  | 
+ |                   sigmaNonDiffractive =    52.12 mb              | 
+ |                                                                  | 
+ |    pT0 =  2.35 gives sigmaInteraction =   258.76 mb: accepted    | 
+ |                                                                  | 
+ *-------  End PYTHIA Multiparton Interactions Initialization  -----* 
+
+ *-------  PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings (changes only)  ------------------* 
+ |                                                                                                                 | 
+ | Name                                          |                      Now |      Default         Min         Max | 
+ |                                               |                          |                                      | 
+ | Beams:frameType                               |                        4 |            1           1           5 | 
+ | Beams:LHEF                                    | /home/shadowquark/code/checkmate/test/100test/2mu_2dm_8TeV.lhe |         void | 
+ | Init:showChangedParticleData                  |                      off |           on                         | 
+ | Main:numberOfEvents                           |                100000001 |         1000           0             | 
+ | Next:numberCount                              |                        0 |         1000           0             | 
+ | Next:numberShowEvent                          |                        0 |            1           0             | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Flag + Mode + Parm + Word + FVec + MVec + PVec + WVec Settings  -----------------------------* 
+
+ --------  LHA initialization information  ------------ 
+
+  beam    kind      energy  pdfgrp  pdfset 
+     A    2212    4000.000       0  247000
+     B    2212    4000.000       0  247000
+
+  Event weighting strategy = -4
+
+  Processes, with strategy-dependent cross section info 
+  number      xsec (pb)      xerr (pb)      xmax (pb) 
+       1     2.6141e-09     2.6744e-11     2.6141e-09
+
+ --------  End LHA initialization information  -------- 
+ PYTHIA Rndm::dumpState: seed = 19780503, sequence no = 814345
+
+ --------  LHA event information and listing  ---------------------------------------------------------------------- 
+
+    process = 1           weight = 2.6141e-09       scale = 4.1150e+02   (GeV) 
+                        alpha_em = 7.8186e-03      alpha_strong = 1.0399e-01  
+
+    Participating Particles 
+    no        id stat     mothers     colours      p_x        p_y        p_z         e          m        tau    spin 
+1     -4        -1   0     0     0     501   -0.000     0.000      794.268    794.269    1.270      0.000   -1.000  
+2     4         -1   0     0     501   0     0.000      -0.000     -53.290    53.306     1.270      0.000   -1.000  
+3     -13       1    1     2     0     0     42.860     -56.727    72.590     101.608    0.106      0.000   -1.000  
+4     13        1    1     2     0     0     -39.764    -10.141    54.542     68.256     0.106      0.000   1.000   
+5     10002     1    1     2     0     0     -41.807    112.230    453.227    479.331    100.000    0.000   0.000   
+6     -10002    1    1     2     0     0     38.711     -45.362    160.619    198.381    100.000    0.000   0.000   
+
+ --------  End LHA event information and listing  ------------------------------------------------------------------ 
+
+ --------  PYTHIA Info Listing  ---------------------------------------- 
+ 
+ Beam A: id = 2212  , pz = 4.000e+03 , e = 4.000e+03 , m = 9.383e-01 .
+ Beam B: id = 2212  , pz = -4.000e+03, e = 4.000e+03 , m = 9.383e-01 .
+
+ In 1: id = -4  , x = 1.986e-01 , pdf = 0.000e+00  at Q2 = 1.693e+05 .
+ In 2: id = 4   , x = 1.333e-02 , pdf = 0.000e+00  at same Q2.
+ Warning: above flavour/x info does not match incoming partons in event!
+
+ Process Les Houches User Process(es) with code 9999 is 2 -> 4.
+ Subprocess user process 1 with code 1 is 2 -> 4.
+     alphaEM = 7.819e-03 ,  alphaS = 1.040e-01     at Q2 = 1.693e+05 .
+
+ Impact parameter b = 7.202e-01  gives enhancement factor = 1.469e+00 .
+ Max pT scale for MPI = 8.000e+03 , ISR = 8.000e+03 , FSR = 8.000e+03 .
+ Number of MPI = 6    , ISR = 19   , FSRproc = 53   , FSRreson = 0    .
+
+ --------  End PYTHIA Info Listing  ------------------------------------
+
+ --------  PYTHIA Event Listing  (hard process)  -----------------------------------------------------------------------------------
+ 
+    no        id   name            status     mothers   daughters     colours      p_x        p_y        p_z         e          m 
+0     90           (system)           -11     0     0     0     0     0     0      0.000      0.000      0.000   8000.000   8000.000
+     1      2212   (p+)               -12     0     0     3     0     0     0      0.000      0.000   4000.000   4000.000      0.938
+     2      2212   (p+)               -12     0     0     4     0     0     0      0.000      0.000  -4000.000   4000.000      0.938
+     3        -4   (cbar)             -21     1     0     5     8     0   501     -0.000      0.000    794.277    794.277      0.000
+     4         4   (c)                -21     2     0     5     8   501     0      0.000     -0.000    -53.298     53.298      0.000
+     5       -13   mu+                 23     3     4     0     0     0     0     42.860    -56.727     72.590    101.608      0.106
+     6        13   mu-                 23     3     4     0     0     0     0    -39.764    -10.141     54.542     68.256      0.106
+     7     10002   dm                  23     3     4     0     0     0     0    -41.807    112.230    453.227    479.331    100.000
+     8    -10002   dmbar               23     3     4     0     0     0     0     38.711    -45.362    160.619    198.381    100.000
+                                   Charge sum:  0.000           Momentum sum:      0.000     -0.000    740.978    847.575    411.503
+
+ --------  End PYTHIA Event Listing  -----------------------------------------------------------------------------------------------
+ PYTHIA Abort from Pythia::next: reached end of Les Houches Events File  
+
+ *-------  PYTHIA Event and Cross Section Statistics  -------------------------------------------------------------*
+ |                                                                                                                 |
+ | Subprocess                                    Code |            Number of events       |      sigma +- delta    |
+ |                                                    |       Tried   Selected   Accepted |     (estimated) (mb)   |
+ |                                                    |                                   |                        |
+ |-----------------------------------------------------------------------------------------------------------------|
+ |                                                    |                                   |                        |
+ | Les Houches User Process(es)                  9999 |        1000       1000       1000 |   2.614e-18  0.000e+00 |
+ |    ... whereof user classification code          1 |        1000       1000       1000 |                        | 
+ |                                                    |                                   |                        |
+ | sum                                                |        1000       1000       1000 |   2.614e-18  0.000e+00 |
+ |                                                                                                                 |
+ *-------  End PYTHIA Event and Cross Section Statistics ----------------------------------------------------------*
+
+ *-------  PYTHIA Error and Warning Messages Statistics  ----------------------------------------------------------* 
+ |                                                                                                                 | 
+ |  times   message                                                                                                | 
+ |                                                                                                                 | 
+ |      1   Abort from Pythia::next: reached end of Les Houches Events File                                        | 
+ |      1   Info from SLHAinterface::initSLHA: No MODSEL found, keeping internal SUSY switched off                 | 
+ |      1   Info from SLHAinterface::initSLHA: importing MASS entries                                              | 
+ |      1   Warning in SLHAinterface::initSLHA: ignoring DECAY tables                                              | 
+ |      1   Warning in SLHAinterface::initSLHA: ignoring MASS entries                                              | 
+ |      1   Warning in SLHAinterface::initSLHA: ignoring empty DECAY tables                                        | 
+ |      1   Warning in SLHAinterface::initSLHA: using QNUMBERS for id codes < 1000000 may clash with SM.           | 
+ |                                                                                                                 | 
+ *-------  End PYTHIA Error and Warning Messages Statistics  ------------------------------------------------------* 
+ PYTHIA Rndm::dumpState: seed = 19780503, sequence no = 23555659

@@ -1,0 +1,47 @@
+# ATLAS
+# ATLAS_1503_03290
+# 2 leptons + jets + missingET
+# sqrt(s) = 8 TeV
+# int(L) = 20.3 fb^-1
+
+Inputfile:
+XSect:           1.81756 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   1.81756
+ SumOfWeights2:  0.00330353
+ NormEvents:     36.8965
+
+Cut                                     Sum_W       Sum_W2       Acc    N_Norm    
+CR00_noCuts                             1.81756     0.00330353   1      36.8965   
+CR01_leptonTriggerRequirement           0           0            0      0         
+CR02_rejectEventsWithBadJets            0           0            0      0         
+CR03_rejectEventsWithBadMuons           0           0            0      0         
+CR04_primaryVertexGE4tracks             0           0            0      0         
+CR05_vetoEventsWithCosmicMuons          0           0            0      0         
+CR06_GE2leptons                         1.80666     0.00328371   0.994  36.6751   
+CR07_fakeMissET                         0           0            0      0         
+CRee08_leptonIsolationTriggerMatching   0           0            0      0         
+CRee09_leptonFlavour                    0           0            0      0         
+CRee10_promptLeptons                    0           0            0      0         
+CRee11_oppositeChargeLeptons            0           0            0      0         
+CRee12_GT1jet                           0           0            0      0         
+CRee13_electronCrackVeto                0           0            0      0         
+CRee14_mllGT15                          0           0            0      0         
+CRee15_dPhi(leadingjet,missET)GT0.4     0           0            0      0         
+CRee16_dPhi(subleadingjet,missET)GT0.4  0           0            0      0         
+CRee17_mllIn(81,101)                    0           0            0      0         
+CRee18_HTGT600                          0           0            0      0         
+CRee19_missETGT225                      0           0            0      0         
+CRmm08_leptonIsolationTriggerMatching   0           0            0      0         
+CRmm09_leptonFlavour                    1.53766     0.00279479   0.846  31.2145   
+CRmm10_promptLeptons                    1.51948     0.00276175   0.836  30.8455   
+CRmm11_oppositeChargeLeptons            1.04146     0.00189292   0.573  21.1417   
+CRmm12_GT1jet                           0.0545269   9.9106e-05   0.03   1.1069    
+CRmm13_electronCrackVeto                0           0            0      0         
+CRmm14_mllGT15                          0.0545269   9.9106e-05   0.03   1.1069    
+CRmm15_dPhi(leadingjet,missET)GT0.4     0.0490742   8.91954e-05  0.027  0.996206  
+CRmm16_dPhi(subleadingjet,missET)GT0.4  0.0418039   7.59813e-05  0.023  0.84862   
+CRmm17_mllIn(81,101)                    0.00363512  6.60707e-06  0.002  0.073793  
+CRmm18_HTGT600                          0           0            0      0         
+CRmm19_missETGT225                      0           0            0      0         
