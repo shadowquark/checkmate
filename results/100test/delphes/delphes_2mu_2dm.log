@@ -43,35 +43,3 @@
 ** INFO: initializing module  JetEnergyScale           
 ** INFO: initializing module  TagSkimmer               
 ** INFO: initializing module  TreeWriter               
-** INFO: adding module        ParticlePropagator       ParticlePropagator       
-** INFO: adding module        Efficiency               ChargedHadronTrackingEfficiency
-** INFO: adding module        Efficiency               ElectronTrackingEfficiency
-** INFO: adding module        Efficiency               MuonTrackingEfficiency   
-** INFO: adding module        MomentumSmearing         ChargedHadronMomentumSmearing
-** INFO: adding module        EnergySmearing           ElectronEnergySmearing   
-** INFO: adding module        MomentumSmearing         MuonMomentumSmearing     
-** INFO: adding module        Merger                   TrackMerger              
-** INFO: adding module        OldCalorimeter           Calorimeter              
-** INFO: adding module        Merger                   EFlowMerger              
-** INFO: adding module        Merger                   MissingET                
-** INFO: adding module        FastJetFinder            FastJetFinder            
-** INFO: adding module        TaggingParticlesSkimmer  TagSkimmer               
-** INFO: adding module        EnergyScale              JetEnergyScale           
-** INFO: adding module        Merger                   FinalTrackMerger         
-** INFO: adding module        TreeWriter               TreeWriter               
-** INFO: initializing module  Delphes                  
-** INFO: initializing module  ParticlePropagator       
-** INFO: initializing module  ChargedHadronTrackingEfficiency
-** INFO: initializing module  ElectronTrackingEfficiency
-** INFO: initializing module  MuonTrackingEfficiency   
-** INFO: initializing module  ChargedHadronMomentumSmearing
-** INFO: initializing module  ElectronEnergySmearing   
-** INFO: initializing module  MuonMomentumSmearing     
-** INFO: initializing module  TrackMerger              
-** INFO: initializing module  Calorimeter              
-** INFO: initializing module  EFlowMerger              
-** INFO: initializing module  MissingET                
-** INFO: initializing module  FastJetFinder            
-** INFO: initializing module  JetEnergyScale           
-** INFO: initializing module  TagSkimmer               
-** INFO: initializing module  TreeWriter               

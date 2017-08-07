@@ -1,0 +1,29 @@
+因爲 checkmate 目前不能外掛 Analysis 只能用內置的 AnalysisManager 手動添加。爲了避免我寫好 Analysis 後。你還需要在你的 checkmate 中手動添加一次。所以我直接把我添加過 Analysis 的 checkmate push 到了 github 上。你 pull 下來。就不用再手動添加我寫好的 Analysis 了。我已經在我的筆記本上測試成功了。用法如下
+。
+
+1. pull 下我的 checkmate。但你不要自己 git add/commit/push。
+2. 把你用 madgraph 生成的 lhe 以及運行 checkmate 需要的 dat 文件放入 checkmate/code 中。
+3. 在 checkmate 文件夾中 
+	autoreconf
+	./configure --with-delphes=YourDelphes --with-pythia=YourPythia
+	make -j4
+	bin/CheckMATE code/xxx.dat
+4. 如果我更新了新的 Analysis 你需要如下操作。
+	git reset --hard HEAD
+	git pull origin master
+	autoreconf
+	./configure --with-delphes=YourDelphes --with-pythia=YourPythia
+	make -j4
+	bin/CheckMATE code/xxx.dat
+
+我屏蔽了	checkmate/tools/madgraph
+		checkmate/tools/root
+		checkmate/tools/pythia
+		checkmate/tools/hepmc
+		checkmate/tools/delphes
+		checkmate/code
+具體見 .gitignore。總之如果你把 pythia 和 delphes 放在 tools 中。你寫的腳本和 dat 放到 code 中。那麼無論 reset 還是 pull 都不會影響你寫的代碼和你編譯好的 pythia 和 delphes。這樣就能保證你 pull 我代碼的時候。不會引發衝突導致失敗。也不需要你對自己的代碼做任何修改。
+
+我測試成功了這種方法編譯 checkmate。編譯出來的 checkmate 也可以在 AnalysisManager 中看到我添加的 Analysis。我還測試了在 dat 中選擇我寫的 Analysis 並用 CheckMATE 運行。也一切正常。見 checkmate/test/100test/test.in。
+
+你可以用你的電腦試試。有問題再聯繫。編譯好後直接運行 bin/test。目前我添加的新 Analysis 是 cms_1410_6679_ee。只包括了 ee 部分的篩選。

@@ -1,5 +1,5 @@
 Test: Calculation of r = signal/(95%CL limit on signal)
 Result: Allowed
-Result for r: 0.064305744706
-Analysis: atlas_1402_7029
-SR: SR0taua17
+Result for r: 0
+Analysis: cms_1410_6679_ee
+SR: BB
