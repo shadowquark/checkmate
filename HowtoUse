@@ -1,5 +1,4 @@
-因爲 checkmate 目前不能外掛 Analysis 只能用內置的 AnalysisManager 手動添加。爲了避免我寫好 Analysis 後。你還需要在你的 checkmate 中手動添加一次。所以我直接把我添加過 Analysis 的 checkmate push 到了 github 上。你 pull 下來。就不用再手動添加我寫好的 Analysis 了。我已經在我的筆記本上測試成功了。用法如下
-。
+因爲 checkmate 目前不能外掛 Analysis 只能用內置的 AnalysisManager 手動添加。爲了避免我寫好 Analysis 後。你還需要在你的 checkmate 中手動添加一次。所以我直接把我添加過 Analysis 的 checkmate push 到了 github 上。你 pull 下來。就不用再手動添加我寫好的 Analysis 了。我已經在我的筆記本上測試成功了。用法如下。
 
 1. pull 下我的 checkmate。但你不要自己 git add/commit/push。
 2. 把你用 madgraph 生成的 lhe 以及運行 checkmate 需要的 dat 文件放入 checkmate/code 中。
