@@ -215,7 +215,8 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/CMS_13TeV/cms_pas_sus_15_011.lo \
 	src/analyses/CMS_8TeV/cms_1410_6679_ee.lo \
 	src/analyses/CMS_8TeV/cms_1410_6679_mumu.lo \
-	src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.lo
+	src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.lo \
+	src/analyses/CMS_13TeV/cms_1701_02042.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -652,7 +653,9 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	include/analyses/CMS_8TeV/cms_1410_6679_mumu.h \
 	src/analyses/CMS_8TeV/cms_1410_6679_mumu.cc \
 	include/analyses/CMS_7TeV/cms_1410_6679_mumu_7.h \
-	src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.cc
+	src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.cc \
+	include/analyses/CMS_13TeV/cms_1701_02042.h \
+	src/analyses/CMS_13TeV/cms_1701_02042.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
@@ -1072,6 +1075,9 @@ src/analyses/CMS_8TeV/cms_1410_6679_mumu.lo:  \
 src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.lo:  \
 	src/analyses/CMS_7TeV/$(am__dirstamp) \
 	src/analyses/CMS_7TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_13TeV/cms_1701_02042.lo:  \
+	src/analyses/CMS_13TeV/$(am__dirstamp) \
+	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
 
 libanalyses.la: $(libanalyses_la_OBJECTS) $(libanalyses_la_DEPENDENCIES) $(EXTRA_libanalyses_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libanalyses_la_LINK) -rpath $(mylibdir) $(libanalyses_la_OBJECTS) $(libanalyses_la_LIBADD) $(LIBS)
@@ -1171,6 +1177,7 @@ include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_conf_2014_014.Plo
 include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_conf_2014_033.Plo
 include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_conf_2014_056.Plo
 include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_conf_2015_004.Plo
+include src/analyses/CMS_13TeV/$(DEPDIR)/cms_1701_02042.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_pas_sus_15_011.Plo
 include src/analyses/CMS_7TeV/$(DEPDIR)/cms_1306_1126_WW.Plo
 include src/analyses/CMS_7TeV/$(DEPDIR)/cms_1410_6679_mumu_7.Plo

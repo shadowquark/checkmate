@@ -109,6 +109,7 @@ libanalyses_la_SOURCES +=
 libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1410_6679_ee.h src/analyses/CMS_8TeV/cms_1410_6679_ee.cc
 libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1410_6679_mumu.h src/analyses/CMS_8TeV/cms_1410_6679_mumu.cc
 libanalyses_la_SOURCES += include/analyses/CMS_7TeV/cms_1410_6679_mumu_7.h src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.cc
+libanalyses_la_SOURCES += include/analyses/CMS_13TeV/cms_1701_02042.h src/analyses/CMS_13TeV/cms_1701_02042.cc
 #@@extraanalysis@@
 
 libanalyses_la_LDFLAGS = -avoid-version -shared
