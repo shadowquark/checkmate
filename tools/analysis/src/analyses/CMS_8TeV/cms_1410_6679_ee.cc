@@ -57,6 +57,7 @@ void Cms_1410_6679_ee::analyze() {
   // - If you need output to be stored in other files than the cutflow/signal files we provide, check the manual for how to do this conveniently.  
 
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
+/*
 	electrons = filterPhaseSpace( electrons , 8 , -2.5 , 2.5 );
 	vector<Electron*> electronsB = filterPhaseSpace( electrons , 8 , -1.44 , 1.44 );
 	vector<Electron*> electronsEp = filterPhaseSpace( electrons , 8 , 1.57 , 2.5 );
@@ -90,6 +91,7 @@ void Cms_1410_6679_ee::analyze() {
 		countSignalEvent( "NBB" );
 		return;
 	}
+*/
 }
 
 void Cms_1410_6679_ee::finalize() {

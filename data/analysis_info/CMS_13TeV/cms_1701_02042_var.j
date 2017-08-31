@@ -35,10 +35,14 @@
     "S95_obs", 
     "S95_exp"
   ], 
-  "jets_btagging": "n", 
-  "jets_tautagging": "n", 
+  "jets_btagging": "y", 
+  "jets_btagging_eff": [
+    "80.0"
+  ], 
+  "jets_btagging_n": 1, 
+  "jets_tautagging": "y", 
   "long_info": [
-    "cms_1701_02042_13_2.3"
+    "cms 1701.02042 mm 13TeV 2.3/fb"
   ], 
   "lumi": "2.3", 
   "muon_iso_absorrel": [
@@ -79,30 +83,20 @@
   ], 
   "photon_niso": 1, 
   "reference_data": {
-    "ee": {
-      "S95_exp": "14.0", 
-      "S95_obs": "10.3", 
-      "bkg": "28.9", 
-      "bkg_err_stat": "1.2", 
-      "bkg_err_sys": "5.4", 
-      "obs": "22"
-    }, 
     "mm": {
-      "S95_exp": "18.8", 
-      "S95_obs": "18.2", 
+      "S95_exp": "19.1", 
+      "S95_obs": "18.5", 
       "bkg": "45.0", 
       "bkg_err_stat": "2.2", 
       "bkg_err_sys": "6.8", 
       "obs": "44"
     }
   }, 
-  "short_info": "cms_1701_02042_13", 
+  "short_info": "cms_1701_02042_mm", 
   "signal_regions": [
-    "ee", 
     "mm"
   ], 
   "tags": [
-    "ee", 
-    "mumu"
+    "mm"
   ]
 }
