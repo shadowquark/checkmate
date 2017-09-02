@@ -62,10 +62,10 @@ void Cms_1701_02042::analyze() {
 	if ( mRec.size() > 2 )	return;
 	mRec = filterPhaseSpace( mRec , 20 , -2.4 , 2.4 );
 	if ( mRec.size() != 2 )	return;
-	if ( mRec[0].Charge + mRec[1].Charge != 0 )	return;
+	if ( mRec[0]->Charge + mRec[1]->Charge != 0 )	return;
 	jets = filterPhaseSpace( jets , 20 , -2.5 , 2.5 );
 	for ( int i = 0 ; i < jets.size() ; ++ i )
-		if ( checkBTag( jets[i] ) || checkTauTag( jets[i] ) )	return;
+		if ( checkBTag( jets[i] ) || checkTauTag( jets[i] , "tight" ) )	return;
 	jets = filterPhaseSpace( jets , 30 , -2.5 , 2.5 );
 	if ( jets.size() > 1 )	return;
 	TLorentzVector mm = mRec[0]->P4() + mRec[1]->P4();
