@@ -59,81 +59,93 @@ void Cms_1410_6679_mumu_7::analyze() {
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
 	vector<Muon*> muon15 = filterPhaseSpace( muonsCombined , 15 , -2.1 , 2.1 );
 	if ( muon15.size() < 2 )	return;
-	bool flag24 = 0;
 	for ( int i = 0 ; i < muon15.size() ; ++ i )
-	{
-		if ( muon15[i]->PT > 24 )
-			flag24 = 1;
 		for ( int j = 0 ; j < tracks.size() ; ++ j )
 			if ( tracks[j]->Particle == muon15[i]->Particle && ( tracks[j]->D0 > 2 || tracks[j]->DZ > 5 ) )
-				return;
-	}
-	if ( !flag24 )	return;
-	FILE	*fout = fopen( "~/code/checkmate/log.log" , "w" );
-	if ( muon15.size() != 2 )	fprintf( fout , "#muonsERROR\n" );
-	TLorentzVector dimuon = muon15[0]->P4() + muon15[1]->P4();
-	int label0 , label1 , label2;
-	label0 = label1 = label2 = 0;
+				muon15.erase( muon15.begin() + i );
+//	FILE	*fout = fopen( "~/code/checkmate/log.log" , "w" );
+//	if ( muon15.size() != 2 )	fprintf( fout , "#muonsERROR\n" );
+	TLorentzVector dimuon[10];
+	int muPair = 0;
+	int mu1[10] , mu2[10];
+	memset( mu1 , 0 , sizeof(mu1) );
+	memset( mu2 , 0 , sizeof(mu2) );
 	for ( int i = 0 ; i < muon15.size() ; ++ i )
+		for ( int j = 0 ; j < muon15.size() ; ++ j )
+			if ( muon15[j]->Charge + muon15[i]->Charge == 0 && muon15[i]->PT > 25 )
+			{
+				if ( muon15[j]->PT > 25 && i > j )	continue;
+				mu1[muPair] = i;
+				mu2[muPair] = j;
+				dimuon[ muPair ++ ] = muon15[i]->P4() + muon15[j]->P4();
+			}
+	if ( !muPair )	return;		
+	vector<Jet*> jets30 = filterPhaseSpace( jets , 30 , -4.7 , 4.7 );
+	bool flagJet40 = 0;
+	for ( int i = 0 ; i < jets30.size() ; ++ i )
+		if ( jets30[i]->PT > 40 )
+			flagJet40 = 1;
+	if ( jets30.size() > 1 && flagJet40 )	return;
+	for ( int i = 0 ; i < muPair ; ++ i )
 	{
-		if ( abs( muon15[i]->Eta ) < 0.8 )
+		int label0 , label1 , label2;
+		label0 = label1 = label2 = 0;
+		Muon *muon1 = muon15[ mu1[i] ];
+		Muon *muon2 = muon15[ mu2[i] ];
+		if ( muon1->Eta < 0.8 )	label0 ++;
+		if ( muon1->Eta >= 0.8 && muon1->Eta < 1.6 )	label1 ++;
+		if ( muon1->Eta >= 1.6 )	label2 ++;
+		if ( muon2->Eta < 0.8 )	label0 ++;
+		if ( muon2->Eta >= 0.8 && muon1->Eta < 1.6 )	label1 ++;
+		if ( muon2->Eta >= 1.6 )	label2 ++;
+		if ( label0 == 2 )
 		{
-			label0 ++;
-		} else
-		{
-			if ( abs( muon15[i]->Eta ) < 1.6 )
-				label1 ++;
+			if ( dimuon[i].Pt() > 10 )
+				countSignalEvent( "TBB" );
 			else
-				label2 ++;
+				countSignalEvent( "LBB" );
+			continue;
 		}
-	}
-	if ( label0 == 2 )
-	{
-		if ( dimuon.Pt() > 10 )
-			countSignalEvent( "TBB" );
-		else
-			countSignalEvent( "LBB" );
-		return;
-	}
-	if ( label0 == 1 && label1 == 1 )
-	{
-		if ( dimuon.Pt() > 10 )
-			countSignalEvent( "TBO" );
-		else
-			countSignalEvent( "LBO" );
-		return;
-	}
-	if ( label0 == 1 && label2 == 1 )
-	{
-		if ( dimuon.Pt() > 10 )
-			countSignalEvent( "TBE" );
-		else
-			countSignalEvent( "LBE" );
-		return;
-	}
-	if ( label1 == 2 )
-	{
-		if ( dimuon.Pt() > 10 )
-			countSignalEvent( "TOO" );
-		else
-			countSignalEvent( "LOO" );
-		return;
-	}
-	if ( label1 == 1 && label2 == 1 )
-	{
-		if ( dimuon.Pt() > 10 )
-			countSignalEvent( "TOE" );
-		else
-			countSignalEvent( "LOE" );
-		return;
-	}
-	if ( label2 == 2 )
-	{
-		if ( dimuon.Pt() > 10 )
-			countSignalEvent( "TEE" );
-		else
-			countSignalEvent( "LEE" );
-		return;
+		if ( label0 == 1 && label1 == 1 )	
+		{
+			if ( dimuon[i].Pt() > 10 )
+				countSignalEvent( "TBO" );
+			else
+				countSignalEvent( "LBO" );
+			continue;
+		}
+		if ( label0 == 1 && label2 == 1 )	
+		{
+			if ( dimuon[i].Pt() > 10 )
+				countSignalEvent( "TBE" );
+			else
+				countSignalEvent( "LBE" );
+			continue;
+		}
+		if ( label1 == 2 )	
+		{
+			if ( dimuon[i].Pt() > 10 )
+				countSignalEvent( "TOO" );
+			else
+				countSignalEvent( "LOO" );
+			continue;
+		}
+		if ( label1 == 1 && label2 == 1 )	
+		{
+			if ( dimuon[i].Pt() > 10 )
+				countSignalEvent( "TOE" );
+			else
+				countSignalEvent( "LOE" );
+			continue;
+		}
+		if ( label2 == 2 )	
+		{
+			if ( dimuon[i].Pt() > 10 )
+				countSignalEvent( "TEE" );
+			else
+				countSignalEvent( "LEE" );
+			continue;
+		}
 	}
 }
 
