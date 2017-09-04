@@ -433,6 +433,7 @@ src/fritz-main.o: src/main.cc /usr/include/stdc-predef.h \
  include/analysishandler/AnalysisHandlerCMS_7TeV.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_7TeV/cms_1306_1126_WW.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_7TeV/cms_1410_6679_mumu_7.h \
+ /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_7TeV/cms_1410_6679_mumu2j_7.h \
  include/analysishandler/AnalysisHandlerCMS_8TeV.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1301_4698_WW.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1303_2985.h \
@@ -444,8 +445,8 @@ src/fritz-main.o: src/main.cc /usr/include/stdc-predef.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_sus_12_019.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_sus_13_016.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_exo_14_014.h \
- /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_ee.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_mumu.h \
+ /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_mumu2j.h \
  include/analysishandler/AnalysisHandlerCMS_13TeV.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_13TeV/cms_pas_sus_15_011.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_13TeV/cms_1701_02042.h \
@@ -1627,6 +1628,8 @@ include/analysishandler/AnalysisHandlerCMS_7TeV.h:
 
 /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_7TeV/cms_1410_6679_mumu_7.h:
 
+/home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_7TeV/cms_1410_6679_mumu2j_7.h:
+
 include/analysishandler/AnalysisHandlerCMS_8TeV.h:
 
 /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1301_4698_WW.h:
@@ -1649,9 +1652,9 @@ include/analysishandler/AnalysisHandlerCMS_8TeV.h:
 
 /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_exo_14_014.h:
 
-/home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_ee.h:
-
 /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_mumu.h:
+
+/home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_mumu2j.h:
 
 include/analysishandler/AnalysisHandlerCMS_13TeV.h:
 

@@ -1,0 +1,4 @@
+SR    obs  bkg    bkg_err_stat  bkg_err_sys  S95_obs  S95_exp  
+VBFT  2    1.44   2.08          0.5          5.54     5.35     
+GFT   16   13.10  6.30          1.7          15.67    14.56    
+L     78   66.73  13.13         8.4          41.5     33.47    
