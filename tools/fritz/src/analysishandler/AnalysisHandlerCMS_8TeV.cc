@@ -59,8 +59,6 @@ void AnalysisHandlerCMS_8TeV::bookAnalysis(std::string analysisName,
         a = new Cms_sus_13_016();   
     else if(analysisName == "cms_exo_14_014")
         a = new Cms_exo_14_014();
-    else if(analysisName == "cms_1410_6679_ee")
-        a = new Cms_1410_6679_ee();
     else if(analysisName == "cms_1410_6679_mumu")
         a = new Cms_1410_6679_mumu();
     else //@@extracode@@
