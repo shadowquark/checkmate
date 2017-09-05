@@ -83,9 +83,9 @@ void Cms_1410_6679_mumu2j_7::analyze() {
 	for ( int i = 0 ; i < jets30.size() ; ++ i )
 		if ( jets30[i]->PT > 40 )
 			flagJet40 = 1;
-	if ( jets30.size() < 2 && !flagJet40 )	return;
+	if ( jets30.size() < 2 || !flagJet40 )	return;
 	if ( missingET->PT >= 40 )	return;
-	int jetMaxn1, jetMaxn2;
+	int jetMaxn1 , jetMaxn2;
 	double jetMax = 0;
 	for ( int i = 0 ; i < jets30.size() ; ++ i )
 		if ( jets30[i]->PT > jetMax )
@@ -113,7 +113,7 @@ void Cms_1410_6679_mumu2j_7::analyze() {
 		{
 			countSignalEvent( "GFT" );
 			return;
-		} 
+		}
 	countSignalEvent( "L" );
 }
 

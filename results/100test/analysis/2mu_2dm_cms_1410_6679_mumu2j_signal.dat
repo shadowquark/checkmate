@@ -1,0 +1,14 @@
+# cms_1410.6679 mumu2j 8TeV 19.7/fb
+
+Inputfile:
+XSect:           2.61412e-06 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   2.61412e-06
+ SumOfWeights2:  6.83362e-15
+ NormEvents:     5.14982e-05
+
+SR    Sum_W        Sum_W2       Acc    N_Norm       
+GFT   2.61412e-09  6.83362e-18  0.001  5.14982e-08  
+L     3.13694e-08  8.20035e-17  0.012  6.17978e-07  
+VBFT  2.61412e-09  6.83362e-18  0.001  5.14982e-08  

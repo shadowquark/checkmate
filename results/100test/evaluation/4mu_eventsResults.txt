@@ -1,3 +1,4 @@
-analysis          sr   signal_normevents  signal_err_tot  
-cms_1410_6679_ee  BB   0.0                0               
-cms_1410_6679_ee  NBB  0.0                0               
+analysis              sr    signal_normevents  signal_err_tot   
+cms_1410_6679_mumu2j  GFT   0.322254           0.107417751993   
+cms_1410_6679_mumu2j  L     1.03837            0.192820544421   
+cms_1410_6679_mumu2j  VBFT  0.035806           0.0358060305999  
