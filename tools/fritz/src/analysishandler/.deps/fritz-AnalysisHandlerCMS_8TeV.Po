@@ -378,7 +378,8 @@ src/analysishandler/fritz-AnalysisHandlerCMS_8TeV.o: \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_sus_13_016.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_exo_14_014.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_mumu.h \
- /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_mumu2j.h
+ /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_mumu2j.h \
+ /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1606_01522_8.h
 
 /usr/include/stdc-predef.h:
 
@@ -1447,3 +1448,5 @@ include/global/FritzConfig.h:
 /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_mumu.h:
 
 /home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1410_6679_mumu2j.h:
+
+/home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1606_01522_8.h:
