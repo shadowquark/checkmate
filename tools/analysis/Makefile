@@ -219,7 +219,10 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/CMS_8TeV/cms_1410_6679_mumu2j.lo \
 	src/analyses/CMS_7TeV/cms_1410_6679_mumu2j_7.lo \
 	src/analyses/CMS_8TeV/cms_1606_01522_8.lo \
-	src/analyses/CMS_8TeV/cms_1506_00424_8.lo
+	src/analyses/CMS_8TeV/cms_1506_00424_8.lo \
+	src/analyses/CMS_8TeV/cms_1701_02032_8_4t.lo \
+	src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.lo \
+	src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -664,7 +667,13 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	include/analyses/CMS_8TeV/cms_1606_01522_8.h \
 	src/analyses/CMS_8TeV/cms_1606_01522_8.cc \
 	include/analyses/CMS_8TeV/cms_1506_00424_8.h \
-	src/analyses/CMS_8TeV/cms_1506_00424_8.cc
+	src/analyses/CMS_8TeV/cms_1506_00424_8.cc \
+	include/analyses/CMS_8TeV/cms_1701_02032_8_4t.h \
+	src/analyses/CMS_8TeV/cms_1701_02032_8_4t.cc \
+	include/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.h \
+	src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.cc \
+	include/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.h \
+	src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
@@ -1096,6 +1105,15 @@ src/analyses/CMS_8TeV/cms_1606_01522_8.lo:  \
 src/analyses/CMS_8TeV/cms_1506_00424_8.lo:  \
 	src/analyses/CMS_8TeV/$(am__dirstamp) \
 	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_8TeV/cms_1701_02032_8_4t.lo:  \
+	src/analyses/CMS_8TeV/$(am__dirstamp) \
+	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.lo:  \
+	src/analyses/CMS_8TeV/$(am__dirstamp) \
+	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.lo:  \
+	src/analyses/CMS_8TeV/$(am__dirstamp) \
+	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
 
 libanalyses.la: $(libanalyses_la_OBJECTS) $(libanalyses_la_DEPENDENCIES) $(EXTRA_libanalyses_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libanalyses_la_LINK) -rpath $(mylibdir) $(libanalyses_la_OBJECTS) $(libanalyses_la_LIBADD) $(LIBS)
@@ -1211,6 +1229,9 @@ include src/analyses/CMS_8TeV/$(DEPDIR)/cms_1502_06031.Plo
 include src/analyses/CMS_8TeV/$(DEPDIR)/cms_1504_03198.Plo
 include src/analyses/CMS_8TeV/$(DEPDIR)/cms_1506_00424_8.Plo
 include src/analyses/CMS_8TeV/$(DEPDIR)/cms_1606_01522_8.Plo
+include src/analyses/CMS_8TeV/$(DEPDIR)/cms_1701_02032_8_2mu2b.Plo
+include src/analyses/CMS_8TeV/$(DEPDIR)/cms_1701_02032_8_2mu2t.Plo
+include src/analyses/CMS_8TeV/$(DEPDIR)/cms_1701_02032_8_4t.Plo
 include src/analyses/CMS_8TeV/$(DEPDIR)/cms_exo_14_014.Plo
 include src/analyses/CMS_8TeV/$(DEPDIR)/cms_smp_12_006.Plo
 include src/analyses/CMS_8TeV/$(DEPDIR)/cms_sus_12_019.Plo

@@ -29,6 +29,8 @@
 #include "cms_1410_6679_mumu2j.h"
 #include "cms_1606_01522_8.h"
 #include "cms_1506_00424_8.h"
+#include "cms_1701_02032_8_4t.h"
+#include "cms_1701_02032_8_2mu2b.h"
 //@extraheader@
 
 
