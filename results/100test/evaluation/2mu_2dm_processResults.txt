@@ -1,4 +1,3 @@
-analysis              sr    signal_normevents  signal_err_tot     
-cms_1410_6679_mumu2j  GFT   5.14982e-08        5.14981872853e-08  
-cms_1410_6679_mumu2j  L     6.17977611999e-07  1.78395019015e-07  
-cms_1410_6679_mumu2j  VBFT  5.14982e-08        5.14981872853e-08  
+analysis             sr     signal_normevents  signal_err_tot  
+cms_1701_02032_8_4t  mtg50  0.0                19.7000137714   
+cms_1701_02032_8_4t  mts50  0.0                19.7000137714   

@@ -62,8 +62,22 @@ void Cms_1701_02032_8_4t::analyze() {
 	electrons = filterPhaseSpace( electrons , 7 , -2.5 , 2.5 );
 	vector<Muon*> muons5 = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
 	vector<Jet*> jets10 = filterPhaseSpace( jets , 10 , -2.3 , 2.3 );
-//	for ( int i = 0 ; i < jets10.size() ; ++ i )
-//		for ( int j = 0 ; j < jets10[i]->Constituents.
+/*	for ( int i = 0 ; i < jets10.size() ; ++ i )
+		for ( int j = jets10[i]->Constituents.LowerBound() ; j <= jets10[i]->Constituents.GetLast() ; ++ j )
+		{
+			if ( jets10[i]->Constituents[j]->IsA() == GenParticle::Class() )
+			{
+			}
+//			fprintf( fout , "%d\t%d\n" , jets10[i]->Constituents.LowerBound() , jets10[i]->Constituents.GetLast() );
+//			fprintf( fout , "%lf, %d\n" , jets10[i]->PT , jets10[i]->Charge );
+//			fprintf( fout , "%s\n" , jets10[i]->Constituents[0]->ClassName() );
+//			double	tmpPT = jets10[i]->PT;
+//			int	tmpCharge = jets10[i]->Charge;
+//			fprintf( fout , "%s\n" , jets10[i]->Constituents[j]->ClassName() );
+			if ( ! strcmp( jets10[i]->Constituents[j]->ClassName() , "Muon" ) )
+			{
+			}
+		}*/
 	for ( int trigger = 0 ; trigger < muons25.size() ; ++ trigger )
 	{
 		bool isoflag = 1;
@@ -90,8 +104,9 @@ void Cms_1701_02032_8_4t::analyze() {
 		if ( !isoflag )	continue;
 		for ( int i = 0 ; i < muons5.size() ; ++ i )
 			for ( int j = 0 ; j < jets10.size() ; ++ j )
-				if ( muons5[i]->Charge != muons25[trigger]->Charge && jets10[j]->PT > 20 )
+				if ( muons5[i]->Charge != muons25[trigger]->Charge && muons5[i]->Charge * jets10[j]->Charge < 0 )
 				{
+					if ( jets10[j]->PT <= 20 )	continue;
 					TLorentzVector tauMX = muons5[i]->P4() + jets10[j]->P4();
 					bool mTbin = mT( muons25[trigger]->P4() , missingET->P4() ) <= 50;
 					if ( tauMX.M() >= 4 && mTbin )	countSignalEvent( "mts50" );

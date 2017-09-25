@@ -7,8 +7,8 @@ DelphesHandler 'cms8tev': Initialising Delphes via linking to PythiaHandler '2mu
 DelphesHandler 'cms8tev': Initialising settings from /home/shadowquark/code/checkmate/data/cards/delphes_skimmed_CMS.tcl
 DelphesHandler 'cms8tev': Delphes successfully initialised!
 AnalysisHandler 'cms8tev': Initialising AnalysisHandler
-AnalysisHandler 'cms8tev': Loading Analysis cms_1410_6679_mumu2j
-AnalysisHandler 'cms8tev': Successfully loaded analysis cms_1410_6679_mumu2j
+AnalysisHandler 'cms8tev': Loading Analysis cms_1701_02032_8_4t
+AnalysisHandler 'cms8tev': Successfully loaded analysis cms_1701_02032_8_4t
 AnalysisHandler 'cms8tev': Linking to DelphesHandler 'cms8tev' tree
 AnalysisHandler 'cms8tev': AnalysisHandler successfully linked to DelphesHandler 'cms8tev'
 Fritz: Fritz successfully loaded command line parameters!

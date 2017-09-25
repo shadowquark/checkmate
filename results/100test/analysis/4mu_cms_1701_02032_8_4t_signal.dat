@@ -1,0 +1,13 @@
+# cms 1701.02032 8TeV 19.7/fb 4tauH
+
+Inputfile:
+XSect:           1.81756 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   1.81756
+ SumOfWeights2:  0.00330353
+ NormEvents:     35.806
+
+SR     Sum_W  Sum_W2  Acc  N_Norm  
+mtg50  0      0       0    0       
+mts50  0      0       0    0       

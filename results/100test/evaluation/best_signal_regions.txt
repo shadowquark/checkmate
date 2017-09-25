@@ -1,2 +1,2 @@
-analysis              sr  o      b      db             s              ds              s95obs  s95exp  robscons         rexpcons          
-cms_1410_6679_mumu2j  L   387.0  434.6  42.9116021607  1.03837579998  0.192821506695  57.51   79.31   0.0125569210398  0.00910539060648  
+analysis             sr     o    b    db  s    ds             s95obs  s95exp  robscons  rexpcons  
+cms_1701_02032_8_4t  mts50  7.0  5.4  -1  0.0  27.8600433714  10.3    9.7     0         0         

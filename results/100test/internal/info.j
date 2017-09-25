@@ -41,6 +41,7 @@
       "atlas_conf_2016_076": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_076.h", 
       "atlas_1605_09318": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1605_09318.h", 
       "atlas_conf_2013_089": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_conf_2013_089.h", 
+      "cms_1506_00424_8": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1506_00424_8.h", 
       "dilepton_hl": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_14TeV_HighLumi/dilepton_hl.h", 
       "atlas_1506_08616": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1506_08616.h", 
       "cms_1701_02042": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_13TeV/cms_1701_02042.h", 
@@ -50,11 +51,14 @@
       "atlas_1404_2500": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1404_2500.h", 
       "atlas_conf_2013_024": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_conf_2013_024.h", 
       "atlas_1606_03903": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1606_03903.h", 
+      "cms_1701_02032_8_2mu2b": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.h", 
+      "cms_1606_01522_8": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1606_01522_8.h", 
       "atlas_1403_5222": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1403_5222.h", 
       "cms_sus_13_016": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_sus_13_016.h", 
       "atlas_conf_2016_013": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_013.h", 
       "atl_phys_pub_2014_010_sbottom": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_14TeV_HighLumi/atl_phys_pub_2014_010_sbottom.h", 
-      "atlas_phys_pub_2013_011": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_14TeV_HighLumi/atlas_phys_pub_2013_011.h"
+      "atlas_phys_pub_2013_011": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_14TeV_HighLumi/atlas_phys_pub_2013_011.h", 
+      "cms_1701_02032_8_4t": "/home/shadowquark/code/checkmate/tools/analysis/include/analyses/CMS_8TeV/cms_1701_02032_8_4t.h"
     }, 
     "internal_processes": "/home/shadowquark/code/checkmate/results/100test/internal/processes.j", 
     "analysis_template_source": "/home/shadowquark/code/checkmate/tools/analysis/src/base/template.cc.raw", 
@@ -105,6 +109,7 @@
       "atlas_conf_2016_076": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_13TeV/atlas_conf_2016_076_ref.dat", 
       "atlas_1605_09318": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_13TeV/atlas_1605_09318_ref.dat", 
       "atlas_conf_2013_089": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_089_ref.dat", 
+      "cms_1506_00424_8": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_8TeV/cms_1506_00424_8_ref.dat", 
       "dilepton_hl": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_14TeV_HighLumi/dilepton_hl_ref.dat", 
       "atlas_1506_08616": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_8TeV/atlas_1506_08616_ref.dat", 
       "cms_1701_02042": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_13TeV/cms_1701_02042_ref.dat", 
@@ -114,14 +119,17 @@
       "atlas_1404_2500": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_8TeV/atlas_1404_2500_ref.dat", 
       "atlas_conf_2013_024": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_024_ref.dat", 
       "atlas_1606_03903": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_13TeV/atlas_1606_03903_ref.dat", 
+      "cms_1701_02032_8_2mu2b": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_8TeV/cms_1701_02032_8_2mu2b_ref.dat", 
+      "cms_1606_01522_8": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_8TeV/cms_1606_01522_8_ref.dat", 
       "atlas_1403_5222": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_8TeV/atlas_1403_5222_ref.dat", 
       "cms_sus_13_016": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_8TeV/cms_sus_13_016_ref.dat", 
       "atlas_conf_2016_013": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_13TeV/atlas_conf_2016_013_ref.dat", 
       "atl_phys_pub_2014_010_sbottom": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_14TeV_HighLumi/atl_phys_pub_2014_010_sbottom_ref.dat", 
-      "atlas_phys_pub_2013_011": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_14TeV_HighLumi/atlas_phys_pub_2013_011_ref.dat"
+      "atlas_phys_pub_2013_011": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_14TeV_HighLumi/atlas_phys_pub_2013_011_ref.dat", 
+      "cms_1701_02032_8_4t": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_8TeV/cms_1701_02032_8_4t_ref.dat"
     }, 
     "output_evaluation_event_numbers": {
-      "cms_1410_6679_mumu2j": "/home/shadowquark/code/checkmate/results/100test/evaluation/cms_1410_6679_mumu2j_event_numbers.txt"
+      "cms_1701_02032_8_4t": "/home/shadowquark/code/checkmate/results/100test/evaluation/cms_1701_02032_8_4t_event_numbers.txt"
     }, 
     "AnalysisHandlerATLAS_7TeV": {
       "src": "/home/shadowquark/code/checkmate/tools/fritz/src/analysishandler/AnalysisHandlerATLAS_7TeV.cc", 
@@ -163,6 +171,7 @@
       "atlas_conf_2016_076": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_13TeV/atlas_conf_2016_076_CR.cc", 
       "atlas_1605_09318": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_13TeV/atlas_1605_09318_CR.cc", 
       "atlas_conf_2013_089": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_8TeV/atlas_conf_2013_089_CR.cc", 
+      "cms_1506_00424_8": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_8TeV/cms_1506_00424_8_CR.cc", 
       "dilepton_hl": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_14TeV_HighLumi/dilepton_hl_CR.cc", 
       "atlas_1506_08616": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_8TeV/atlas_1506_08616_CR.cc", 
       "cms_1701_02042": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_13TeV/cms_1701_02042_CR.cc", 
@@ -172,11 +181,14 @@
       "atlas_1404_2500": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_8TeV/atlas_1404_2500_CR.cc", 
       "atlas_conf_2013_024": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_8TeV/atlas_conf_2013_024_CR.cc", 
       "atlas_1606_03903": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_13TeV/atlas_1606_03903_CR.cc", 
+      "cms_1701_02032_8_2mu2b": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b_CR.cc", 
+      "cms_1606_01522_8": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_8TeV/cms_1606_01522_8_CR.cc", 
       "atlas_1403_5222": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_8TeV/atlas_1403_5222_CR.cc", 
       "cms_sus_13_016": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_8TeV/cms_sus_13_016_CR.cc", 
       "atlas_conf_2016_013": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_13TeV/atlas_conf_2016_013_CR.cc", 
       "atl_phys_pub_2014_010_sbottom": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_14TeV_HighLumi/atl_phys_pub_2014_010_sbottom_CR.cc", 
-      "atlas_phys_pub_2013_011": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_14TeV_HighLumi/atlas_phys_pub_2013_011_CR.cc"
+      "atlas_phys_pub_2013_011": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_14TeV_HighLumi/atlas_phys_pub_2013_011_CR.cc", 
+      "cms_1701_02032_8_4t": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_8TeV/cms_1701_02032_8_4t_CR.cc"
     }, 
     "AnalysisHandlerCMS_8TeV": {
       "src": "/home/shadowquark/code/checkmate/tools/fritz/src/analysishandler/AnalysisHandlerCMS_8TeV.cc", 
@@ -236,6 +248,7 @@
       "atlas_conf_2016_076": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_13TeV/atlas_conf_2016_076.cc", 
       "atlas_1605_09318": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_13TeV/atlas_1605_09318.cc", 
       "atlas_conf_2013_089": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_8TeV/atlas_conf_2013_089.cc", 
+      "cms_1506_00424_8": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_8TeV/cms_1506_00424_8.cc", 
       "dilepton_hl": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_14TeV_HighLumi/dilepton_hl.cc", 
       "atlas_1506_08616": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_8TeV/atlas_1506_08616.cc", 
       "cms_1701_02042": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_13TeV/cms_1701_02042.cc", 
@@ -245,11 +258,14 @@
       "atlas_1404_2500": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_8TeV/atlas_1404_2500.cc", 
       "atlas_conf_2013_024": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_8TeV/atlas_conf_2013_024.cc", 
       "atlas_1606_03903": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_13TeV/atlas_1606_03903.cc", 
+      "cms_1701_02032_8_2mu2b": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.cc", 
+      "cms_1606_01522_8": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_8TeV/cms_1606_01522_8.cc", 
       "atlas_1403_5222": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_8TeV/atlas_1403_5222.cc", 
       "cms_sus_13_016": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_8TeV/cms_sus_13_016.cc", 
       "atlas_conf_2016_013": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_13TeV/atlas_conf_2016_013.cc", 
       "atl_phys_pub_2014_010_sbottom": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_14TeV_HighLumi/atl_phys_pub_2014_010_sbottom.cc", 
-      "atlas_phys_pub_2013_011": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_14TeV_HighLumi/atlas_phys_pub_2013_011.cc"
+      "atlas_phys_pub_2013_011": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/ATLAS_14TeV_HighLumi/atlas_phys_pub_2013_011.cc", 
+      "cms_1701_02032_8_4t": "/home/shadowquark/code/checkmate/tools/analysis/src/analyses/CMS_8TeV/cms_1701_02032_8_4t.cc"
     }, 
     "analysis_template_header": "/home/shadowquark/code/checkmate/tools/analysis/include/base/template.h.raw", 
     "AnalysisHandlerATLAS_14TeV_projected": {
@@ -283,7 +299,7 @@
       "ATLAS_13TeV": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_13TeV_analyses.txt"
     }, 
     "output_evaluation_r_limits": {
-      "cms_1410_6679_mumu2j": "/home/shadowquark/code/checkmate/results/100test/evaluation/cms_1410_6679_mumu2j_r_limits.txt"
+      "cms_1701_02032_8_4t": "/home/shadowquark/code/checkmate/results/100test/evaluation/cms_1701_02032_8_4t_r_limits.txt"
     }, 
     "delphes_events": [], 
     "AnalysisHandlerATLAS_8TeV": {
@@ -292,7 +308,7 @@
     }, 
     "pythia_mg5minimal_template": "/home/shadowquark/code/checkmate/data/cards/pythia_mg5minimal_default_card.in", 
     "output_evaluation_likelihoodRootmethod": {
-      "cms_1410_6679_mumu2j": "/home/shadowquark/code/checkmate/results/100test/evaluation/cms_1410_6679_mumu2j_likelihoodrm.txt"
+      "cms_1701_02032_8_4t": "/home/shadowquark/code/checkmate/results/100test/evaluation/cms_1701_02032_8_4t_likelihoodrm.txt"
     }, 
     "AnalysisHandlerATLAS_13TeV": {
       "src": "/home/shadowquark/code/checkmate/tools/fritz/src/analysishandler/AnalysisHandlerATLAS_13TeV.cc", 
@@ -300,11 +316,11 @@
     }, 
     "fritz_bin": "/home/shadowquark/code/checkmate/tools/fritz/bin/fritz", 
     "output_evaluation_likelihood": {
-      "cms_1410_6679_mumu2j": "/home/shadowquark/code/checkmate/results/100test/evaluation/cms_1410_6679_mumu2j_likelihood.txt"
+      "cms_1701_02032_8_4t": "/home/shadowquark/code/checkmate/results/100test/evaluation/cms_1701_02032_8_4t_likelihood.txt"
     }, 
     "slha": "", 
     "eff_tab": {
-      "cms_1410_6679_mumu2j": "/home/shadowquark/code/checkmate/results/100test/evaluation/cms_1410_6679_mumu2j_eff_tab.txt"
+      "cms_1701_02032_8_4t": "/home/shadowquark/code/checkmate/results/100test/evaluation/cms_1701_02032_8_4t_eff_tab.txt"
     }, 
     "me5_configuration_template": "/home/shadowquark/code/checkmate/data/cards/mg5_default_me5_configuration.txt", 
     "analysis_settings": {
@@ -343,6 +359,7 @@
       "atlas_conf_2016_076": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_13TeV/atlas_conf_2016_076_var.j", 
       "atlas_1605_09318": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_13TeV/atlas_1605_09318_var.j", 
       "atlas_conf_2013_089": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_089_var.j", 
+      "cms_1506_00424_8": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_8TeV/cms_1506_00424_8_var.j", 
       "dilepton_hl": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_14TeV_HighLumi/dilepton_hl_var.j", 
       "atlas_1506_08616": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_8TeV/atlas_1506_08616_var.j", 
       "cms_1701_02042": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_13TeV/cms_1701_02042_var.j", 
@@ -352,11 +369,14 @@
       "atlas_1404_2500": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_8TeV/atlas_1404_2500_var.j", 
       "atlas_conf_2013_024": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_024_var.j", 
       "atlas_1606_03903": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_13TeV/atlas_1606_03903_var.j", 
+      "cms_1701_02032_8_2mu2b": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_8TeV/cms_1701_02032_8_2mu2b_var.j", 
+      "cms_1606_01522_8": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_8TeV/cms_1606_01522_8_var.j", 
       "atlas_1403_5222": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_8TeV/atlas_1403_5222_var.j", 
       "cms_sus_13_016": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_8TeV/cms_sus_13_016_var.j", 
       "atlas_conf_2016_013": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_13TeV/atlas_conf_2016_013_var.j", 
       "atl_phys_pub_2014_010_sbottom": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_14TeV_HighLumi/atl_phys_pub_2014_010_sbottom_var.j", 
-      "atlas_phys_pub_2013_011": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_14TeV_HighLumi/atlas_phys_pub_2013_011_var.j"
+      "atlas_phys_pub_2013_011": "/home/shadowquark/code/checkmate/data/analysis_info/ATLAS_14TeV_HighLumi/atlas_phys_pub_2013_011_var.j", 
+      "cms_1701_02032_8_4t": "/home/shadowquark/code/checkmate/data/analysis_info/CMS_8TeV/cms_1701_02032_8_4t_var.j"
     }, 
     "pythia_log": "/home/shadowquark/code/checkmate/results/100test/pythia/pythia_output.log", 
     "AnalysisHandlerCMS": {
@@ -435,7 +455,7 @@
     ], 
     "bestcls": 0
   }, 
-  "identifiers": "(dp0\nS'4mu'\np1\nccopy_reg\n_reconstructor\np2\n(cevents\nLHEEvents\np3\nc__builtin__\ndict\np4\n(dp5\ntp6\nRp7\n(dp8\nS'fritz_config_file'\np9\nS'/home/shadowquark/code/checkmate/results/100test/fritz/4mu.ini'\np10\nsS'maxEvents'\np11\nI-1\nsS'analysis_result_files'\np12\n(dp13\nsS'result_output_file'\np14\nS'/home/shadowquark/code/checkmate/results/100test/evaluation/4mu_eventsResults.txt'\np15\nsS'analysis_cutflow_files'\np16\n(dp17\nS'cms_1410_6679_mumu2j'\np18\nS'/home/shadowquark/code/checkmate/results/100test/analysis/4mu_cms_1410_6679_mumu2j_cutflow.dat'\np19\nssS'full_filenames'\np20\n(lp21\nS'/home/shadowquark/code/checkmate/test/100test/4mu_8TeV.lhe'\np22\nasS'analysis_signal_files'\np23\n(dp24\ng18\nS'/home/shadowquark/code/checkmate/results/100test/analysis/4mu_cms_1410_6679_mumu2j_signal.dat'\np25\nssS'configFile'\np26\nS'/home/shadowquark/code/checkmate/results/100test/fritz/4mu.ini'\np27\nsS'py8_infile'\np28\nS'/home/shadowquark/code/checkmate/results/100test/pythia/4mucard_0.in'\np29\nsS'processed'\np30\nI01\nsS'identifier'\np31\ng1\nsS'name'\np32\ng1\nsbsS'2mu_2dm'\np33\ng2\n(g3\ng4\n(dp34\ntp35\nRp36\n(dp37\ng9\nS'/home/shadowquark/code/checkmate/results/100test/fritz/2mu_2dm.ini'\np38\nsg11\nI-1\nsg12\n(dp39\nsg14\nS'/home/shadowquark/code/checkmate/results/100test/evaluation/2mu_2dm_eventsResults.txt'\np40\nsg16\n(dp41\ng18\nS'/home/shadowquark/code/checkmate/results/100test/analysis/2mu_2dm_cms_1410_6679_mumu2j_cutflow.dat'\np42\nssg20\n(lp43\nS'/home/shadowquark/code/checkmate/test/100test/2mu_2dm_8TeV.lhe'\np44\nasg23\n(dp45\ng18\nS'/home/shadowquark/code/checkmate/results/100test/analysis/2mu_2dm_cms_1410_6679_mumu2j_signal.dat'\np46\nssg26\nS'/home/shadowquark/code/checkmate/results/100test/fritz/2mu_2dm.ini'\np47\nsg28\nS'/home/shadowquark/code/checkmate/results/100test/pythia/2mu_2dmcard_1.in'\np48\nsg30\nI01\nsg31\ng33\nsg32\ng33\nsbs.", 
+  "identifiers": "(dp0\nS'4mu'\np1\nccopy_reg\n_reconstructor\np2\n(cevents\nLHEEvents\np3\nc__builtin__\ndict\np4\n(dp5\ntp6\nRp7\n(dp8\nS'fritz_config_file'\np9\nS'/home/shadowquark/code/checkmate/results/100test/fritz/4mu.ini'\np10\nsS'maxEvents'\np11\nI-1\nsS'analysis_result_files'\np12\n(dp13\nsS'result_output_file'\np14\nS'/home/shadowquark/code/checkmate/results/100test/evaluation/4mu_eventsResults.txt'\np15\nsS'analysis_cutflow_files'\np16\n(dp17\nS'cms_1701_02032_8_4t'\np18\nS'/home/shadowquark/code/checkmate/results/100test/analysis/4mu_cms_1701_02032_8_4t_cutflow.dat'\np19\nssS'full_filenames'\np20\n(lp21\nS'/home/shadowquark/code/checkmate/test/100test/4mu_8TeV.lhe'\np22\nasS'analysis_signal_files'\np23\n(dp24\ng18\nS'/home/shadowquark/code/checkmate/results/100test/analysis/4mu_cms_1701_02032_8_4t_signal.dat'\np25\nssS'configFile'\np26\nS'/home/shadowquark/code/checkmate/results/100test/fritz/4mu.ini'\np27\nsS'py8_infile'\np28\nS'/home/shadowquark/code/checkmate/results/100test/pythia/4mucard_0.in'\np29\nsS'processed'\np30\nI01\nsS'identifier'\np31\ng1\nsS'name'\np32\ng1\nsbsS'2mu_2dm'\np33\ng2\n(g3\ng4\n(dp34\ntp35\nRp36\n(dp37\ng9\nS'/home/shadowquark/code/checkmate/results/100test/fritz/2mu_2dm.ini'\np38\nsg11\nI-1\nsg12\n(dp39\nsg14\nS'/home/shadowquark/code/checkmate/results/100test/evaluation/2mu_2dm_eventsResults.txt'\np40\nsg16\n(dp41\ng18\nS'/home/shadowquark/code/checkmate/results/100test/analysis/2mu_2dm_cms_1701_02032_8_4t_cutflow.dat'\np42\nssg20\n(lp43\nS'/home/shadowquark/code/checkmate/test/100test/2mu_2dm_8TeV.lhe'\np44\nasg23\n(dp45\ng18\nS'/home/shadowquark/code/checkmate/results/100test/analysis/2mu_2dm_cms_1701_02032_8_4t_signal.dat'\np46\nssg26\nS'/home/shadowquark/code/checkmate/results/100test/fritz/2mu_2dm.ini'\np47\nsg28\nS'/home/shadowquark/code/checkmate/results/100test/pythia/2mu_2dmcard_1.in'\np48\nsg30\nI01\nsg31\ng33\nsg32\ng33\nsbs.", 
   "flags": {
     "zsig": false, 
     "controlregions": false, 
@@ -457,6 +477,6 @@
     "fullcls": false
   }, 
   "analyses": [
-    "cms_1410_6679_mumu2j"
+    "cms_1701_02032_8_4t"
   ]
 }
