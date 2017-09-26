@@ -1,0 +1,16 @@
+# cms 1701.02032 8TeV 19.7/fb 2mu2tau
+
+Inputfile:
+XSect:           1.81756 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   1.81756
+ SumOfWeights2:  0.00330353
+ NormEvents:     35.806
+
+SR   Sum_W  Sum_W2  Acc  N_Norm  
+2e   0      0       0    0       
+eh   0      0       0    0       
+emu  0      0       0    0       
+hh   0      0       0    0       
+muh  0      0       0    0       

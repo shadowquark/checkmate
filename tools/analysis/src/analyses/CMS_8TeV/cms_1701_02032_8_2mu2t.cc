@@ -57,47 +57,121 @@ void Cms_1701_02032_8_2mu2t::analyze() {
   // - If you need output to be stored in other files than the cutflow/signal files we provide, check the manual for how to do this conveniently.  
 
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
-	vector<Muon*> muonsTrigger = filterPhaseSpace( muonsCombined , 8 , -2.4 , 2.4 );
-	if ( muonsTrigger.size() < 2 )	return;
+/*	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
+	if ( muonsCombined.size() < 2 )	return;
 	int muon1 , muon2;
 	double lMuon1 , lMuon2;
 	muon1 = muon2 = 0;
 	lMuon1 = lMuon2 = 0;
-	for ( int i = 0 ; i < muonsTrigger.size() ; ++ i )
-		if ( muonsTrigger[i]->PT > lMuon1 )
+	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
+		if ( muonsCombined[i]->PT > lMuon1 )
 		{
-			lMuon1 = muonsTrigger[i]->PT;
+			lMuon1 = muonsCombined[i]->PT;
 			muon1 = i;
 		}
-	for ( int i = 0 ; i < muonsTrigger.size() ; ++ i )
-		if ( muonsTrigger[i]->PT > lMuon2 && muonsTrigger[i]->Charge != muonsTrigger[lMuon1]->Charge )
+	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
+		if ( muonsCombined[i]->PT > lMuon2 && muonsCombined[i]->Charge != muonsCombined[lMuon1]->Charge )
 		{
-			lMuon2 = muonsTrigger[i]->PT;
+			lMuon2 = muonsCombined[i]->PT;
 			muon2 = i;
 		}
 	if ( lMuon1 <= 17 )	return;
-	if ( muonsTrigger[lMuon1]->P4().DeltaR( muonsTrigger[lMuon2]->P4() ) < 0.4 )	return;
+	if ( lMuon2 <= 8 )	return;
+//	if ( abs( muonsCombined[lmuon1]->P4().M() - 125 ) < )
+	if ( muonsCombined[lMuon1]->P4().DeltaR( muonsCombined[lMuon2]->P4() ) < 0.4 )	return;
 	electrons = filterPhaseSpace( electrons , 7 , -2.5 , 2.5 );
 	jets = filterPhaseSpace( jets , 15 , -2.3 , 2.3 );
 	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
 	for ( int i = 0 ; i < jets.size() ; ++ i )
 		if ( checkBTag( jets[i] ) )
 			return;
-	bool eeFlag , emFlag , ehFlag , mhFlag , hhFlag;
-	eeFlag = emFlag = ehFlag = mhFlag = hhFlag = 0;
-	if ( electrons.size() > 1 )
+	TLorentzVector l4T = muonsCombined[muon1]->P4() + muonsCombined[muon2]->P4();
+	if ( l4T.M() < 14 || l4T.M() > 66 )	return;
+	if ( electrons.size() == 2 && muonsCombined.size() == 2 && lMuon1 > 18 && lMuon2 > 9 )
 		for ( int i = 0 ; i < electrons.size() ; ++ i )
 			for ( int j = i + 1 ; j < electrons.size() ; ++ j )
 				if ( electrons[i]->Charge != electrons[j]->Charge )
 				{
-					TLorentzVector l4 = electrons[i]->P4() + electrons[j]->P4() + muonsTrigger[i]->P4() + muonsTrigger[muon1]->P4() + muonsTrigger[muon2]->P4();
-					if ( abs( l4.M() - 125 ) < 30 )	continue;
-					if ( muonsTrigger[lMuon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsTrigger[lMuon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsTrigger[lMuon1]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
-					if ( muonsTrigger[lMuon2]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
+					TLorentzVector l4t = electrons[i]->P4() + electrons[j]->P4();
+					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
+					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
+					if ( muonsCombined[lMuon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon1]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon2]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
 					if ( electrons[i]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
+					countSignalEvent( "2e" );
 				}
+	if ( electrons.size() == 1 && muonsCombined.size() == 3 )
+		for ( int i = 0 ; i < electrons.size() ; ++ i )
+			for ( int j = 0 ; j < muonsCombined.size() ; ++ j )
+				if ( electrons[i]->Charge != muonsCombined[j]->Charge && j != muon1 && j != muon2 )
+				{
+					TLorentzVector l4t = electrons[i]->P4() + muonsCombined[j]->P4();
+					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
+					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
+					if ( muonsCombined[lMuon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon1]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon2]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
+					if ( electrons[i]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
+					countSignalEvent( "emu" );
+				}
+	if ( electrons.size() == 1 && ! jets.size() && muonsCombined.size() == 2 && lMuon1 > 18 && lMuon2 > 9 )
+	{
+		bool ehFlag = 0;
+		for ( int i = 0 ; i < electrons.size() ; ++ i )
+		{
+			if ( ehFlag )	break;
+			for ( int j = 0 ; j < jets.size() ; ++ j )
+			{
+				if ( ehFlag )	break;
+				if ( electrons[i]->Charge + jets[j]->Charge == 0 )
+				{
+					TLorentzVector l4t = electrons[i]->P4() + jets[j]->P4();
+					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
+					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
+					if ( muonsCombined[lMuon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon1]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon2]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( electrons[i]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					countSignalEvent( "eh" );
+					ehFlag = 1;
+				}
+			}
+		}
+	}
+	if ( electrons.size() == 0 && muonsCombined.size() == 3 && ! jets.size() )
+		for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
+			for ( int j = 0 ; j < jets.size() ; ++ j )
+				if ( muonsCombined[i]->Charge + jets[j]->Charge == 0 && i != muon1 && i != muon2 )
+				{
+					TLorentzVector l4t = muonsCombined[i]->P4() + jets[j]->P4();
+					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
+					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
+					if ( muonsCombined[lMuon1]->P4().DeltaR( muonsCombined[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon2]->P4().DeltaR( muonsCombined[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon1]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon2]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[i]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					countSignalEvent( "muh" );
+				}
+	if ( electrons.size() == 0 && muonsCombined.size() == 2 && jets.size() > 1 && lMuon1 > 18 && lMuon2 > 9 )
+		for ( int i = 0 ; i < jets.size() ; ++ i )
+			for ( int j = 0 ; j < jets.size() ; ++ j )
+				if ( jets[i]->Charge + jets[j]->Charge == 0 )
+				{
+					TLorentzVector l4t = jets[i]->P4() + jets[j]->P4();
+					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
+					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
+					if ( muonsCombined[lMuon1]->P4().DeltaR( jets[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon2]->P4().DeltaR( jets[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon1]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[lMuon2]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( jets[i]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					countSignalEvent( "hh" );
+				}*/
 }
 
 void Cms_1701_02032_8_2mu2t::finalize() {
