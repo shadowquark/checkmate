@@ -57,7 +57,7 @@ void Cms_1701_02032_8_2mu2t::analyze() {
   // - If you need output to be stored in other files than the cutflow/signal files we provide, check the manual for how to do this conveniently.  
 
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
-/*	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
+	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
 	if ( muonsCombined.size() < 2 )	return;
 	int muon1 , muon2;
 	double lMuon1 , lMuon2;
@@ -70,7 +70,7 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 			muon1 = i;
 		}
 	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
-		if ( muonsCombined[i]->PT > lMuon2 && muonsCombined[i]->Charge != muonsCombined[lMuon1]->Charge )
+		if ( muonsCombined[i]->PT > lMuon2 && muonsCombined[i]->Charge != muonsCombined[muon1]->Charge )
 		{
 			lMuon2 = muonsCombined[i]->PT;
 			muon2 = i;
@@ -78,10 +78,9 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 	if ( lMuon1 <= 17 )	return;
 	if ( lMuon2 <= 8 )	return;
 //	if ( abs( muonsCombined[lmuon1]->P4().M() - 125 ) < )
-	if ( muonsCombined[lMuon1]->P4().DeltaR( muonsCombined[lMuon2]->P4() ) < 0.4 )	return;
+	if ( muonsCombined[muon1]->P4().DeltaR( muonsCombined[muon2]->P4() ) < 0.4 )	return;
 	electrons = filterPhaseSpace( electrons , 7 , -2.5 , 2.5 );
 	jets = filterPhaseSpace( jets , 15 , -2.3 , 2.3 );
-	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
 	for ( int i = 0 ; i < jets.size() ; ++ i )
 		if ( checkBTag( jets[i] ) )
 			return;
@@ -95,10 +94,10 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 					TLorentzVector l4t = electrons[i]->P4() + electrons[j]->P4();
 					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
 					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
-					if ( muonsCombined[lMuon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon1]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon2]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon1]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon2]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
 					if ( electrons[i]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
 					countSignalEvent( "2e" );
 				}
@@ -110,10 +109,10 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 					TLorentzVector l4t = electrons[i]->P4() + muonsCombined[j]->P4();
 					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
 					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
-					if ( muonsCombined[lMuon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon1]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon2]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon1]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon2]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
 					if ( electrons[i]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
 					countSignalEvent( "emu" );
 				}
@@ -131,10 +130,10 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 					TLorentzVector l4t = electrons[i]->P4() + jets[j]->P4();
 					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
 					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
-					if ( muonsCombined[lMuon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon1]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon2]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon1]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon2]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
 					if ( electrons[i]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
 					countSignalEvent( "eh" );
 					ehFlag = 1;
@@ -150,10 +149,10 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 					TLorentzVector l4t = muonsCombined[i]->P4() + jets[j]->P4();
 					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
 					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
-					if ( muonsCombined[lMuon1]->P4().DeltaR( muonsCombined[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon2]->P4().DeltaR( muonsCombined[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon1]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon2]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon1]->P4().DeltaR( muonsCombined[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon2]->P4().DeltaR( muonsCombined[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon1]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon2]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
 					if ( muonsCombined[i]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
 					countSignalEvent( "muh" );
 				}
@@ -165,13 +164,13 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 					TLorentzVector l4t = jets[i]->P4() + jets[j]->P4();
 					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
 					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
-					if ( muonsCombined[lMuon1]->P4().DeltaR( jets[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon2]->P4().DeltaR( jets[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon1]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[lMuon2]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon1]->P4().DeltaR( jets[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon2]->P4().DeltaR( jets[i]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon1]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
+					if ( muonsCombined[muon2]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
 					if ( jets[i]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
 					countSignalEvent( "hh" );
-				}*/
+				}
 }
 
 void Cms_1701_02032_8_2mu2t::finalize() {
