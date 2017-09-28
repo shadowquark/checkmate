@@ -77,7 +77,6 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 		}
 	if ( lMuon1 <= 17 )	return;
 	if ( lMuon2 <= 8 )	return;
-//	if ( abs( muonsCombined[lmuon1]->P4().M() - 125 ) < )
 	if ( muonsCombined[muon1]->P4().DeltaR( muonsCombined[muon2]->P4() ) < 0.4 )	return;
 	electrons = filterPhaseSpace( electrons , 7 , -2.5 , 2.5 );
 	jets = filterPhaseSpace( jets , 15 , -2.3 , 2.3 );
@@ -86,58 +85,54 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 			return;
 	TLorentzVector l4T = muonsCombined[muon1]->P4() + muonsCombined[muon2]->P4();
 	if ( l4T.M() < 14 || l4T.M() > 66 )	return;
+	bool eeFlag = 1; 
 	if ( electrons.size() == 2 && muonsCombined.size() == 2 && lMuon1 > 18 && lMuon2 > 9 )
-		for ( int i = 0 ; i < electrons.size() ; ++ i )
-			for ( int j = i + 1 ; j < electrons.size() ; ++ j )
-				if ( electrons[i]->Charge != electrons[j]->Charge )
-				{
-					TLorentzVector l4t = electrons[i]->P4() + electrons[j]->P4();
-					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
-					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
-					if ( muonsCombined[muon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[muon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[muon1]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[muon2]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
-					if ( electrons[i]->P4().DeltaR( electrons[j]->P4() ) < 0.4 )	continue;
-					countSignalEvent( "2e" );
-				}
+		if ( electrons[0]->Charge != electrons[1]->Charge )
+		{
+			TLorentzVector l4t = electrons[0]->P4() + electrons[1]->P4() + missingET->P4();
+			TLorentzVector l4e = electrons[0]->P4() + electrons[1]->P4();
+			if ( abs( ( l4T + l4e ).M() - 125 ) <= 15 )	eeFlag = 0;
+			if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	eeFlag = 0;
+			if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	eeFlag = 0;
+			if ( muonsCombined[muon1]->P4().DeltaR( electrons[0]->P4() ) < 0.4 )	eeFlag = 0;
+			if ( muonsCombined[muon2]->P4().DeltaR( electrons[0]->P4() ) < 0.4 )	eeFlag = 0;
+			if ( muonsCombined[muon1]->P4().DeltaR( electrons[1]->P4() ) < 0.4 )	eeFlag = 0;
+			if ( muonsCombined[muon2]->P4().DeltaR( electrons[1]->P4() ) < 0.4 )	eeFlag = 0;
+			if ( electrons[0]->P4().DeltaR( electrons[1]->P4() ) < 0.4 )	eeFlag = 0;
+			if (eeFlag)	countSignalEvent( "2e" );
+		}
 	if ( electrons.size() == 1 && muonsCombined.size() == 3 )
-		for ( int i = 0 ; i < electrons.size() ; ++ i )
-			for ( int j = 0 ; j < muonsCombined.size() ; ++ j )
-				if ( electrons[i]->Charge != muonsCombined[j]->Charge && j != muon1 && j != muon2 )
-				{
-					TLorentzVector l4t = electrons[i]->P4() + muonsCombined[j]->P4();
-					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
-					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
-					if ( muonsCombined[muon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[muon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[muon1]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[muon2]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
-					if ( electrons[i]->P4().DeltaR( muonsCombined[j]->P4() ) < 0.4 )	continue;
-					countSignalEvent( "emu" );
-				}
+		for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
+			if ( electrons[0]->Charge != muonsCombined[i]->Charge && i != muon1 && i != muon2 )
+			{
+				TLorentzVector l4t = electrons[0]->P4() + muonsCombined[i]->P4();
+				if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
+				if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
+				if ( muonsCombined[muon1]->P4().DeltaR( electrons[0]->P4() ) < 0.4 )	continue;
+				if ( muonsCombined[muon2]->P4().DeltaR( electrons[0]->P4() ) < 0.4 )	continue;
+				if ( muonsCombined[muon1]->P4().DeltaR( muonsCombined[i]->P4() ) < 0.4 )	continue;
+				if ( muonsCombined[muon2]->P4().DeltaR( muonsCombined[i]->P4() ) < 0.4 )	continue;
+				if ( electrons[0]->P4().DeltaR( muonsCombined[i]->P4() ) < 0.4 )	continue;
+				countSignalEvent( "emu" );
+			}
 	if ( electrons.size() == 1 && ! jets.size() && muonsCombined.size() == 2 && lMuon1 > 18 && lMuon2 > 9 )
 	{
 		bool ehFlag = 0;
-		for ( int i = 0 ; i < electrons.size() ; ++ i )
+		for ( int i = 0 ; i < jets.size() ; ++ i )
 		{
 			if ( ehFlag )	break;
-			for ( int j = 0 ; j < jets.size() ; ++ j )
+			if ( electrons[0]->Charge + jets[i]->Charge == 0 )
 			{
-				if ( ehFlag )	break;
-				if ( electrons[i]->Charge + jets[j]->Charge == 0 )
-				{
-					TLorentzVector l4t = electrons[i]->P4() + jets[j]->P4();
-					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
-					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
-					if ( muonsCombined[muon1]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[muon2]->P4().DeltaR( electrons[i]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[muon1]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
-					if ( muonsCombined[muon2]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
-					if ( electrons[i]->P4().DeltaR( jets[j]->P4() ) < 0.4 )	continue;
-					countSignalEvent( "eh" );
-					ehFlag = 1;
-				}
+				TLorentzVector l4t = electrons[0]->P4() + jets[i]->P4();
+				if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
+				if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
+				if ( muonsCombined[muon1]->P4().DeltaR( electrons[0]->P4() ) < 0.4 )	continue;
+				if ( muonsCombined[muon2]->P4().DeltaR( electrons[0]->P4() ) < 0.4 )	continue;
+				if ( muonsCombined[muon1]->P4().DeltaR( jets[i]->P4() ) < 0.4 )	continue;
+				if ( muonsCombined[muon2]->P4().DeltaR( jets[i]->P4() ) < 0.4 )	continue;
+				if ( electrons[0]->P4().DeltaR( jets[i]->P4() ) < 0.4 )	continue;
+				countSignalEvent( "eh" );
+				ehFlag = 1;
 			}
 		}
 	}
