@@ -105,7 +105,7 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 		for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
 			if ( electrons[0]->Charge != muonsCombined[i]->Charge && i != muon1 && i != muon2 )
 			{
-				TLorentzVector l4t = electrons[0]->P4() + muonsCombined[i]->P4();
+				TLorentzVector l4t = electrons[0]->P4() + muonsCombined[i]->P4() + missingET->P4();
 				if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
 				if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
 				if ( muonsCombined[muon1]->P4().DeltaR( electrons[0]->P4() ) < 0.4 )	continue;
@@ -123,7 +123,7 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 			if ( ehFlag )	break;
 			if ( electrons[0]->Charge + jets[i]->Charge == 0 )
 			{
-				TLorentzVector l4t = electrons[0]->P4() + jets[i]->P4();
+				TLorentzVector l4t = electrons[0]->P4() + jets[i]->P4() + missingET->P4();
 				if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
 				if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
 				if ( muonsCombined[muon1]->P4().DeltaR( electrons[0]->P4() ) < 0.4 )	continue;
@@ -141,7 +141,7 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 			for ( int j = 0 ; j < jets.size() ; ++ j )
 				if ( muonsCombined[i]->Charge + jets[j]->Charge == 0 && i != muon1 && i != muon2 )
 				{
-					TLorentzVector l4t = muonsCombined[i]->P4() + jets[j]->P4();
+					TLorentzVector l4t = muonsCombined[i]->P4() + jets[j]->P4() + missingET->P4();
 					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
 					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
 					if ( muonsCombined[muon1]->P4().DeltaR( muonsCombined[i]->P4() ) < 0.4 )	continue;
@@ -156,7 +156,7 @@ void Cms_1701_02032_8_2mu2t::analyze() {
 			for ( int j = 0 ; j < jets.size() ; ++ j )
 				if ( jets[i]->Charge + jets[j]->Charge == 0 )
 				{
-					TLorentzVector l4t = jets[i]->P4() + jets[j]->P4();
+					TLorentzVector l4t = jets[i]->P4() + jets[j]->P4() + missingET->P4();
 					if ( abs( ( l4T + l4t ).M() - 125 ) >= 25 )	continue;
 					if ( abs( l4T.M() - l4t.M() ) / l4T.M() >= 0.8 )	continue;
 					if ( muonsCombined[muon1]->P4().DeltaR( jets[i]->P4() ) < 0.4 )	continue;
