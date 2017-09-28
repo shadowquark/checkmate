@@ -80,6 +80,8 @@ void Cms_1701_02032_8_2mu2b::analyze() {
 	if ( muon1 < 0 || muon2 < 0 )	return;
 	if ( muonsCombined[muon1]->PT <= 24 )	return;
 	if ( muonsCombined[muon2]->PT <= 9 )	return;
+	TLorentzVector mumu = muonsCombined[muon1]->P4() + muonsCombined[muon2]->P4();
+	if ( mumu.M() < 20 || mumu.M() > 70 )	return;
 	jets = filterPhaseSpace( jets , 15 , -2.4 , 2.4 );
 	maxPt1 = maxPt2 = 0;
 	int jet1 , jet2;
@@ -90,13 +92,13 @@ void Cms_1701_02032_8_2mu2b::analyze() {
 		{
 			maxPt2 = maxPt1;
 			jet2 = jet1;
-			maxPt1 = muonsCombined[i]->PT;
+			maxPt1 = jets[i]->PT;
 			jet1 = i;
 			continue;
 		}
 		if ( jets[i]->PT > maxPt2 && checkBTag( jets[i] ) )
 		{
-			maxPt2 = muonsCombined[i]->PT;
+			maxPt2 = jets[i]->PT;
 			jet2 = i;
 		}
 	}
