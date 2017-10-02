@@ -406,6 +406,7 @@ src/fritz-main.o: src/main.cc /usr/include/stdc-predef.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_conf_2014_056.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_conf_2015_004.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1612_07004_8.h \
+ /home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1508_04735_8.h \
  include/analysishandler/AnalysisHandlerATLAS_13TeV.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1602_09058.h \
  /home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1604_07773.h \
@@ -1580,6 +1581,8 @@ include/analysishandler/AnalysisHandlerATLAS_8TeV.h:
 /home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_conf_2015_004.h:
 
 /home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1612_07004_8.h:
+
+/home/shadowquark/code/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1508_04735_8.h:
 
 include/analysishandler/AnalysisHandlerATLAS_13TeV.h:
 

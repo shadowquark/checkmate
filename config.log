@@ -38,6 +38,8 @@ PATH: /usr/lib/mit/bin
 PATH: /usr/lib/mit/sbin
 PATH: /home/shadowquark/code/anaconda2/bin
 PATH: /home/shadowquark/code/anaconda3/bin
+PATH: /home/shadowquark/code/anaconda2/bin
+PATH: /home/shadowquark/code/anaconda3/bin
 
 
 ## ----------- ##
