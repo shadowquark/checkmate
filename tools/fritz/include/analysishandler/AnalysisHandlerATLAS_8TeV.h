@@ -46,6 +46,7 @@
 #include "atlas_conf_2015_004.h"
 #include "atlas_1612_07004_8.h"
 #include "atlas_1508_04735_8.h"
+#include "atlas_1506_01839_8.h"
 //@extraheader@
 #include "AnalysisBase.h"
 

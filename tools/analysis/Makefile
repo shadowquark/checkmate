@@ -225,7 +225,8 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.lo \
 	src/analyses/ATLAS_8TeV/atlas_1612_07004_8.lo \
 	src/analyses/CMS_7TeV/cms_1306_1126_7.lo \
-	src/analyses/ATLAS_8TeV/atlas_1508_04735_8.lo
+	src/analyses/ATLAS_8TeV/atlas_1508_04735_8.lo \
+	src/analyses/ATLAS_8TeV/atlas_1506_01839_8.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -682,7 +683,9 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	include/analyses/CMS_7TeV/cms_1306_1126_7.h \
 	src/analyses/CMS_7TeV/cms_1306_1126_7.cc \
 	include/analyses/ATLAS_8TeV/atlas_1508_04735_8.h \
-	src/analyses/ATLAS_8TeV/atlas_1508_04735_8.cc
+	src/analyses/ATLAS_8TeV/atlas_1508_04735_8.cc \
+	include/analyses/ATLAS_8TeV/atlas_1506_01839_8.h \
+	src/analyses/ATLAS_8TeV/atlas_1506_01839_8.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
@@ -1132,6 +1135,9 @@ src/analyses/CMS_7TeV/cms_1306_1126_7.lo:  \
 src/analyses/ATLAS_8TeV/atlas_1508_04735_8.lo:  \
 	src/analyses/ATLAS_8TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_8TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_8TeV/atlas_1506_01839_8.lo:  \
+	src/analyses/ATLAS_8TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_8TeV/$(DEPDIR)/$(am__dirstamp)
 
 libanalyses.la: $(libanalyses_la_OBJECTS) $(libanalyses_la_DEPENDENCIES) $(EXTRA_libanalyses_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libanalyses_la_LINK) -rpath $(mylibdir) $(libanalyses_la_OBJECTS) $(libanalyses_la_LIBADD) $(LIBS)
@@ -1204,6 +1210,7 @@ include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1411_1559.Plo
 include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1501_07110.Plo
 include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1502_01518.Plo
 include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1503_03290.Plo
+include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1506_01839_8.Plo
 include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1506_08616.Plo
 include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1508_04735_8.Plo
 include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1612_07004_8.Plo
