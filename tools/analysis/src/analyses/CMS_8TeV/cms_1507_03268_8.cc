@@ -68,26 +68,74 @@ void Cms_1507_03268_8::analyze() {
 	electronsTight = filterPhaseSpace( electronsTight , 20 , -2.5 , 2.5 );
 	muonsCombined = filterPhaseSpace( muonsCombined , 20 , -2.4 , 2.4 );
 	if ( electronsTight.size() + muonsCombined.size() != 2 )	return;
-	TLorentzVector llV = 0;
+	TLorentzVector llV;
 	int llP;
 	if ( electronsTight.size() == 2 )
 	{
+		if ( electronsTight[0]->Charge == electronsTight[1]->Charge )	return;
 		llV = electronsTight[0]->P4() + electronsTight[1]->P4();
 		llP = 1;
 	}
 	if ( muonsCombined.size() == 2 )
 	{
+		if ( muonsCombined[0]->Charge == muonsCombined[1]->Charge )	return;
 		llV = muonsCombined[0]->P4() + muonsCombined[1]->P4();
 		llP = 2;
 	}
 	if ( muonsCombined.size() == 1 && electronsTight.size() == 1 )
 	{
+		if ( electronsTight[0]->Charge == muonsCombined[0]->Charge )	return;
 		llV = muonsCombined[0]->P4() + electronsTight[0]->P4();
 		llP = 0;
 	}
+	double pEt = missingET->PT , tmpAng = M_PI / 2;
+	bool tmplepFlag = 0;
+	for ( int i = 0 ; i < electronsTight.size() ; ++ i )
+		if ( abs( electronsTight[i]->P4().DeltaPhi( missingET->P4() ) ) < tmpAng )
+		{
+			tmpAng = abs( electronsTight[i]->P4().DeltaPhi( missingET->P4() ) );
+			tmplepFlag = 1;
+		}
+	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
+		if ( abs( muonsCombined[i]->P4().DeltaPhi( missingET->P4() ) ) < tmpAng )
+		{
+			tmpAng = abs( muonsCombined[i]->P4().DeltaPhi( missingET->P4() ) );
+			tmplepFlag = 1;
+		}
+	if (tmplepFlag)	pEt *= cos(tmpAng);
+	if ( pEt <= 20 )	return;
+	TLorentzVector trackET;
+	pEt = 0;
+	tmplepFlag = 0;
+	tmpAng = M_PI / 2;
+	for ( int i = 0 ; i < tracks.size() ; ++ i )
+	{
+		pEt += tracks[i]->PT;
+		trackET += tracks[i]->P4();
+	}
+	trackET.SetPxPyPzE( - trackET.Px() , - trackET.Py() , - trackET.Pz() , 8000 - trackET.E() );
+	for ( int i = 0 ; i < electronsTight.size() ; ++ i )
+		if ( abs( electronsTight[i]->P4().DeltaPhi(trackET) ) < tmpAng )
+		{
+			tmpAng = abs( electronsTight[i]->P4().DeltaPhi(trackET) );
+			tmplepFlag = 1;
+		}
+	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
+		if ( abs( muonsCombined[i]->P4().DeltaPhi(trackET) ) < tmpAng )
+		{
+			tmpAng = abs( muonsCombined[i]->P4().DeltaPhi(trackET) );
+			tmplepFlag = 1;
+		}
+	if (tmplepFlag)	pEt *= cos(tmpAng);
+	if ( pEt <= 20 )	return;
 	if ( llV.M() < 12 )	return;
 	if ( llV.Pt() <= 45 && llP )	return;
 	if ( llV.Pt() <= 30 && !llP )	return;
+	if ( abs( llV.M() - 91.1876 ) <= 15 && llP )	return;
+	if ( ! jets.size() && !llP )	countSignalEvent( "0jDf" );
+	if ( ! jets.size() && llP )	countSignalEvent( "0jSf" );
+	if ( jets.size() && !llP )	countSignalEvent( "1jDf" );
+	if ( jets.size() && llP )	countSignalEvent( "1jSf" );
 }
 
 void Cms_1507_03268_8::finalize() {
