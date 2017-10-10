@@ -227,7 +227,8 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/CMS_7TeV/cms_1306_1126_7.lo \
 	src/analyses/ATLAS_8TeV/atlas_1508_04735_8.lo \
 	src/analyses/ATLAS_8TeV/atlas_1506_01839_8.lo \
-	src/analyses/CMS_8TeV/cms_1507_03268_8.lo
+	src/analyses/CMS_8TeV/cms_1507_03268_8.lo \
+	src/analyses/CMS_13TeV/cms_1709_08601_13.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -688,7 +689,9 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	include/analyses/ATLAS_8TeV/atlas_1506_01839_8.h \
 	src/analyses/ATLAS_8TeV/atlas_1506_01839_8.cc \
 	include/analyses/CMS_8TeV/cms_1507_03268_8.h \
-	src/analyses/CMS_8TeV/cms_1507_03268_8.cc
+	src/analyses/CMS_8TeV/cms_1507_03268_8.cc \
+	include/analyses/CMS_13TeV/cms_1709_08601_13.h \
+	src/analyses/CMS_13TeV/cms_1709_08601_13.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
@@ -1144,6 +1147,9 @@ src/analyses/ATLAS_8TeV/atlas_1506_01839_8.lo:  \
 src/analyses/CMS_8TeV/cms_1507_03268_8.lo:  \
 	src/analyses/CMS_8TeV/$(am__dirstamp) \
 	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_13TeV/cms_1709_08601_13.lo:  \
+	src/analyses/CMS_13TeV/$(am__dirstamp) \
+	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
 
 libanalyses.la: $(libanalyses_la_OBJECTS) $(libanalyses_la_DEPENDENCIES) $(EXTRA_libanalyses_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libanalyses_la_LINK) -rpath $(mylibdir) $(libanalyses_la_OBJECTS) $(libanalyses_la_LIBADD) $(LIBS)
@@ -1247,6 +1253,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_conf_2014_056.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_conf_2015_004.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_13TeV/$(DEPDIR)/cms_1701_02042.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_13TeV/$(DEPDIR)/cms_1709_08601_13.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_13TeV/$(DEPDIR)/cms_pas_sus_15_011.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_7TeV/$(DEPDIR)/cms_1306_1126_7.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_7TeV/$(DEPDIR)/cms_1306_1126_WW.Plo@am__quote@

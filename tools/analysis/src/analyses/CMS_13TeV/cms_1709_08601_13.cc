@@ -74,12 +74,19 @@ void Cms_1709_08601_13::analyze() {
 		for ( int j = i ; j < 4 ; ++ j )
 			if ( muonsCombined[i]->Charge + muonsCombined[j]->Charge == 0 )
 			{
+				if ( ( muonsCombined[i]->P4() + muonsCombined[j]->P4() ).M() <= 4 )	return;
 				if ( abs( ( muonsCombined[i]->P4() + muonsCombined[j]->P4() ).M() - 91.1876 ) < minMz )
 				{
 					dilepton1 = muonsCombined[i]->P4() + muonsCombined[j]->P4();
 					minMz = abs( dilepton1.M() - 91.1876 );
 				}
 			}
+	dilepton2 = - dilepton1;
+	for ( int i = 0 ; i < 4 ; ++ i )
+		dilepton2 += muonsCombined[i]->P4();
+	if ( dilepton1.M() <= 40 )	return;
+	if ( dilepton1.M() >= 120 || dilepton2.M() >= 120 )	return;
+	countSignalEvent( "4mu" );
 }
 
 void Cms_1709_08601_13::finalize() {
