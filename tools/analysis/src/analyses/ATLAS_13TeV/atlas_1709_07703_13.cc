@@ -59,8 +59,31 @@ void Atlas_1709_07703_13::analyze() {
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
 	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.7 , 2.7 );
 	if ( muonsCombined.size() < 4 )	return;
+	vector<TLorentzVector> muonsPhoton;
+	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
+	{
+		TLorentzVector tmpVec4( 0 , 0 , 0 , 0 );
+		for ( int j = 0 ; j < photons.size() ; ++ j )
+			if ( muonsCombined[i]->P4().DeltaR( photons[j]->P4() ) < 0.1 )
+				tmpVec4 += photons[j]->P4();
+		muonsPhoton.push_back( muonsCombined[i]->P4() + tmpVec4 );
+	}
+	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
+		for ( int j = i ; j < muonsCombined.size() ; ++ j )
+		{
+			if ( muonsCombined[i]->Charge + muonsCombined[j]->Charge == 0 )
+			{
+				double tmpMassll = ( muonsPhoton[i] + muonsPhoton[j] ).M();
+				if ( tmpMassll <= 5 )	return;
+			}
+			if ( muonsPhoton[i].DeltaR( muonsPhoton[j] ) <= 0.1 )	return;
+		}
 	jets = filterPhaseSpace( jets , 30 , -4.5 , 4.5 );
-	double minSelect = 10000;
+	for ( int i = 0 ; i < jets.size() ; ++ i )
+		for ( int j = 0 ; j < muonsPhoton.size() ; ++ j )
+			if ( jets[i]->P4().DeltaR( muonsPhoton[j] ) < 0.4 )
+				return;
+	double minSelect = 10000 , massll1 , massll2;
 	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
 		for ( int j = 0 ; j < muonsCombined.size() ; ++ j )
 			for ( int k = 0 ; k < muonsCombined.size() ; ++ k )
@@ -76,17 +99,41 @@ void Atlas_1709_07703_13::analyze() {
 					{
 						if ( muonsCombined[i]->Charge + muonsCombined[j]->Charge == 0 )
 						{
-							
+							double tmpll1 = ( muonsPhoton[i] + muonsPhoton[j] ).M();
+							double tmpll2 = ( muonsPhoton[k] + muonsPhoton[kk] ).M();
+							if ( abs( tmpll1 - 91.1876 ) + abs( tmpll2 - 91.1876 ) < minSelect )
+							{
+								massll1 = tmpll1;
+								massll2 = tmpll2;
+								minSelect = abs( tmpll1 - 91.1876 ) + abs( tmpll2 - 91.1876 );
+							}	
 						} else
 						{
-							if ( muonsCombined[i] + muonsCombined[k] == 0 )
+							if ( muonsCombined[i]->Charge + muonsCombined[k]->Charge == 0 )
 							{
+								double tmpll1 = ( muonsPhoton[i] + muonsPhoton[k] ).M();
+								double tmpll2 = ( muonsPhoton[j] + muonsPhoton[kk] ).M();
+								if ( abs( tmpll1 - 91.1876 ) + abs( tmpll2 - 91.1876 ) < minSelect )
+								{
+									massll1 = tmpll1;
+									massll2 = tmpll2;
+									minSelect = abs( tmpll1 - 91.1876 ) + abs( tmpll2 - 91.1876 );
+								}	
 							} else
 							{
+								double tmpll1 = ( muonsPhoton[i] + muonsPhoton[kk] ).M();
+								double tmpll2 = ( muonsPhoton[j] + muonsPhoton[k] ).M();
+								if ( abs( tmpll1 - 91.1876 ) + abs( tmpll2 - 91.1876 ) < minSelect )
+								{
+									massll1 = tmpll1;
+									massll2 = tmpll2;
+									minSelect = abs( tmpll1 - 91.1876 ) + abs( tmpll2 - 91.1876 );
+								}	
 							}
 						}
 					}
-				
+	if ( massll1 <= 66 || massll2 <= 66 || massll1 >=116 || massll2 >= 116 )	return;
+	countSignalEvent( "4mu" );
 }
 
 void Atlas_1709_07703_13::finalize() {

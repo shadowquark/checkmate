@@ -228,7 +228,8 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/ATLAS_8TeV/atlas_1508_04735_8.lo \
 	src/analyses/ATLAS_8TeV/atlas_1506_01839_8.lo \
 	src/analyses/CMS_8TeV/cms_1507_03268_8.lo \
-	src/analyses/CMS_13TeV/cms_1709_08601_13.lo
+	src/analyses/CMS_13TeV/cms_1709_08601_13.lo \
+	src/analyses/ATLAS_13TeV/atlas_1709_07703_13.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -691,7 +692,9 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	include/analyses/CMS_8TeV/cms_1507_03268_8.h \
 	src/analyses/CMS_8TeV/cms_1507_03268_8.cc \
 	include/analyses/CMS_13TeV/cms_1709_08601_13.h \
-	src/analyses/CMS_13TeV/cms_1709_08601_13.cc
+	src/analyses/CMS_13TeV/cms_1709_08601_13.cc \
+	include/analyses/ATLAS_13TeV/atlas_1709_07703_13.h \
+	src/analyses/ATLAS_13TeV/atlas_1709_07703_13.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
@@ -1150,6 +1153,9 @@ src/analyses/CMS_8TeV/cms_1507_03268_8.lo:  \
 src/analyses/CMS_13TeV/cms_1709_08601_13.lo:  \
 	src/analyses/CMS_13TeV/$(am__dirstamp) \
 	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1709_07703_13.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
 
 libanalyses.la: $(libanalyses_la_OBJECTS) $(libanalyses_la_DEPENDENCIES) $(EXTRA_libanalyses_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libanalyses_la_LINK) -rpath $(mylibdir) $(libanalyses_la_OBJECTS) $(libanalyses_la_LIBADD) $(LIBS)
@@ -1191,6 +1197,7 @@ include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1605_03814.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1605_04285.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1605_09318.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1606_03903.Plo
+include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1709_07703_13.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2015_082.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_013.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_050.Plo
