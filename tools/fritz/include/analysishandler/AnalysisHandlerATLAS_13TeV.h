@@ -27,6 +27,7 @@
 #include "atlas_conf_2016_054.h"
 #include "atlas_conf_2016_078.h"
 #include "atlas_1709_07703_13.h"
+#include "atlas_1709_07242_13.h"
 //@extraheader@
 #include "AnalysisBase.h"
 
