@@ -46,7 +46,7 @@
   ], 
   "muon_iso_ptmin": [
     "0.5", 
-    "0.0"
+    "0.1"
   ], 
   "muon_iso_ptratiomax": [
     "0.2", 
