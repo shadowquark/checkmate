@@ -57,6 +57,7 @@ void Cms_1701_02032_8_4t::analyze() {
   // - If you need output to be stored in other files than the cutflow/signal files we provide, check the manual for how to do this conveniently.  
 
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
+	muonsCombined = filterIsolation(muonsCombined);
 	vector<Muon*> muons25 = filterPhaseSpace( muonsCombined , 25 , -2.1 , 2.1 );
 	if ( !muons25.size() )	return;
 	electrons = filterPhaseSpace( electrons , 7 , -2.5 , 2.5 );

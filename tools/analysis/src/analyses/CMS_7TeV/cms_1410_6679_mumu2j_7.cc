@@ -58,6 +58,7 @@ void Cms_1410_6679_mumu2j_7::analyze() {
 
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
 	vector<Muon*> muon15 = filterPhaseSpace( muonsCombined , 15 , -2.1 , 2.1 );
+	muon15 = filterIsolation(muon15);
 	if ( muon15.size() < 2 )	return;
 	for ( int i = 0 ; i < muon15.size() ; ++ i )
 		for ( int j = 0 ; j < tracks.size() ; ++ j )

@@ -339,9 +339,9 @@ CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2 -std=gnu++11
 CYGPATH_W = echo
 DEFS = -DPACKAGE_NAME=\"CheckMATE\" -DPACKAGE_TARNAME=\"checkmate\" -DPACKAGE_VERSION=\"2.0.0\" -DPACKAGE_STRING=\"CheckMATE\ 2.0.0\" -DPACKAGE_BUGREPORT=\"daschm@uni-bonn.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"checkmate\" -DVERSION=\"2.0.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DSTDC_HEADERS=1 -DHAVE_IOSTREAM=1 -DHAVE_OSTREAM=1 -DHAVE_FSTREAM=1
-DELPHESCFLAGS = -I/Users/shadowquark/code/checkmate/tools/delphes -I/Users/shadowquark/code/checkmate/tools/delphes/external
+DELPHESCFLAGS = -I/Users/shadowquark/code/github/checkmate/tools/delphes -I/Users/shadowquark/code/github/checkmate/tools/delphes/external
 DELPHESINCLUDE = 
-DELPHESLIBDIR = /Users/shadowquark/code/checkmate/tools/delphes
+DELPHESLIBDIR = /Users/shadowquark/code/github/checkmate/tools/delphes
 DELPHESLIBS = -lEG -lDelphes
 DEPDIR = .deps
 DSYMUTIL = dsymutil
@@ -367,7 +367,7 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /Library/Developer/CommandLineTools/usr/bin/ld
 LDFLAGS = 
 LD_LIBRARY_PATH = 
-LD_RUN_PATH = /usr/local/Cellar/root/6.12.06/lib/root:/Users/shadowquark/code/checkmate/tools/delphes
+LD_RUN_PATH = /usr/local/Cellar/root/6.12.06/lib/root:/Users/shadowquark/code/github/checkmate/tools/delphes
 LIBOBJS = 
 LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
@@ -480,7 +480,7 @@ top_build_prefix = ../../
 top_builddir = ../..
 top_srcdir = ../..
 AUTOMAKE_OPTIONS = subdir-objects
-AM_CXXFLAGS = -I/usr/local/Cellar/root/6.12.06/include/root -I/Users/shadowquark/code/checkmate/tools/delphes -I/Users/shadowquark/code/checkmate/tools/delphes/external -Iinclude/base -Iinclude/kinematics -Iinclude/kinematics/mctlib \
+AM_CXXFLAGS = -I/usr/local/Cellar/root/6.12.06/include/root -I/Users/shadowquark/code/github/checkmate/tools/delphes -I/Users/shadowquark/code/github/checkmate/tools/delphes/external -Iinclude/base -Iinclude/kinematics -Iinclude/kinematics/mctlib \
              -Iinclude/kinematics/mt2family -Iinclude/kinematics/topness -Iinclude/global \
              -Iinclude/analyses/ATLAS_7TeV -Iinclude/analyses/ATLAS_8TeV -Iinclude/analyses/ATLAS_13TeV -Iinclude/analyses/ATLAS_14TeV_HighLumi \
              -Iinclude/analyses/CMS_7TeV -Iinclude/analyses/CMS_8TeV -Iinclude/analyses/CMS_13TeV -Iinclude/analyses/CMS_14TeV_HighLumi
@@ -701,7 +701,7 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
-libanalyses_la_LIBADD = -L/usr/local/Cellar/root/6.12.06/lib/root -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -L/Users/shadowquark/code/checkmate/tools/delphes -lEG -lDelphes
+libanalyses_la_LIBADD = -L/usr/local/Cellar/root/6.12.06/lib/root -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -L/Users/shadowquark/code/github/checkmate/tools/delphes -lEG -lDelphes
 all: all-am
 
 .SUFFIXES:

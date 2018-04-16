@@ -215,9 +215,9 @@ CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2 -std=gnu++11
 CYGPATH_W = echo
 DEFS = -DPACKAGE_NAME=\"CheckMATE\" -DPACKAGE_TARNAME=\"checkmate\" -DPACKAGE_VERSION=\"2.0.0\" -DPACKAGE_STRING=\"CheckMATE\ 2.0.0\" -DPACKAGE_BUGREPORT=\"daschm@uni-bonn.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"checkmate\" -DVERSION=\"2.0.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DSTDC_HEADERS=1 -DHAVE_IOSTREAM=1 -DHAVE_OSTREAM=1 -DHAVE_FSTREAM=1
-DELPHESCFLAGS = -I/Users/shadowquark/code/checkmate/tools/delphes -I/Users/shadowquark/code/checkmate/tools/delphes/external
+DELPHESCFLAGS = -I/Users/shadowquark/code/github/checkmate/tools/delphes -I/Users/shadowquark/code/github/checkmate/tools/delphes/external
 DELPHESINCLUDE = 
-DELPHESLIBDIR = /Users/shadowquark/code/checkmate/tools/delphes
+DELPHESLIBDIR = /Users/shadowquark/code/github/checkmate/tools/delphes
 DELPHESLIBS = -lEG -lDelphes
 DEPDIR = .deps
 DSYMUTIL = dsymutil

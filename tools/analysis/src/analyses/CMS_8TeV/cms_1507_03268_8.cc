@@ -63,6 +63,7 @@ void Cms_1507_03268_8::analyze() {
 		if ( checkBTag( jets[0] ) )
 			return;
 	electronsTight = filterPhaseSpace( electronsTight , 10 , -2.5 , 2.5 );
+	electronsTight = filterIsolation(electronsTight);
 	muonsCombined = filterPhaseSpace( muonsCombined , 10 , -2.4 , 2.4 );
 	if ( electronsTight.size() + muonsCombined.size() != 2 )	return;
 	electronsTight = filterPhaseSpace( electronsTight , 20 , -2.5 , 2.5 );

@@ -59,6 +59,7 @@ void Cms_1701_02042::analyze() {
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
 	if ( missingET->P4().E() <= 80 )	return;
 	vector<Muon*> mRec = filterPhaseSpace( muonsCombined , 10 , -2.4 , 2.4 );
+	mRec = filterIsolation(mRec);
 	if ( mRec.size() > 2 )	return;
 	mRec = filterPhaseSpace( mRec , 20 , -2.4 , 2.4 );
 	if ( mRec.size() != 2 )	return;

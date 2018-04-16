@@ -58,6 +58,7 @@ void Cms_1709_08601_13::analyze() {
 
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
 	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
+	muonsCombined = filterIsolation(muonsCombined);
 	if ( muonsCombined.size() < 4 )	return;
 	int totCharge = 0;
 	for ( int i = 0 ; i < 4 ; ++ i )

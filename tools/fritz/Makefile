@@ -279,9 +279,9 @@ CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2 -std=gnu++11
 CYGPATH_W = echo
 DEFS = -DPACKAGE_NAME=\"CheckMATE\" -DPACKAGE_TARNAME=\"checkmate\" -DPACKAGE_VERSION=\"2.0.0\" -DPACKAGE_STRING=\"CheckMATE\ 2.0.0\" -DPACKAGE_BUGREPORT=\"daschm@uni-bonn.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"checkmate\" -DVERSION=\"2.0.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DSTDC_HEADERS=1 -DHAVE_IOSTREAM=1 -DHAVE_OSTREAM=1 -DHAVE_FSTREAM=1
-DELPHESCFLAGS = -I/Users/shadowquark/code/checkmate/tools/delphes -I/Users/shadowquark/code/checkmate/tools/delphes/external
+DELPHESCFLAGS = -I/Users/shadowquark/code/github/checkmate/tools/delphes -I/Users/shadowquark/code/github/checkmate/tools/delphes/external
 DELPHESINCLUDE = 
-DELPHESLIBDIR = /Users/shadowquark/code/checkmate/tools/delphes
+DELPHESLIBDIR = /Users/shadowquark/code/github/checkmate/tools/delphes
 DELPHESLIBS = -lEG -lDelphes
 DEPDIR = .deps
 DSYMUTIL = dsymutil
@@ -458,10 +458,10 @@ fritz_SOURCES = src/main.cc src/global/Global.cc \
 	src/analysishandler/AnalysisHandlerCMS_14TeV_projected.cc \
 	include/analysishandler/AnalysisHandlerCMS_14TeV_projected.h \
 	$(am__append_1)
-fritz_LDADD = -L/usr/local/Cellar/root/6.12.06/lib/root -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -L/Users/shadowquark/code/checkmate/tools/delphes \
+fritz_LDADD = -L/usr/local/Cellar/root/6.12.06/lib/root -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -L/Users/shadowquark/code/github/checkmate/tools/delphes \
 	-lEG -lDelphes -L$(abs_top_builddir)/tools/analysis -lanalyses \
 	$(am__append_2) $(am__append_8)
-fritz_CXXFLAGS = -I/usr/local/Cellar/root/6.12.06/include/root -I/Users/shadowquark/code/checkmate/tools/delphes -I/Users/shadowquark/code/checkmate/tools/delphes/external -Iinclude/global \
+fritz_CXXFLAGS = -I/usr/local/Cellar/root/6.12.06/include/root -I/Users/shadowquark/code/github/checkmate/tools/delphes -I/Users/shadowquark/code/github/checkmate/tools/delphes/external -Iinclude/global \
 	-Iinclude/fritz -Iinclude/delpheshandler \
 	-Iinclude/analysishandler \
 	-I$(abs_top_builddir)/tools/analysis/include/base \
@@ -479,7 +479,7 @@ fritz_CXXFLAGS = -I/usr/local/Cellar/root/6.12.06/include/root -I/Users/shadowqu
 	-I$(abs_top_builddir)/tools/analysis/include/analyses/CMS_14TeV_HighLumi \
 	$(am__append_3) $(am__append_6) $(am__append_7) \
 	$(am__append_10)
-fritz_LDFLAGS = -R/usr/local/Cellar/root/6.12.06/lib/root -R/Users/shadowquark/code/checkmate/tools/delphes \
+fritz_LDFLAGS = -R/usr/local/Cellar/root/6.12.06/lib/root -R/Users/shadowquark/code/github/checkmate/tools/delphes \
 	-R$(abs_top_builddir)/tools/analysis $(am__append_4) \
 	$(am__append_9)
 all: all-am
