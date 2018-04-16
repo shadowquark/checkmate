@@ -1,0 +1,4 @@
+autoreconf
+./configure --with-delphes=/Users/shadowquark/code/checkmate/tools/delphes 
+make -j4
+
