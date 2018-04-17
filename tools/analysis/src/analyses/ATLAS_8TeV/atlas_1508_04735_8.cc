@@ -57,8 +57,8 @@ void Atlas_1508_04735_8::analyze() {
   // - If you need output to be stored in other files than the cutflow/signal files we provide, check the manual for how to do this conveniently.  
 
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
-	muonsCombined = filterIsolation(muonsCombined);
 	muonsCombined = filterPhaseSpace( muonsCombined , 40 , -2.4 , 2.4 );
+	muonsCombined = filterIsolation(muonsCombined);
 	if ( muonsCombined.size() != 2 )	return;
 	if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge != 0 )	return;
 	jets = overlapRemoval( jets , muonsCombined , 0.4 );
