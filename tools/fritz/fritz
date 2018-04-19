@@ -38,11 +38,11 @@ relink_command=""
 if test "$libtool_install_magic" = "%%%MAGIC variable%%%"; then
   # install mode needs the following variables:
   generated_by_libtool_version='2.2.6'
-  notinst_deplibs=' /Users/shadowquark/code/github/checkmate/tools/analysis/libanalyses.la'
+  notinst_deplibs=' /home/shadowquark/code/checkmate/tools/analysis/libanalyses.la'
 else
   # When we are sourced in execute mode, $file and $ECHO are already set.
   if test "$libtool_execute_magic" != "%%%MAGIC variable%%%"; then
-    ECHO="/bin/echo"
+    ECHO="echo"
     file="$0"
     # Make sure echo works.
     if test "X$1" = X--no-reexec; then
@@ -103,14 +103,14 @@ else
 
 
   if test -f "$progdir/$program"; then
-    # Add our own library path to DYLD_LIBRARY_PATH
-    DYLD_LIBRARY_PATH="/Users/shadowquark/code/github/checkmate/tools/analysis/.libs:$DYLD_LIBRARY_PATH"
+    # Add our own library path to LD_LIBRARY_PATH
+    LD_LIBRARY_PATH="/home/shadowquark/code/checkmate/tools/analysis/.libs:$LD_LIBRARY_PATH"
 
-    # Some systems cannot cope with colon-terminated DYLD_LIBRARY_PATH
+    # Some systems cannot cope with colon-terminated LD_LIBRARY_PATH
     # The second colon is a workaround for a bug in BeOS R4 sed
-    DYLD_LIBRARY_PATH=`$ECHO "X$DYLD_LIBRARY_PATH" | $Xsed -e 's/::*$//'`
+    LD_LIBRARY_PATH=`$ECHO "X$LD_LIBRARY_PATH" | $Xsed -e 's/::*$//'`
 
-    export DYLD_LIBRARY_PATH
+    export LD_LIBRARY_PATH
 
     if test "$libtool_execute_magic" != "%%%MAGIC variable%%%"; then
       # Run the actual program with our arguments.
@@ -124,7 +124,7 @@ else
     # The program doesn't exist.
     $ECHO "$0: error: \`$progdir/$program' does not exist" 1>&2
     $ECHO "This script is just a wrapper for $program." 1>&2
-    /bin/echo "See the libtool documentation for more information." 1>&2
+    echo "See the libtool documentation for more information." 1>&2
     exit 1
   fi
 fi
