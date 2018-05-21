@@ -190,29 +190,29 @@ src/analyses/ATLAS_13TeV/atlas_1605_04285.lo: \
  /usr/include/root/TMatrixTSym.h /usr/include/root/TMatrixTSparse.h \
  /usr/include/root/TMatrixDSym.h /usr/include/root/TMatrixDSymfwd.h \
  /usr/include/root/TMatrixDSparse.h /usr/include/root/TMatrixDSparsefwd.h \
- /home/shadowquark/code/checkmate/tools/delphes/classes/DelphesClasses.h \
+ /home/shadowquark/code/github/checkmate/tools/delphes/classes/DelphesClasses.h \
  /usr/include/root/TRef.h /usr/include/root/TRefArray.h \
  /usr/include/root/TProcessID.h /usr/include/root/TLorentzVector.h \
  /usr/include/root/TVector3.h /usr/include/root/TVector2.h \
  /usr/include/root/TMatrix.h /usr/include/root/TMatrixF.h \
  /usr/include/root/TMatrixFfwd.h /usr/include/root/TMatrixFUtils.h \
  /usr/include/root/TMatrixFUtilsfwd.h /usr/include/root/TRotation.h \
- /home/shadowquark/code/checkmate/tools/delphes/classes/SortableObject.h \
- /home/shadowquark/code/checkmate/tools/delphes/external/ExRootAnalysis/ExRootTreeReader.h \
+ /home/shadowquark/code/github/checkmate/tools/delphes/classes/SortableObject.h \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/ExRootAnalysis/ExRootTreeReader.h \
  /usr/include/root/TNamed.h /usr/include/root/TFile.h \
  /usr/include/root/TDirectoryFile.h /usr/include/root/TMap.h \
  /usr/include/root/THashTable.h /usr/include/root/TUrl.h \
- /home/shadowquark/code/checkmate/tools/delphes/external/ExRootAnalysis/ExRootResult.h \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/ExRootAnalysis/ExRootResult.h \
  /usr/include/root/Rtypes.h /usr/include/root/Gtypes.h \
  /usr/include/c++/4.8/set /usr/include/c++/4.8/bits/stl_set.h \
  /usr/include/c++/4.8/bits/stl_multiset.h \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/JetDefinition.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/JetDefinition.hh \
  /usr/include/c++/4.8/cassert /usr/include/assert.h \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/internal/numconsts.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/internal/base.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/config.h \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/config_auto.h \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/PseudoJet.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/internal/numconsts.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/internal/base.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/config.h \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/config_auto.h \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/PseudoJet.hh \
  /usr/include/c++/4.8/valarray /usr/include/c++/4.8/bits/valarray_array.h \
  /usr/include/c++/4.8/bits/valarray_array.tcc \
  /usr/include/c++/4.8/bits/valarray_before.h \
@@ -222,11 +222,11 @@ src/analyses/ATLAS_13TeV/atlas_1605_04285.lo: \
  /usr/include/c++/4.8/bits/gslice_array.h \
  /usr/include/c++/4.8/bits/mask_array.h \
  /usr/include/c++/4.8/bits/indirect_array.h \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/internal/IsBase.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/SharedPtr.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/internal/deprecated.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/Error.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/PseudoJetStructureBase.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/internal/IsBase.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/SharedPtr.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/internal/deprecated.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/Error.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/PseudoJetStructureBase.hh \
  /usr/include/c++/4.8/memory \
  /usr/include/c++/4.8/bits/stl_raw_storage_iter.h \
  /usr/include/c++/4.8/ext/concurrence.h \
@@ -234,17 +234,17 @@ src/analyses/ATLAS_13TeV/atlas_1605_04285.lo: \
  /usr/include/c++/4.8/bits/shared_ptr.h \
  /usr/include/c++/4.8/bits/shared_ptr_base.h \
  /usr/include/c++/4.8/backward/auto_ptr.h \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/ClusterSequence.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/JetDefinition.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/LimitedWarning.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/ClusterSequence.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/JetDefinition.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/LimitedWarning.hh \
  /usr/include/c++/4.8/list /usr/include/c++/4.8/bits/stl_list.h \
  /usr/include/c++/4.8/bits/list.tcc \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/FunctionOfPseudoJet.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/Selector.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/RangeDefinition.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/FunctionOfPseudoJet.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/Selector.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/RangeDefinition.hh \
  /usr/include/c++/4.8/sstream /usr/include/c++/4.8/bits/sstream.tcc \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/ClusterSequenceStructure.hh \
- /home/shadowquark/code/checkmate/tools/delphes/external/fastjet/ClusterSequence.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/ClusterSequenceStructure.hh \
+ /home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/ClusterSequence.hh \
  include/base/ETMiss.h include/base/FinalStateObject.h \
  include/base/Units.h include/kinematics/mt2family/mt2_bisect.h \
  include/kinematics/mctlib/mctlib.h \
@@ -857,7 +857,7 @@ include/base/AnalysisBase.h:
 
 /usr/include/root/TMatrixDSparsefwd.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/classes/DelphesClasses.h:
+/home/shadowquark/code/github/checkmate/tools/delphes/classes/DelphesClasses.h:
 
 /usr/include/root/TRef.h:
 
@@ -883,9 +883,9 @@ include/base/AnalysisBase.h:
 
 /usr/include/root/TRotation.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/classes/SortableObject.h:
+/home/shadowquark/code/github/checkmate/tools/delphes/classes/SortableObject.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/ExRootAnalysis/ExRootTreeReader.h:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/ExRootAnalysis/ExRootTreeReader.h:
 
 /usr/include/root/TNamed.h:
 
@@ -899,7 +899,7 @@ include/base/AnalysisBase.h:
 
 /usr/include/root/TUrl.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/ExRootAnalysis/ExRootResult.h:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/ExRootAnalysis/ExRootResult.h:
 
 /usr/include/root/Rtypes.h:
 
@@ -911,21 +911,21 @@ include/base/AnalysisBase.h:
 
 /usr/include/c++/4.8/bits/stl_multiset.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/JetDefinition.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/JetDefinition.hh:
 
 /usr/include/c++/4.8/cassert:
 
 /usr/include/assert.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/internal/numconsts.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/internal/numconsts.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/internal/base.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/internal/base.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/config.h:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/config.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/config_auto.h:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/config_auto.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/PseudoJet.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/PseudoJet.hh:
 
 /usr/include/c++/4.8/valarray:
 
@@ -947,15 +947,15 @@ include/base/AnalysisBase.h:
 
 /usr/include/c++/4.8/bits/indirect_array.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/internal/IsBase.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/internal/IsBase.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/SharedPtr.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/SharedPtr.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/internal/deprecated.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/internal/deprecated.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/Error.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/Error.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/PseudoJetStructureBase.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/PseudoJetStructureBase.hh:
 
 /usr/include/c++/4.8/memory:
 
@@ -971,11 +971,11 @@ include/base/AnalysisBase.h:
 
 /usr/include/c++/4.8/backward/auto_ptr.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/ClusterSequence.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/ClusterSequence.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/JetDefinition.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/JetDefinition.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/LimitedWarning.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/LimitedWarning.hh:
 
 /usr/include/c++/4.8/list:
 
@@ -983,19 +983,19 @@ include/base/AnalysisBase.h:
 
 /usr/include/c++/4.8/bits/list.tcc:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/FunctionOfPseudoJet.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/FunctionOfPseudoJet.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/Selector.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/Selector.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/RangeDefinition.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/RangeDefinition.hh:
 
 /usr/include/c++/4.8/sstream:
 
 /usr/include/c++/4.8/bits/sstream.tcc:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/ClusterSequenceStructure.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/ClusterSequenceStructure.hh:
 
-/home/shadowquark/code/checkmate/tools/delphes/external/fastjet/ClusterSequence.hh:
+/home/shadowquark/code/github/checkmate/tools/delphes/external/fastjet/ClusterSequence.hh:
 
 include/base/ETMiss.h:
 

@@ -80,10 +80,10 @@ build_triplet = x86_64-suse-linux-gnu
 host_triplet = x86_64-suse-linux-gnu
 mybin_PROGRAMS = fritz$(EXEEXT)
 am__append_1 = src/pythiahandler/PythiaHandler.cc include/pythiahandler/PythiaHandler.h
-am__append_2 = -L/home/shadowquark/code/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz
-am__append_3 = -I/home/shadowquark/code/checkmate/tools/pythia/include -Iinclude/pythiahandler -DHAVE_PYTHIA=1
-am__append_4 = -R/home/shadowquark/code/checkmate/tools/pythia/lib 
-am__append_5 = :/home/shadowquark/code/checkmate/tools/pythia/lib    
+am__append_2 = -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz
+am__append_3 = -I/home/shadowquark/code/github/checkmate/tools/pythia/include -Iinclude/pythiahandler -DHAVE_PYTHIA=1
+am__append_4 = -R/home/shadowquark/code/github/checkmate/tools/pythia/lib 
+am__append_5 = :/home/shadowquark/code/github/checkmate/tools/pythia/lib    
 #am__append_6 =   
 ##am__append_7 = 
 #am__append_8 =     
@@ -271,7 +271,7 @@ CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPP = gcc -E
-CPPFLAGS =  -I/home/shadowquark/code/checkmate/tools/pythia/include  -I/home/shadowquark/code/checkmate/tools/delphes -I/home/shadowquark/code/checkmate/tools/delphes/external -I/usr/include/root
+CPPFLAGS =  -I/home/shadowquark/code/github/checkmate/tools/pythia/include  -I/home/shadowquark/code/github/checkmate/tools/delphes -I/home/shadowquark/code/github/checkmate/tools/delphes/external -I/usr/include/root
 CREATE_HEPMC = 
 CXX = g++
 CXXCPP = g++ -E
@@ -279,9 +279,9 @@ CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2 -std=gnu++11
 CYGPATH_W = echo
 DEFS = -DPACKAGE_NAME=\"CheckMATE\" -DPACKAGE_TARNAME=\"checkmate\" -DPACKAGE_VERSION=\"2.0.0\" -DPACKAGE_STRING=\"CheckMATE\ 2.0.0\" -DPACKAGE_BUGREPORT=\"daschm@uni-bonn.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"checkmate\" -DVERSION=\"2.0.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DSTDC_HEADERS=1 -DHAVE_IOSTREAM=1 -DHAVE_OSTREAM=1 -DHAVE_FSTREAM=1 -DHAVE_PYTHIA8_PYTHIA_H=1 -DHAVE_CLASSES_DELPHESCLASSES_H=1
-DELPHESCFLAGS = -I/home/shadowquark/code/checkmate/tools/delphes -I/home/shadowquark/code/checkmate/tools/delphes/external
+DELPHESCFLAGS = -I/home/shadowquark/code/github/checkmate/tools/delphes -I/home/shadowquark/code/github/checkmate/tools/delphes/external
 DELPHESINCLUDE = 
-DELPHESLIBDIR = /home/shadowquark/code/checkmate/tools/delphes
+DELPHESLIBDIR = /home/shadowquark/code/github/checkmate/tools/delphes
 DELPHESLIBS = -lEG -lDelphes
 DEPDIR = .deps
 DSYMUTIL = 
@@ -309,7 +309,7 @@ LDFLAGS =
 LD_LIBRARY_PATH = 
 LD_RUN_PATH =  $(am__append_5) $(am__append_11)
 LIBOBJS = 
-LIBS =   -L/home/shadowquark/code/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz -L/home/shadowquark/code/checkmate/tools/delphes -L/usr/lib64/root/5.34 -lGui -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lEG -lDelphes
+LIBS =   -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz -L/home/shadowquark/code/github/checkmate/tools/delphes -L/usr/lib64/root/5.34 -lGui -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lEG -lDelphes
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
@@ -332,9 +332,9 @@ PACKAGE_TARNAME = checkmate
 PACKAGE_URL = 
 PACKAGE_VERSION = 2.0.0
 PATH_SEPARATOR = :
-PYTHIAINCLUDE = -I/home/shadowquark/code/checkmate/tools/pythia/include
-PYTHIALIBDIR = /home/shadowquark/code/checkmate/tools/pythia/lib
-PYTHIALIBS = -L/home/shadowquark/code/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz
+PYTHIAINCLUDE = -I/home/shadowquark/code/github/checkmate/tools/pythia/include
+PYTHIALIBDIR = /home/shadowquark/code/github/checkmate/tools/pythia/lib
+PYTHIALIBS = -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz
 PYTHON = /usr/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
 PYTHON_PLATFORM = linux2
@@ -362,10 +362,10 @@ SET_MAKE =
 SHELL = /bin/sh
 STRIP = strip
 VERSION = 2.0.0
-abs_builddir = /home/shadowquark/code/checkmate/tools/fritz
-abs_srcdir = /home/shadowquark/code/checkmate/tools/fritz
-abs_top_builddir = /home/shadowquark/code/checkmate
-abs_top_srcdir = /home/shadowquark/code/checkmate
+abs_builddir = /home/shadowquark/code/github/checkmate/tools/fritz
+abs_srcdir = /home/shadowquark/code/github/checkmate/tools/fritz
+abs_top_builddir = /home/shadowquark/code/github/checkmate
+abs_top_srcdir = /home/shadowquark/code/github/checkmate
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 ac_ct_DUMPBIN = 
@@ -394,9 +394,9 @@ host_vendor = suse
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/shadowquark/code/checkmate/install-sh
-libdir = ${exec_prefix}/lib64
-libexecdir = ${exec_prefix}/lib
+install_sh = ${SHELL} /home/shadowquark/code/github/checkmate/install-sh
+libdir = ${exec_prefix}/lib
+libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
 lt_ECHO = echo
@@ -458,10 +458,10 @@ fritz_SOURCES = src/main.cc src/global/Global.cc \
 	src/analysishandler/AnalysisHandlerCMS_14TeV_projected.cc \
 	include/analysishandler/AnalysisHandlerCMS_14TeV_projected.h \
 	$(am__append_1)
-fritz_LDADD = -L/usr/lib64/root/5.34 -lGui -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -L/home/shadowquark/code/checkmate/tools/delphes \
+fritz_LDADD = -L/usr/lib64/root/5.34 -lGui -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -L/home/shadowquark/code/github/checkmate/tools/delphes \
 	-lEG -lDelphes -L$(abs_top_builddir)/tools/analysis -lanalyses \
 	$(am__append_2) $(am__append_8)
-fritz_CXXFLAGS = -I/usr/include/root -I/home/shadowquark/code/checkmate/tools/delphes -I/home/shadowquark/code/checkmate/tools/delphes/external -Iinclude/global \
+fritz_CXXFLAGS = -I/usr/include/root -I/home/shadowquark/code/github/checkmate/tools/delphes -I/home/shadowquark/code/github/checkmate/tools/delphes/external -Iinclude/global \
 	-Iinclude/fritz -Iinclude/delpheshandler \
 	-Iinclude/analysishandler \
 	-I$(abs_top_builddir)/tools/analysis/include/base \
@@ -479,7 +479,7 @@ fritz_CXXFLAGS = -I/usr/include/root -I/home/shadowquark/code/checkmate/tools/de
 	-I$(abs_top_builddir)/tools/analysis/include/analyses/CMS_14TeV_HighLumi \
 	$(am__append_3) $(am__append_6) $(am__append_7) \
 	$(am__append_10)
-fritz_LDFLAGS = -R/usr/lib64/root/5.34 -R/home/shadowquark/code/checkmate/tools/delphes \
+fritz_LDFLAGS = -R/usr/lib64/root/5.34 -R/home/shadowquark/code/github/checkmate/tools/delphes \
 	-R$(abs_top_builddir)/tools/analysis $(am__append_4) \
 	$(am__append_9)
 all: all-am

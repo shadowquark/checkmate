@@ -120,7 +120,7 @@ src/base/ETMiss.lo: src/base/ETMiss.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/istream.tcc \
  /usr/include/c++/4.8/bits/stream_iterator.h /usr/include/root/TDatime.h \
  /usr/include/root/TUUID.h \
- /home/shadowquark/code/checkmate/tools/delphes/classes/DelphesClasses.h \
+ /home/shadowquark/code/github/checkmate/tools/delphes/classes/DelphesClasses.h \
  /usr/include/root/TRef.h /usr/include/root/TRefArray.h \
  /usr/include/root/TProcessID.h /usr/include/root/TObjArray.h \
  /usr/include/root/TLorentzVector.h /usr/include/root/TMath.h \
@@ -155,7 +155,7 @@ src/base/ETMiss.lo: src/base/ETMiss.cc /usr/include/stdc-predef.h \
  /usr/include/root/TVectorDfwd.h /usr/include/root/TMatrixTUtils.h \
  /usr/include/root/TMatrixFfwd.h /usr/include/root/TMatrixFUtils.h \
  /usr/include/root/TMatrixFUtilsfwd.h /usr/include/root/TRotation.h \
- /home/shadowquark/code/checkmate/tools/delphes/classes/SortableObject.h \
+ /home/shadowquark/code/github/checkmate/tools/delphes/classes/SortableObject.h \
  /usr/include/root/TMath.h
 
 /usr/include/stdc-predef.h:
@@ -530,7 +530,7 @@ include/base/ETMiss.h:
 
 /usr/include/root/TUUID.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/classes/DelphesClasses.h:
+/home/shadowquark/code/github/checkmate/tools/delphes/classes/DelphesClasses.h:
 
 /usr/include/root/TRef.h:
 
@@ -636,6 +636,6 @@ include/base/ETMiss.h:
 
 /usr/include/root/TRotation.h:
 
-/home/shadowquark/code/checkmate/tools/delphes/classes/SortableObject.h:
+/home/shadowquark/code/github/checkmate/tools/delphes/classes/SortableObject.h:
 
 /usr/include/root/TMath.h:

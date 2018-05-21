@@ -8,7 +8,7 @@ from info import Info
 
 config_paths = dict()
 config_paths['mg5_source_path']=''
-config_paths['pythia8_lib_path']='/home/shadowquark/code/checkmate/tools/pythia/lib'
+config_paths['pythia8_lib_path']='/home/shadowquark/code/github/checkmate/tools/pythia/lib'
 
 global Info, AdvPrint
 Info.init(config_paths)
