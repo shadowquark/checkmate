@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 57
-/basic/checkmate/!svn/ver/1802/trunk/alpha/tools/analysis
+/basic/checkmate/!svn/ver/2144/trunk/alpha/tools/analysis
 END
 Makefile.am
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/basic/checkmate/!svn/ver/1735/trunk/alpha/tools/analysis/Makefile.am
+/basic/checkmate/!svn/ver/2144/trunk/alpha/tools/analysis/Makefile.am
 END

@@ -1,5 +1,158 @@
 CheckMATE - Changelog
 
+Ver 2.0.26
+---------
+        
+2018-04-16   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
+        
+    ~ fixed center-of-mass energy setting and unifying lepton isolation
+
+Ver 2.0.25
+---------
+
+2018-04-16   Jong Soo Kim <jsk@th.physik.uni-bonn.de>
+        
+    ~ added atlas_1804_03602
+
+
+
+	
+Ver 2.0.24
+---------
+        
+2018-03-28   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
+        
+    ~ added atlas_1706_03731
+
+Ver 2.0.23
+---------
+        
+2018-03-28   Jong Soo Kim <jsk@th.physik.uni-bonn.de>
+        
+    ~ fixed missing files in atlas_1507_05493  
+
+	
+Ver 2.0.23
+---------
+        
+2018-03-21   Jong Soo Kim <jsk@th.physik.uni-bonn.de>
+        
+    ~ fixed tools/analysis/Makefile.am  
+
+	
+Ver 2.0.22
+---------
+	
+2018-03-21   Jong Soo Kim <jsk@th.physik.uni-bonn.de>
+
+    ~ added atlas_conf_2016_066 (GMSB search)
+
+	
+Ver 2.0.21
+---------
+
+2018-03-16   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
+
+
+    ~ fixed bug in atlas_1712_08119
+
+	
+Ver 2.0.20
+---------
+
+2018-03-12   Jong Soo Kim <jsk@th.physik.uni-bonn.de>
+
+    ~ added cms_sus_16_048
+
+
+	
+Ver 2.0.20
+---------
+
+2018-03-12   Jong Soo Kim <jsk@th.physik.uni-bonn.de>
+
+    ~ added cms_sus_16_025
+
+
+Ver 2.0.19
+---------
+
+2018-03-12   Jong Soo Kim <jsk@th.physik.uni-bonn.de>
+
+    ~ added cms_sus_16_039
+
+
+Ver 2.0.18
+---------
+
+2018-03-08   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
+
+    ~ added atlas_1708_07875 (EW SUSY, taus)
+    ~ added atlas_1802_03158 (GMSB photons)
+    ~ new JES function for ATLAS 13
+
+Ver 2.0.17
+---------
+
+2018-02-14   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
+
+    ~ added atlas_1712_02332 (jets+MET, gluinos, squarks)
+    ~ added atlas_1712_08119 (electroweak soft leptons)
+
+Ver 2.0.16
+---------
+
+2017-12-14   Jong Soo Kim <jsk@th.physik.uni-bonn.de>
+
+    ~ added atlas_1710_11412 (ttbar + met and bbar + met, simplified DM)
+
+	
+
+	
+Ver 2.0.15
+---------
+
+2017-11-20   Jong Soo Kim <jsk@th.physik.uni-bonn.de>
+             Krzysztof Rolbiecki
+
+    ~ added atlas_conf_2017_040 (Z + met)
+    ~ moved atlas_1609_01599 to alpha
+
+Ver 2.0.14
+---------
+2017-10-13   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
+
+    ~ Added atlas_1709_04183 (stops jets+MET)
+
+	Ver 2.0.14
+	---------
+
+	2017-11-20   Jong Soo Kim <jsk@th.physik.uni-bonn.de>
+
+	~ added atlas_1507_05493 (GMSB search)
+	
+	
+	
+Ver 2.0.13
+---------
+
+2017-07-11   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
+
+    ~ Added atlas_1704_03848 (monophoton)
+    ~ Update atlas_conf_2017_022
+
+
+Ver 2.0.12
+---------
+
+2017-04-27   Frederic Poncza <poncza@physik.rwth-aachen.de>
+
+    ~ Fixed bug in 7TeV and 8TeV Analysis Handlers, true_c eta cut was wrong.
+
+
+2017-04-19   Ferdinand Eiteneuer <ferdinand.eiteneuer@rwth-aachen.de>
+
+    ~ Fixed bug in atlas_conf_2016_096, the SR 3LI was not defined correctly.
 
 Ver 2.0.11
 ---------
@@ -76,7 +229,6 @@ Ver 2.0.4
 
 Ver 2.0.3
 ---------
-2017-01-16   Jong Soo Kim <jongsoo.kim@tu-dortmund.de>
 
 2017-02-09   Jamie Tattersall <tattersall@physik.rwth-aachen.de>
 

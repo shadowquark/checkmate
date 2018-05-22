@@ -187,6 +187,9 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/ATLAS_13TeV/atlas_1605_04285.lo \
 	src/analyses/ATLAS_13TeV/atlas_1605_09318.lo \
 	src/analyses/ATLAS_13TeV/atlas_1606_03903.lo \
+	src/analyses/ATLAS_13TeV/atlas_1609_01599.lo \
+	src/analyses/ATLAS_13TeV/atlas_1704_03848.lo \
+	src/analyses/ATLAS_13TeV/atlas_1709_04183.lo \
 	src/analyses/ATLAS_13TeV/atlas_conf_2015_082.lo \
 	src/analyses/ATLAS_13TeV/atlas_conf_2016_013.lo \
 	src/analyses/ATLAS_13TeV/atlas_conf_2016_050.lo \
@@ -213,22 +216,33 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/CMS_8TeV/cms_sus_13_016.lo \
 	src/analyses/CMS_8TeV/cms_exo_14_014.lo \
 	src/analyses/CMS_13TeV/cms_pas_sus_15_011.lo \
-	src/analyses/CMS_8TeV/cms_1410_6679_mumu.lo \
-	src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.lo \
+	src/analyses/CMS_13TeV/cms_sus_16_039.lo \
+	src/analyses/CMS_13TeV/cms_sus_16_025.lo \
+	src/analyses/ATLAS_13TeV/atlas_1712_08119.lo \
+	src/analyses/ATLAS_13TeV/atlas_1712_02332.lo \
+	src/analyses/ATLAS_13TeV/atlas_1802_03158.lo \
+	src/analyses/ATLAS_13TeV/atlas_1708_07875.lo \
+	src/analyses/ATLAS_13TeV/atlas_conf_2016_066.lo \
+	src/analyses/ATLAS_13TeV/atlas_conf_2017_060.lo \
+	src/analyses/CMS_13TeV/cms_sus_16_048.lo \
+	src/analyses/ATLAS_8TeV/atlas_1507_05493.lo \
+	src/analyses/ATLAS_13TeV/atlas_1706_03731.lo \
 	src/analyses/CMS_13TeV/cms_1701_02042.lo \
-	src/analyses/CMS_8TeV/cms_1410_6679_mumu2j.lo \
+	src/analyses/CMS_13TeV/cms_1709_08601_13.lo \
+	src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.lo \
 	src/analyses/CMS_7TeV/cms_1410_6679_mumu2j_7.lo \
+	src/analyses/CMS_7TeV/cms_1306_1126_7.lo \
+	src/analyses/CMS_8TeV/cms_1410_6679_mumu.lo \
+	src/analyses/CMS_8TeV/cms_1410_6679_mumu2j.lo \
 	src/analyses/CMS_8TeV/cms_1606_01522_8.lo \
 	src/analyses/CMS_8TeV/cms_1506_00424_8.lo \
 	src/analyses/CMS_8TeV/cms_1701_02032_8_4t.lo \
 	src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.lo \
 	src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.lo \
+	src/analyses/CMS_8TeV/cms_1507_03268_8.lo \
 	src/analyses/ATLAS_8TeV/atlas_1612_07004_8.lo \
-	src/analyses/CMS_7TeV/cms_1306_1126_7.lo \
 	src/analyses/ATLAS_8TeV/atlas_1508_04735_8.lo \
 	src/analyses/ATLAS_8TeV/atlas_1506_01839_8.lo \
-	src/analyses/CMS_8TeV/cms_1507_03268_8.lo \
-	src/analyses/CMS_13TeV/cms_1709_08601_13.lo \
 	src/analyses/ATLAS_13TeV/atlas_1709_07703_13.lo \
 	src/analyses/ATLAS_13TeV/atlas_1709_07242_13.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
@@ -497,7 +511,6 @@ mylib_LTLIBRARIES = libanalyses.la
 # CMS_7TeV
 # CMS_8TeV
 # CMS_13TeV
-# CMS_14TeV_HighLumi
 libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	src/base/AnalysisBase.cc include/base/AnalysisBase.h \
 	src/base/ETMiss.cc include/base/ETMiss.h \
@@ -611,6 +624,12 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	src/analyses/ATLAS_13TeV/atlas_1605_09318.cc \
 	include/analyses/ATLAS_13TeV/atlas_1606_03903.h \
 	src/analyses/ATLAS_13TeV/atlas_1606_03903.cc \
+	include/analyses/ATLAS_13TeV/atlas_1609_01599.h \
+	src/analyses/ATLAS_13TeV/atlas_1609_01599.cc \
+	include/analyses/ATLAS_13TeV/atlas_1704_03848.h \
+	src/analyses/ATLAS_13TeV/atlas_1704_03848.cc \
+	include/analyses/ATLAS_13TeV/atlas_1709_04183.h \
+	src/analyses/ATLAS_13TeV/atlas_1709_04183.cc \
 	include/analyses/ATLAS_13TeV/atlas_conf_2015_082.h \
 	src/analyses/ATLAS_13TeV/atlas_conf_2015_082.cc \
 	include/analyses/ATLAS_13TeV/atlas_conf_2016_013.h \
@@ -662,16 +681,42 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	src/analyses/CMS_8TeV/cms_exo_14_014.cc \
 	include/analyses/CMS_13TeV/cms_pas_sus_15_011.h \
 	src/analyses/CMS_13TeV/cms_pas_sus_15_011.cc \
-	include/analyses/CMS_8TeV/cms_1410_6679_mumu.h \
-	src/analyses/CMS_8TeV/cms_1410_6679_mumu.cc \
-	include/analyses/CMS_7TeV/cms_1410_6679_mumu_7.h \
-	src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.cc \
+	include/analyses/CMS_13TeV/cms_sus_16_039.h \
+	src/analyses/CMS_13TeV/cms_sus_16_039.cc \
+	include/analyses/CMS_13TeV/cms_sus_16_025.h \
+	src/analyses/CMS_13TeV/cms_sus_16_025.cc \
+	include/analyses/ATLAS_13TeV/atlas_1712_08119.h \
+	src/analyses/ATLAS_13TeV/atlas_1712_08119.cc \
+	include/analyses/ATLAS_13TeV/atlas_1712_02332.h \
+	src/analyses/ATLAS_13TeV/atlas_1712_02332.cc \
+	include/analyses/ATLAS_13TeV/atlas_1802_03158.h \
+	src/analyses/ATLAS_13TeV/atlas_1802_03158.cc \
+	include/analyses/ATLAS_13TeV/atlas_1708_07875.h \
+	src/analyses/ATLAS_13TeV/atlas_1708_07875.cc \
+	include/analyses/ATLAS_13TeV/atlas_conf_2016_066.h \
+	src/analyses/ATLAS_13TeV/atlas_conf_2016_066.cc \
+	include/analyses/ATLAS_13TeV/atlas_conf_2017_060.h \
+	src/analyses/ATLAS_13TeV/atlas_conf_2017_060.cc \
+	include/analyses/CMS_13TeV/cms_sus_16_048.h \
+	src/analyses/CMS_13TeV/cms_sus_16_048.cc \
+	include/analyses/ATLAS_8TeV/atlas_1507_05493.h \
+	src/analyses/ATLAS_8TeV/atlas_1507_05493.cc \
+	include/analyses/ATLAS_13TeV/atlas_1706_03731.h \
+	src/analyses/ATLAS_13TeV/atlas_1706_03731.cc \
 	include/analyses/CMS_13TeV/cms_1701_02042.h \
 	src/analyses/CMS_13TeV/cms_1701_02042.cc \
-	include/analyses/CMS_8TeV/cms_1410_6679_mumu2j.h \
-	src/analyses/CMS_8TeV/cms_1410_6679_mumu2j.cc \
+	include/analyses/CMS_13TeV/cms_1709_08601_13.h \
+	src/analyses/CMS_13TeV/cms_1709_08601_13.cc \
+	include/analyses/CMS_7TeV/cms_1410_6679_mumu_7.h \
+	src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.cc \
 	include/analyses/CMS_7TeV/cms_1410_6679_mumu2j_7.h \
 	src/analyses/CMS_7TeV/cms_1410_6679_mumu2j_7.cc \
+	include/analyses/CMS_7TeV/cms_1306_1126_7.h \
+	src/analyses/CMS_7TeV/cms_1306_1126_7.cc \
+	include/analyses/CMS_8TeV/cms_1410_6679_mumu.h \
+	src/analyses/CMS_8TeV/cms_1410_6679_mumu.cc \
+	include/analyses/CMS_8TeV/cms_1410_6679_mumu2j.h \
+	src/analyses/CMS_8TeV/cms_1410_6679_mumu2j.cc \
 	include/analyses/CMS_8TeV/cms_1606_01522_8.h \
 	src/analyses/CMS_8TeV/cms_1606_01522_8.cc \
 	include/analyses/CMS_8TeV/cms_1506_00424_8.h \
@@ -682,18 +727,14 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.cc \
 	include/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.h \
 	src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.cc \
+	include/analyses/CMS_8TeV/cms_1507_03268_8.h \
+	src/analyses/CMS_8TeV/cms_1507_03268_8.cc \
 	include/analyses/ATLAS_8TeV/atlas_1612_07004_8.h \
 	src/analyses/ATLAS_8TeV/atlas_1612_07004_8.cc \
-	include/analyses/CMS_7TeV/cms_1306_1126_7.h \
-	src/analyses/CMS_7TeV/cms_1306_1126_7.cc \
 	include/analyses/ATLAS_8TeV/atlas_1508_04735_8.h \
 	src/analyses/ATLAS_8TeV/atlas_1508_04735_8.cc \
 	include/analyses/ATLAS_8TeV/atlas_1506_01839_8.h \
 	src/analyses/ATLAS_8TeV/atlas_1506_01839_8.cc \
-	include/analyses/CMS_8TeV/cms_1507_03268_8.h \
-	src/analyses/CMS_8TeV/cms_1507_03268_8.cc \
-	include/analyses/CMS_13TeV/cms_1709_08601_13.h \
-	src/analyses/CMS_13TeV/cms_1709_08601_13.cc \
 	include/analyses/ATLAS_13TeV/atlas_1709_07703_13.h \
 	src/analyses/ATLAS_13TeV/atlas_1709_07703_13.cc \
 	include/analyses/ATLAS_13TeV/atlas_1709_07242_13.h \
@@ -1006,6 +1047,15 @@ src/analyses/ATLAS_13TeV/atlas_1605_09318.lo:  \
 src/analyses/ATLAS_13TeV/atlas_1606_03903.lo:  \
 	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1609_01599.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1704_03848.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1709_04183.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
 src/analyses/ATLAS_13TeV/atlas_conf_2015_082.lo:  \
 	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
@@ -1108,21 +1158,60 @@ src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp):
 src/analyses/CMS_13TeV/cms_pas_sus_15_011.lo:  \
 	src/analyses/CMS_13TeV/$(am__dirstamp) \
 	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
-src/analyses/CMS_8TeV/cms_1410_6679_mumu.lo:  \
-	src/analyses/CMS_8TeV/$(am__dirstamp) \
-	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
-src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.lo:  \
-	src/analyses/CMS_7TeV/$(am__dirstamp) \
-	src/analyses/CMS_7TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_13TeV/cms_sus_16_039.lo:  \
+	src/analyses/CMS_13TeV/$(am__dirstamp) \
+	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_13TeV/cms_sus_16_025.lo:  \
+	src/analyses/CMS_13TeV/$(am__dirstamp) \
+	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1712_08119.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1712_02332.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1802_03158.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1708_07875.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_conf_2016_066.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_conf_2017_060.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_13TeV/cms_sus_16_048.lo:  \
+	src/analyses/CMS_13TeV/$(am__dirstamp) \
+	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_8TeV/atlas_1507_05493.lo:  \
+	src/analyses/ATLAS_8TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_8TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1706_03731.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
 src/analyses/CMS_13TeV/cms_1701_02042.lo:  \
 	src/analyses/CMS_13TeV/$(am__dirstamp) \
 	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
-src/analyses/CMS_8TeV/cms_1410_6679_mumu2j.lo:  \
-	src/analyses/CMS_8TeV/$(am__dirstamp) \
-	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_13TeV/cms_1709_08601_13.lo:  \
+	src/analyses/CMS_13TeV/$(am__dirstamp) \
+	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.lo:  \
+	src/analyses/CMS_7TeV/$(am__dirstamp) \
+	src/analyses/CMS_7TeV/$(DEPDIR)/$(am__dirstamp)
 src/analyses/CMS_7TeV/cms_1410_6679_mumu2j_7.lo:  \
 	src/analyses/CMS_7TeV/$(am__dirstamp) \
 	src/analyses/CMS_7TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_7TeV/cms_1306_1126_7.lo:  \
+	src/analyses/CMS_7TeV/$(am__dirstamp) \
+	src/analyses/CMS_7TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_8TeV/cms_1410_6679_mumu.lo:  \
+	src/analyses/CMS_8TeV/$(am__dirstamp) \
+	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_8TeV/cms_1410_6679_mumu2j.lo:  \
+	src/analyses/CMS_8TeV/$(am__dirstamp) \
+	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
 src/analyses/CMS_8TeV/cms_1606_01522_8.lo:  \
 	src/analyses/CMS_8TeV/$(am__dirstamp) \
 	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
@@ -1138,24 +1227,18 @@ src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.lo:  \
 src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.lo:  \
 	src/analyses/CMS_8TeV/$(am__dirstamp) \
 	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_8TeV/cms_1507_03268_8.lo:  \
+	src/analyses/CMS_8TeV/$(am__dirstamp) \
+	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
 src/analyses/ATLAS_8TeV/atlas_1612_07004_8.lo:  \
 	src/analyses/ATLAS_8TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_8TeV/$(DEPDIR)/$(am__dirstamp)
-src/analyses/CMS_7TeV/cms_1306_1126_7.lo:  \
-	src/analyses/CMS_7TeV/$(am__dirstamp) \
-	src/analyses/CMS_7TeV/$(DEPDIR)/$(am__dirstamp)
 src/analyses/ATLAS_8TeV/atlas_1508_04735_8.lo:  \
 	src/analyses/ATLAS_8TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_8TeV/$(DEPDIR)/$(am__dirstamp)
 src/analyses/ATLAS_8TeV/atlas_1506_01839_8.lo:  \
 	src/analyses/ATLAS_8TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_8TeV/$(DEPDIR)/$(am__dirstamp)
-src/analyses/CMS_8TeV/cms_1507_03268_8.lo:  \
-	src/analyses/CMS_8TeV/$(am__dirstamp) \
-	src/analyses/CMS_8TeV/$(DEPDIR)/$(am__dirstamp)
-src/analyses/CMS_13TeV/cms_1709_08601_13.lo:  \
-	src/analyses/CMS_13TeV/$(am__dirstamp) \
-	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
 src/analyses/ATLAS_13TeV/atlas_1709_07703_13.lo:  \
 	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
@@ -1203,15 +1286,25 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1605_04285.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1605_09318.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1606_03903.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1609_01599.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1704_03848.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1706_03731.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1708_07875.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1709_04183.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1709_07242_13.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1709_07703_13.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_02332.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2015_082.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_013.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_050.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_054.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_066.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_076.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_078.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_096.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2017_060.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_14TeV_HighLumi/$(DEPDIR)/atl_phys_pub_2014_010_sbottom.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_14TeV_HighLumi/$(DEPDIR)/atlas_2014_010_hl_3l.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_14TeV_HighLumi/$(DEPDIR)/atlas_phys_2014_010_300.Plo@am__quote@
@@ -1238,6 +1331,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1503_03290.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1506_01839_8.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1506_08616.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1507_05493.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1508_04735_8.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_1612_07004_8.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_conf_2012_104.Plo@am__quote@
@@ -1269,6 +1363,9 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_13TeV/$(DEPDIR)/cms_1701_02042.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_13TeV/$(DEPDIR)/cms_1709_08601_13.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_13TeV/$(DEPDIR)/cms_pas_sus_15_011.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_13TeV/$(DEPDIR)/cms_sus_16_025.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_13TeV/$(DEPDIR)/cms_sus_16_039.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_13TeV/$(DEPDIR)/cms_sus_16_048.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_7TeV/$(DEPDIR)/cms_1306_1126_7.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_7TeV/$(DEPDIR)/cms_1306_1126_WW.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/CMS_7TeV/$(DEPDIR)/cms_1410_6679_mumu2j_7.Plo@am__quote@

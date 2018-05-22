@@ -70,13 +70,16 @@ libanalyses_la_SOURCES +=	\
              include/analyses/ATLAS_13TeV/atlas_1605_04285.h src/analyses/ATLAS_13TeV/atlas_1605_04285.cc \
              include/analyses/ATLAS_13TeV/atlas_1605_09318.h src/analyses/ATLAS_13TeV/atlas_1605_09318.cc \
              include/analyses/ATLAS_13TeV/atlas_1606_03903.h src/analyses/ATLAS_13TeV/atlas_1606_03903.cc \
+             include/analyses/ATLAS_13TeV/atlas_1609_01599.h src/analyses/ATLAS_13TeV/atlas_1609_01599.cc \
+             include/analyses/ATLAS_13TeV/atlas_1704_03848.h src/analyses/ATLAS_13TeV/atlas_1704_03848.cc \
+             include/analyses/ATLAS_13TeV/atlas_1709_04183.h src/analyses/ATLAS_13TeV/atlas_1709_04183.cc \
              include/analyses/ATLAS_13TeV/atlas_conf_2015_082.h src/analyses/ATLAS_13TeV/atlas_conf_2015_082.cc \
              include/analyses/ATLAS_13TeV/atlas_conf_2016_013.h src/analyses/ATLAS_13TeV/atlas_conf_2016_013.cc \
              include/analyses/ATLAS_13TeV/atlas_conf_2016_050.h src/analyses/ATLAS_13TeV/atlas_conf_2016_050.cc \
              include/analyses/ATLAS_13TeV/atlas_conf_2016_054.h src/analyses/ATLAS_13TeV/atlas_conf_2016_054.cc \
              include/analyses/ATLAS_13TeV/atlas_conf_2016_076.h src/analyses/ATLAS_13TeV/atlas_conf_2016_076.cc \
              include/analyses/ATLAS_13TeV/atlas_conf_2016_078.h src/analyses/ATLAS_13TeV/atlas_conf_2016_078.cc \
-             include/analyses/ATLAS_13TeV/atlas_conf_2016_076.h src/analyses/ATLAS_13TeV/atlas_conf_2016_096.cc
+             include/analyses/ATLAS_13TeV/atlas_conf_2016_076.h src/analyses/ATLAS_13TeV/atlas_conf_2016_096.cc 
 # ATLAS_14TeV_HighLumi
 libanalyses_la_SOURCES +=	\
              include/analyses/ATLAS_14TeV_HighLumi/atl_phys_pub_2014_010_sbottom.h src/analyses/ATLAS_14TeV_HighLumi/atl_phys_pub_2014_010_sbottom.cc \
@@ -103,25 +106,39 @@ libanalyses_la_SOURCES +=	\
 # CMS_13TeV
 libanalyses_la_SOURCES +=	\
              include/analyses/CMS_13TeV/cms_pas_sus_15_011.h src/analyses/CMS_13TeV/cms_pas_sus_15_011.cc
-# CMS_14TeV_HighLumi
-libanalyses_la_SOURCES +=	
+libanalyses_la_SOURCES += include/analyses/CMS_13TeV/cms_sus_16_039.h src/analyses/CMS_13TeV/cms_sus_16_039.cc
 
-libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1410_6679_mumu.h src/analyses/CMS_8TeV/cms_1410_6679_mumu.cc
-libanalyses_la_SOURCES += include/analyses/CMS_7TeV/cms_1410_6679_mumu_7.h src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.cc
+libanalyses_la_SOURCES += include/analyses/CMS_13TeV/cms_sus_16_025.h src/analyses/CMS_13TeV/cms_sus_16_025.cc
+
+libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_1712_08119.h src/analyses/ATLAS_13TeV/atlas_1712_08119.cc
+libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_1712_02332.h src/analyses/ATLAS_13TeV/atlas_1712_02332.cc
+libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_1802_03158.h src/analyses/ATLAS_13TeV/atlas_1802_03158.cc
+libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_1708_07875.h src/analyses/ATLAS_13TeV/atlas_1708_07875.cc
+
+libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_conf_2016_066.h src/analyses/ATLAS_13TeV/atlas_conf_2016_066.cc
+
+libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_conf_2017_060.h src/analyses/ATLAS_13TeV/atlas_conf_2017_060.cc
+
+
+libanalyses_la_SOURCES += include/analyses/CMS_13TeV/cms_sus_16_048.h src/analyses/CMS_13TeV/cms_sus_16_048.cc
+libanalyses_la_SOURCES += include/analyses/ATLAS_8TeV/atlas_1507_05493.h src/analyses/ATLAS_8TeV/atlas_1507_05493.cc
+libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_1706_03731.h src/analyses/ATLAS_13TeV/atlas_1706_03731.cc
 libanalyses_la_SOURCES += include/analyses/CMS_13TeV/cms_1701_02042.h src/analyses/CMS_13TeV/cms_1701_02042.cc
-libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1410_6679_mumu2j.h src/analyses/CMS_8TeV/cms_1410_6679_mumu2j.cc
+libanalyses_la_SOURCES += include/analyses/CMS_13TeV/cms_1709_08601_13.h src/analyses/CMS_13TeV/cms_1709_08601_13.cc
+libanalyses_la_SOURCES += include/analyses/CMS_7TeV/cms_1410_6679_mumu_7.h src/analyses/CMS_7TeV/cms_1410_6679_mumu_7.cc
 libanalyses_la_SOURCES += include/analyses/CMS_7TeV/cms_1410_6679_mumu2j_7.h src/analyses/CMS_7TeV/cms_1410_6679_mumu2j_7.cc
+libanalyses_la_SOURCES += include/analyses/CMS_7TeV/cms_1306_1126_7.h src/analyses/CMS_7TeV/cms_1306_1126_7.cc
+libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1410_6679_mumu.h src/analyses/CMS_8TeV/cms_1410_6679_mumu.cc
+libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1410_6679_mumu2j.h src/analyses/CMS_8TeV/cms_1410_6679_mumu2j.cc
 libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1606_01522_8.h src/analyses/CMS_8TeV/cms_1606_01522_8.cc
 libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1506_00424_8.h src/analyses/CMS_8TeV/cms_1506_00424_8.cc
 libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1701_02032_8_4t.h src/analyses/CMS_8TeV/cms_1701_02032_8_4t.cc
 libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.h src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2b.cc
 libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.h src/analyses/CMS_8TeV/cms_1701_02032_8_2mu2t.cc
+libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1507_03268_8.h src/analyses/CMS_8TeV/cms_1507_03268_8.cc
 libanalyses_la_SOURCES += include/analyses/ATLAS_8TeV/atlas_1612_07004_8.h src/analyses/ATLAS_8TeV/atlas_1612_07004_8.cc
-libanalyses_la_SOURCES += include/analyses/CMS_7TeV/cms_1306_1126_7.h src/analyses/CMS_7TeV/cms_1306_1126_7.cc
 libanalyses_la_SOURCES += include/analyses/ATLAS_8TeV/atlas_1508_04735_8.h src/analyses/ATLAS_8TeV/atlas_1508_04735_8.cc
 libanalyses_la_SOURCES += include/analyses/ATLAS_8TeV/atlas_1506_01839_8.h src/analyses/ATLAS_8TeV/atlas_1506_01839_8.cc
-libanalyses_la_SOURCES += include/analyses/CMS_8TeV/cms_1507_03268_8.h src/analyses/CMS_8TeV/cms_1507_03268_8.cc
-libanalyses_la_SOURCES += include/analyses/CMS_13TeV/cms_1709_08601_13.h src/analyses/CMS_13TeV/cms_1709_08601_13.cc
 libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_1709_07703_13.h src/analyses/ATLAS_13TeV/atlas_1709_07703_13.cc
 libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_1709_07242_13.h src/analyses/ATLAS_13TeV/atlas_1709_07242_13.cc
 #@@extraanalysis@@
@@ -129,7 +146,6 @@ libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_1709_07242_13.h src
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
 libanalyses_la_LIBADD =  -L@ROOTLIBDIR@ @ROOTGLIBS@ @ROOTLIBS@ -L@DELPHESLIBDIR@ @DELPHESLIBS@
-	
 
 ROOTSYS = @ROOTSYSTEM@:
 LD_RUN_PATH = @ROOTLIBDIR@:@DELPHESLIBDIR@

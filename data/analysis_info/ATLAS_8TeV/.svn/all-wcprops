@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/basic/checkmate/!svn/ver/1605/trunk/alpha/data/analysis_info/ATLAS_8TeV
+/basic/checkmate/!svn/ver/2129/trunk/alpha/data/analysis_info/ATLAS_8TeV
 END
 atlas_conf_2013_089_ref.dat
 K 25
@@ -111,6 +111,12 @@ svn:wc:ra_dav:version-url
 V 94
 /basic/checkmate/!svn/ver/1605/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_1404_2500_var.j
 END
+atlas_1507_05493_var.j
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/basic/checkmate/!svn/ver/2129/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_1507_05493_var.j
+END
 atlas_1506_08616_ref.dat
 K 25
 svn:wc:ra_dav:version-url
@@ -147,17 +153,17 @@ svn:wc:ra_dav:version-url
 V 96
 /basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_1403_5294_ref.dat
 END
-atlas_conf_2013_021_ref.dat
-K 25
-svn:wc:ra_dav:version-url
-V 100
-/basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_021_ref.dat
-END
 atlas_conf_2014_014_var.j
 K 25
 svn:wc:ra_dav:version-url
 V 98
 /basic/checkmate/!svn/ver/1605/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2014_014_var.j
+END
+atlas_conf_2013_021_ref.dat
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_021_ref.dat
 END
 atlas_conf_2012_104_ref.dat
 K 25
@@ -177,17 +183,17 @@ svn:wc:ra_dav:version-url
 V 97
 /basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_1501_07110_ref.dat
 END
-atlas_conf_2013_024_ref.dat
-K 25
-svn:wc:ra_dav:version-url
-V 100
-/basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_024_ref.dat
-END
 atlas_conf_2013_036_var.j
 K 25
 svn:wc:ra_dav:version-url
 V 98
 /basic/checkmate/!svn/ver/1605/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_036_var.j
+END
+atlas_conf_2013_024_ref.dat
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_024_ref.dat
 END
 atlas_conf_2013_061_ref.dat
 K 25
@@ -236,6 +242,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 96
 /basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_1404_2500_ref.dat
+END
+atlas_1507_05493_ref.dat
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/basic/checkmate/!svn/ver/2129/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_1507_05493_ref.dat
 END
 atlas_1403_5222_ref.dat
 K 25
@@ -315,17 +327,17 @@ svn:wc:ra_dav:version-url
 V 95
 /basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_1502_01518_var.j
 END
-atlas_conf_2013_049_var.j
-K 25
-svn:wc:ra_dav:version-url
-V 98
-/basic/checkmate/!svn/ver/1605/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_049_var.j
-END
 atlas_conf_2013_037_ref.dat
 K 25
 svn:wc:ra_dav:version-url
 V 100
 /basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_037_ref.dat
+END
+atlas_conf_2013_049_var.j
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/basic/checkmate/!svn/ver/1605/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_049_var.j
 END
 atlas_conf_2013_089_var.j
 K 25
@@ -363,17 +375,17 @@ svn:wc:ra_dav:version-url
 V 96
 /basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_1411_1559_ref.dat
 END
-atlas_conf_2013_031_var.j
-K 25
-svn:wc:ra_dav:version-url
-V 98
-/basic/checkmate/!svn/ver/1605/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_031_var.j
-END
 atlas_1407_0583_ref.dat
 K 25
 svn:wc:ra_dav:version-url
 V 96
 /basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_1407_0583_ref.dat
+END
+atlas_conf_2013_031_var.j
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/basic/checkmate/!svn/ver/1605/trunk/alpha/data/analysis_info/ATLAS_8TeV/atlas_conf_2013_031_var.j
 END
 atlas_conf_2013_035_var.j
 K 25

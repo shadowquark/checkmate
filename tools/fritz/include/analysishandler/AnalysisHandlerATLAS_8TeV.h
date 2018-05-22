@@ -44,6 +44,7 @@
 #include "atlas_conf_2014_033.h"
 #include "atlas_conf_2014_056.h"
 #include "atlas_conf_2015_004.h"
+#include "atlas_1507_05493.h"
 #include "atlas_1612_07004_8.h"
 #include "atlas_1508_04735_8.h"
 #include "atlas_1506_01839_8.h"

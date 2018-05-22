@@ -1,7 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/CMS_13TeV
+/basic/checkmate/!svn/ver/2113/trunk/alpha/data/analysis_info/CMS_13TeV
+END
+cms_sus_16_039_ref.dat
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/basic/checkmate/!svn/ver/2109/trunk/alpha/data/analysis_info/CMS_13TeV/cms_sus_16_039_ref.dat
+END
+cms_sus_16_048_ref.dat
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/basic/checkmate/!svn/ver/2113/trunk/alpha/data/analysis_info/CMS_13TeV/cms_sus_16_048_ref.dat
 END
 cms_pas_sus_15_011_var.j
 K 25
@@ -14,4 +26,28 @@ K 25
 svn:wc:ra_dav:version-url
 V 98
 /basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/CMS_13TeV/cms_pas_sus_15_011_ref.dat
+END
+cms_sus_16_025_var.j
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/basic/checkmate/!svn/ver/2111/trunk/alpha/data/analysis_info/CMS_13TeV/cms_sus_16_025_var.j
+END
+cms_sus_16_025_ref.dat
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/basic/checkmate/!svn/ver/2111/trunk/alpha/data/analysis_info/CMS_13TeV/cms_sus_16_025_ref.dat
+END
+cms_sus_16_039_var.j
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/basic/checkmate/!svn/ver/2109/trunk/alpha/data/analysis_info/CMS_13TeV/cms_sus_16_039_var.j
+END
+cms_sus_16_048_var.j
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/basic/checkmate/!svn/ver/2113/trunk/alpha/data/analysis_info/CMS_13TeV/cms_sus_16_048_var.j
 END

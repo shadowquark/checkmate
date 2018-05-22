@@ -294,11 +294,11 @@ class Pythia8Events(Events):
 
         # Write Pythia cards
         ecm_str = "Beams:eCM = 8000.\n"
-        if(Info.parameters["ecm"] == 7.0): 
+        if( float(Info.parameters["ecm"]) == 7.0): 
             ecm_str = "Beams:eCM = 7000.\n"
-        elif (Info.parameters["ecm"] == 13.0): 
-            ecm_str = "Beams:eCM = 13000\n."
-        elif (Info.parameters["ecm"] == 14.0): 
+        elif ( float(Info.parameters["ecm"]) == 13.0): 
+            ecm_str = "Beams:eCM = 13000.\n"
+        elif ( float(Info.parameters["ecm"]) == 14.0): 
             ecm_str = "Beams:eCM = 14000.\n"
 
         if len(proclist) == 0:

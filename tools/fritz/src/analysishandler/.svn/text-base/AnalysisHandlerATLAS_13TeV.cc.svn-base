@@ -50,6 +50,12 @@ void AnalysisHandlerATLAS_13TeV::bookAnalysis(std::string analysisName,
         a = new Atlas_1605_09318();
     else if(analysisName == "atlas_1606_03903")
         a = new Atlas_1606_03903();
+    else if(analysisName == "atlas_1609_01599")
+        a = new Atlas_1609_01599();
+    else if(analysisName == "atlas_1704_03848")
+        a = new Atlas_1704_03848();
+    else if(analysisName == "atlas_1709_04183")
+        a = new Atlas_1709_04183();
     else if(analysisName == "atlas_conf_2015_082")
         a = new Atlas_conf_2015_082();
     else if(analysisName == "atlas_conf_2016_013")
@@ -64,8 +70,21 @@ void AnalysisHandlerATLAS_13TeV::bookAnalysis(std::string analysisName,
         a = new Atlas_conf_2016_078();
     else if(analysisName == "atlas_conf_2016_096")
         a = new Atlas_conf_2016_096();
-    else if(analysisName == "atlas_conf_2016_078")
-        a = new Atlas_conf_2016_078();
+    else if(analysisName == "atlas_1712_08119")
+        a = new Atlas_1712_08119();
+    else if(analysisName == "atlas_1712_02332")
+        a = new Atlas_1712_02332();
+    else if(analysisName == "atlas_1802_03158")
+        a = new Atlas_1802_03158();
+    else if(analysisName == "atlas_1708_07875")
+        a = new Atlas_1708_07875();
+    else if(analysisName == "atlas_conf_2016_066")
+        a = new Atlas_conf_2016_066();
+    else if(analysisName == "atlas_conf_2017_060")
+        a = new Atlas_conf_2017_060();
+    else if(analysisName == "atlas_1706_03731")
+        a = new Atlas_1706_03731();
+
     else //@@extracode@@
         Global::abort(name,
                       "Cannot load analysis "+analysisName+

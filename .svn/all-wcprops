@@ -1,13 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 42
-/basic/checkmate/!svn/ver/1876/trunk/alpha
-END
-VERSION
-K 25
-svn:wc:ra_dav:version-url
-V 50
-/basic/checkmate/!svn/ver/1840/trunk/alpha/VERSION
+/basic/checkmate/!svn/ver/2163/trunk/alpha
 END
 AUTHORS
 K 25
@@ -15,35 +9,35 @@ svn:wc:ra_dav:version-url
 V 50
 /basic/checkmate/!svn/ver/1595/trunk/alpha/AUTHORS
 END
-ChangeLog
+VERSION
 K 25
 svn:wc:ra_dav:version-url
-V 52
-/basic/checkmate/!svn/ver/1840/trunk/alpha/ChangeLog
+V 50
+/basic/checkmate/!svn/ver/2163/trunk/alpha/VERSION
 END
 depcomp
 K 25
 svn:wc:ra_dav:version-url
 V 50
-/basic/checkmate/!svn/ver/1676/trunk/alpha/depcomp
+/basic/checkmate/!svn/ver/1952/trunk/alpha/depcomp
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/basic/checkmate/!svn/ver/2163/trunk/alpha/ChangeLog
 END
 compile
 K 25
 svn:wc:ra_dav:version-url
 V 50
-/basic/checkmate/!svn/ver/1595/trunk/alpha/compile
+/basic/checkmate/!svn/ver/1952/trunk/alpha/compile
 END
 config.guess
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/basic/checkmate/!svn/ver/1676/trunk/alpha/config.guess
-END
-ltmain.sh
-K 25
-svn:wc:ra_dav:version-url
-V 52
-/basic/checkmate/!svn/ver/1676/trunk/alpha/ltmain.sh
+/basic/checkmate/!svn/ver/1952/trunk/alpha/config.guess
 END
 README
 K 25
@@ -51,11 +45,17 @@ svn:wc:ra_dav:version-url
 V 49
 /basic/checkmate/!svn/ver/1595/trunk/alpha/README
 END
+ltmain.sh
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/basic/checkmate/!svn/ver/2095/trunk/alpha/ltmain.sh
+END
 config.sub
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/basic/checkmate/!svn/ver/1676/trunk/alpha/config.sub
+/basic/checkmate/!svn/ver/1952/trunk/alpha/config.sub
 END
 configure.ac
 K 25
@@ -75,17 +75,17 @@ svn:wc:ra_dav:version-url
 V 50
 /basic/checkmate/!svn/ver/1595/trunk/alpha/COPYING
 END
-missing
-K 25
-svn:wc:ra_dav:version-url
-V 50
-/basic/checkmate/!svn/ver/1676/trunk/alpha/missing
-END
 Makefile.am
 K 25
 svn:wc:ra_dav:version-url
 V 54
 /basic/checkmate/!svn/ver/1613/trunk/alpha/Makefile.am
+END
+missing
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/basic/checkmate/!svn/ver/1952/trunk/alpha/missing
 END
 NEWS
 K 25
@@ -97,11 +97,11 @@ aclocal.m4
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/basic/checkmate/!svn/ver/1720/trunk/alpha/aclocal.m4
+/basic/checkmate/!svn/ver/2144/trunk/alpha/aclocal.m4
 END
 install-sh
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/basic/checkmate/!svn/ver/1676/trunk/alpha/install-sh
+/basic/checkmate/!svn/ver/1952/trunk/alpha/install-sh
 END

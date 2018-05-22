@@ -406,6 +406,7 @@ src/analysishandler/fritz-AnalysisHandlerATLAS_8TeV.o: \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_conf_2014_033.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_conf_2014_056.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_conf_2015_004.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1507_05493.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1612_07004_8.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1508_04735_8.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1506_01839_8.h
@@ -1525,6 +1526,8 @@ include/global/FritzConfig.h:
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_conf_2014_056.h:
 
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_conf_2015_004.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1507_05493.h:
 
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_8TeV/atlas_1612_07004_8.h:
 

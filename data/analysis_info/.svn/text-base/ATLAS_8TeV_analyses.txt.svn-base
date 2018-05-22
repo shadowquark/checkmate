@@ -12,7 +12,8 @@ atlas_1411_1559                1    ATLAS, monophoton plus MET                  
 atlas_1501_07110               12   ATLAS, ATLAS, 1 lepton + 125GeV Higgs + missingEt                20.3    no
 atlas_1502_01518               9    ATLAS, Monojet plus missing energy                               20.3    no   
 atlas_1503_03290               1    ATLAS, 2 leptons + jets + missingET                              20.3    no   
-atlas_1506_08616               12   ATLAS, di-lepton and 2b-jets+lepton at 8 TeV                     20.0    no   
+atlas_1506_08616               12   ATLAS, di-lepton and 2b-jets+lepton at 8 TeV                     20.0    no
+atlas_1507_05493               10   ATLAS, photonic signatures of gauge-mediated SUSY at 8 TeV       20.3    no
 atlas_conf_2012_104            2    ATLAS, 1 lepton + >= 4 jets + etmiss                             5.8     yes  
 atlas_conf_2013_024            3    ATLAS, 0 leptons + 6 (2 b-)jets + etmiss                         20.5    yes  
 atlas_conf_2013_049            9    ATLAS, 2 leptons + etmiss                                        20.3    yes 

@@ -80,7 +80,7 @@ void Atlas_conf_2013_024::analyze() {
   countCutflowEvent("05");
   
   //------------------------------
-  // Missing energy is also calculated from reconstructed tracks (assume 50% reconstructed, matched to cutflow)
+  // Missing energy is also calculated from reconstructed tracks (assume 75% reconstructed, matched to cutflow)
   TLorentzVector trackMET;    
   for (int i = 0; i < tracks.size(); i++) {
     if ( (tracks[i]->PT > 0.5) && ( fabs(tracks[i]->Eta) < 2.5) && (rand()/static_cast<double>(RAND_MAX) > 0.25))  

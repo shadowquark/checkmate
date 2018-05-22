@@ -378,6 +378,9 @@ src/analysishandler/fritz-AnalysisHandlerATLAS_13TeV.o: \
  /usr/include/root/TVectorD.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1605_09318.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1606_03903.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1609_01599.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1704_03848.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1709_04183.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2015_082.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_013.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_050.h \
@@ -385,6 +388,13 @@ src/analysishandler/fritz-AnalysisHandlerATLAS_13TeV.o: \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_076.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_078.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_096.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1712_08119.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1712_02332.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1802_03158.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1708_07875.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_066.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2017_060.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1706_03731.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1709_07703_13.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1709_07242_13.h
 
@@ -1448,6 +1458,12 @@ include/global/FritzConfig.h:
 
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1606_03903.h:
 
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1609_01599.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1704_03848.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1709_04183.h:
+
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2015_082.h:
 
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_013.h:
@@ -1461,6 +1477,20 @@ include/global/FritzConfig.h:
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_078.h:
 
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_096.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1712_08119.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1712_02332.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1802_03158.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1708_07875.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2016_066.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2017_060.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1706_03731.h:
 
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1709_07703_13.h:
 

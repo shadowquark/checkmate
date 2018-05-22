@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/basic/checkmate/!svn/ver/1735/trunk/alpha/tools/fritz/include/analysishandler
+/basic/checkmate/!svn/ver/2144/trunk/alpha/tools/fritz/include/analysishandler
 END
 AnalysisHandlerCMS_7TeV.h
 K 25
@@ -25,7 +25,7 @@ AnalysisHandlerATLAS_8TeV.h
 K 25
 svn:wc:ra_dav:version-url
 V 106
-/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/fritz/include/analysishandler/AnalysisHandlerATLAS_8TeV.h
+/basic/checkmate/!svn/ver/2129/trunk/alpha/tools/fritz/include/analysishandler/AnalysisHandlerATLAS_8TeV.h
 END
 AnalysisHandlerATLAS_14TeV_HL_FlatBtagger.h
 K 25
@@ -55,7 +55,7 @@ AnalysisHandlerCMS_13TeV.h
 K 25
 svn:wc:ra_dav:version-url
 V 105
-/basic/checkmate/!svn/ver/1595/trunk/alpha/tools/fritz/include/analysishandler/AnalysisHandlerCMS_13TeV.h
+/basic/checkmate/!svn/ver/2113/trunk/alpha/tools/fritz/include/analysishandler/AnalysisHandlerCMS_13TeV.h
 END
 AnalysisHandlerCMS_14TeV_projected.h
 K 25
@@ -67,7 +67,7 @@ AnalysisHandlerATLAS_13TeV.h
 K 25
 svn:wc:ra_dav:version-url
 V 107
-/basic/checkmate/!svn/ver/1678/trunk/alpha/tools/fritz/include/analysishandler/AnalysisHandlerATLAS_13TeV.h
+/basic/checkmate/!svn/ver/2144/trunk/alpha/tools/fritz/include/analysishandler/AnalysisHandlerATLAS_13TeV.h
 END
 AnalysisHandlerATLAS_14TeV_projected.h
 K 25

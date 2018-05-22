@@ -9,7 +9,7 @@
     "r"
   ], 
   "electron_iso_dR": [
-    "0.05",
+    "0.2",
     "0.2"
   ], 
   "electron_iso_ptmin": [

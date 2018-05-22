@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/basic/checkmate/!svn/ver/1876/trunk/alpha/tools/python
+/basic/checkmate/!svn/ver/2163/trunk/alpha/tools/python
 END
 detectorsettings.py
 K 25
@@ -43,7 +43,7 @@ events.py
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/basic/checkmate/!svn/ver/1613/trunk/alpha/tools/python/events.py
+/basic/checkmate/!svn/ver/2163/trunk/alpha/tools/python/events.py
 END
 process.py
 K 25

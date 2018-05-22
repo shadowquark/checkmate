@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/basic/checkmate/!svn/ver/1694/trunk/alpha/data/cards
+/basic/checkmate/!svn/ver/2066/trunk/alpha/data/cards
 END
 mg5_default_me5_configuration.txt.raw
 K 25
@@ -49,7 +49,7 @@ delphes_skimmed_ATLAS_13TeV.tcl
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/basic/checkmate/!svn/ver/1595/trunk/alpha/data/cards/delphes_skimmed_ATLAS_13TeV.tcl
+/basic/checkmate/!svn/ver/2066/trunk/alpha/data/cards/delphes_skimmed_ATLAS_13TeV.tcl
 END
 delphes_skimmed_ATLAS_14TeV.tcl
 K 25

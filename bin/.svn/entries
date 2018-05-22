@@ -1,15 +1,15 @@
 9
 
 dir
-1876
+2163
 https://svn.physik.uni-bonn.de/basic/checkmate/trunk/alpha/bin
 https://svn.physik.uni-bonn.de/basic/checkmate
 
 
 
-2017-03-09T09:20:15.577385Z
-1814
-tattersall@physik.rwth-aachen.de
+2017-11-02T13:18:11.691985Z
+1951
+rolbiecki
 
 
 svn:special svn:externals svn:needs-lock
@@ -32,7 +32,7 @@ file
 
 
 
-2017-05-17T14:50:25.621043Z
+2018-04-26T17:04:05.791643Z
 39ef96c704cb166fd0a4c3d5609755a3
 2016-04-08T09:47:24.100217Z
 1138
@@ -66,7 +66,7 @@ file
 
 
 
-2017-05-17T14:50:25.624045Z
+2018-04-26T17:04:05.794643Z
 be35171f1457d7922e8833ad4895d1bf
 2016-05-11T11:49:38.933467Z
 1195

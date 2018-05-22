@@ -1,15 +1,15 @@
 9
 
 dir
-1876
+2163
 https://svn.physik.uni-bonn.de/basic/checkmate/trunk/alpha/tools/fritz
 https://svn.physik.uni-bonn.de/basic/checkmate
 
 
 
-2017-04-27T11:14:36.440937Z
-1871
-poncza@physik.rwth-aachen.de
+2018-04-06T16:46:52.563417Z
+2144
+rolbiecki
 
 
 svn:special svn:externals svn:needs-lock
@@ -38,7 +38,7 @@ file
 
 
 
-2017-05-17T14:50:24.985044Z
+2018-04-26T17:04:05.172644Z
 a71d2220c625129aad742e21e40160e6
 2017-01-08T18:36:43.185759Z
 1621

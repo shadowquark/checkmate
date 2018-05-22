@@ -120,6 +120,8 @@ void AnalysisHandlerATLAS_8TeV::bookAnalysis(std::string analysisName,
         a = new Atlas_conf_2014_056();
     else if(analysisName == "atlas_conf_2015_004")
         a = new Atlas_conf_2015_004();
+    else if(analysisName == "atlas_1507_05493")
+        a = new Atlas_1507_05493();
     else if(analysisName == "atlas_1612_07004_8")
         a = new Atlas_1612_07004_8();
     else if(analysisName == "atlas_1508_04735_8")

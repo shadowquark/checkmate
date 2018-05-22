@@ -39,17 +39,17 @@ svn:wc:ra_dav:version-url
 V 92
 /basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/CMS_8TeV/cms_1408_3583_ref.dat
 END
-cms_exo_14_014_var.j
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/basic/checkmate/!svn/ver/1735/trunk/alpha/data/analysis_info/CMS_8TeV/cms_exo_14_014_var.j
-END
 cms_1502_06031_ref.dat
 K 25
 svn:wc:ra_dav:version-url
 V 93
 /basic/checkmate/!svn/ver/1595/trunk/alpha/data/analysis_info/CMS_8TeV/cms_1502_06031_ref.dat
+END
+cms_exo_14_014_var.j
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/basic/checkmate/!svn/ver/1735/trunk/alpha/data/analysis_info/CMS_8TeV/cms_exo_14_014_var.j
 END
 cms_smp_12_006_var.j
 K 25
