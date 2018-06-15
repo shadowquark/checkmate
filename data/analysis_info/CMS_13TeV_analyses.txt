@@ -6,3 +6,4 @@ cms_sus_16_048      20   two soft opposite sign leptons		35.9	no
 
 cms_1701_02042      1    cms_1701_02042_mm                                   
 cms_1709_08601_13   1    cms_1709_08601_13_35.9_4mu                          
+cms_1709_08908      8    cms_1709_08908_13_35.9                              

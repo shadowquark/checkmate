@@ -14,7 +14,7 @@ hostname = DESKTOP-F9FRAU6
 uname -m = x86_64
 uname -r = 4.4.0-17134-Microsoft
 uname -s = Linux
-uname -v = #48-Microsoft Fri Apr 27 18:06:00 PST 2018
+uname -v = #112-Microsoft Thu Jun 07 22:57:00 PST 2018
 
 /usr/bin/uname -p = x86_64
 /bin/uname -X     = unknown
@@ -28,6 +28,7 @@ uname -v = #48-Microsoft Fri Apr 27 18:06:00 PST 2018
 /bin/universe          = unknown
 
 PATH: /home/shadowquark/.nvm/versions/node/v10.1.0/bin
+PATH: /home/shadowquark/bin
 PATH: /home/shadowquark/bin
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
@@ -50,13 +51,14 @@ PATH: /mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT
 PATH: /mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT
 PATH: /mnt/c/Program Files/Intel/WiFi/bin
 PATH: /mnt/c/Program Files/Common Files/Intel/WirelessCommon
-PATH: /mnt/c/Program Files/Git/cmd
 PATH: /mnt/c/Program Files (x86)/Wolfram Research/WolframScript
+PATH: /mnt/c/Program Files/Git/cmd
 PATH: /mnt/c/Users/maxp4/AppData/Local/Microsoft/WindowsApps
-PATH: /mnt/c/Program Files/Intel/WiFi/bin
-PATH: /mnt/c/Program Files/Common Files/Intel/WirelessCommon
 PATH: /mnt/c/Program Files/Microsoft VS Code/bin
 PATH: /mnt/c/texlive/2018/bin/win32
+PATH: /usr/games
+PATH: /usr/lib/mit/bin
+PATH: /usr/lib/mit/sbin
 
 
 ## ----------- ##
