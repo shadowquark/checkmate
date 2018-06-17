@@ -29,7 +29,6 @@ uname -v = #112-Microsoft Thu Jun 07 22:57:00 PST 2018
 
 PATH: /home/shadowquark/.nvm/versions/node/v10.1.0/bin
 PATH: /home/shadowquark/bin
-PATH: /home/shadowquark/bin
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
 PATH: /usr/sbin
@@ -54,11 +53,10 @@ PATH: /mnt/c/Program Files/Common Files/Intel/WirelessCommon
 PATH: /mnt/c/Program Files (x86)/Wolfram Research/WolframScript
 PATH: /mnt/c/Program Files/Git/cmd
 PATH: /mnt/c/Users/maxp4/AppData/Local/Microsoft/WindowsApps
+PATH: /mnt/c/Program Files/Intel/WiFi/bin
+PATH: /mnt/c/Program Files/Common Files/Intel/WirelessCommon
 PATH: /mnt/c/Program Files/Microsoft VS Code/bin
 PATH: /mnt/c/texlive/2018/bin/win32
-PATH: /usr/games
-PATH: /usr/lib/mit/bin
-PATH: /usr/lib/mit/sbin
 
 
 ## ----------- ##

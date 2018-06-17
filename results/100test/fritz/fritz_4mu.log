@@ -1,10 +1,10 @@
-Fritz: Initialising handlers from file /home/shadowquark/code/checkmate/results/100test/fritz/4mu.ini
-PythiaHandler '4mu': Pythia8 output redirected to /home/shadowquark/code/checkmate/results/100test/pythia/pythia_4mu.log
-PythiaHandler '4mu': Initializing Pythia8 with /home/shadowquark/code/checkmate/results/100test/pythia/4mucard_0.in
+Fritz: Initialising handlers from file /mnt/c/Users/maxp4/Documents/code/github/checkmate/results/100test/fritz/4mu.ini
+PythiaHandler '4mu': Pythia8 output redirected to /mnt/c/Users/maxp4/Documents/code/github/checkmate/results/100test/pythia/pythia_4mu.log
+PythiaHandler '4mu': Initializing Pythia8 with /mnt/c/Users/maxp4/Documents/code/github/checkmate/results/100test/pythia/4mucard_0.in
 PythiaHandler '4mu': Pythia8 successfully initialized!
 PythiaHandler '4mu': Pythia8 successfully initialised!
 DelphesHandler 'cms8tev': Initialising Delphes via linking to PythiaHandler '4mu'
-DelphesHandler 'cms8tev': Initialising settings from /home/shadowquark/code/checkmate/data/cards/delphes_skimmed_CMS.tcl
+DelphesHandler 'cms8tev': Initialising settings from /mnt/c/Users/maxp4/Documents/code/github/checkmate/data/cards/delphes_skimmed_CMS.tcl
 DelphesHandler 'cms8tev': Delphes successfully initialised!
 AnalysisHandler 'cms8tev': Initialising AnalysisHandler
 AnalysisHandler 'cms8tev': Loading Analysis cms_1701_02032_8_2mu2t

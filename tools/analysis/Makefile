@@ -245,7 +245,9 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/ATLAS_8TeV/atlas_1506_01839_8.lo \
 	src/analyses/ATLAS_13TeV/atlas_1709_07703_13.lo \
 	src/analyses/ATLAS_13TeV/atlas_1709_07242_13.lo \
-	src/analyses/CMS_13TeV/cms_1709_08908.lo
+	src/analyses/CMS_13TeV/cms_1709_08908.lo \
+	src/analyses/CMS_13TeV/cms_1711_00431.lo \
+	src/analyses/ATLAS_13TeV/atlas_1712_02304.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -741,7 +743,11 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	include/analyses/ATLAS_13TeV/atlas_1709_07242_13.h \
 	src/analyses/ATLAS_13TeV/atlas_1709_07242_13.cc \
 	include/analyses/CMS_13TeV/cms_1709_08908.h \
-	src/analyses/CMS_13TeV/cms_1709_08908.cc
+	src/analyses/CMS_13TeV/cms_1709_08908.cc \
+	include/analyses/CMS_13TeV/cms_1711_00431.h \
+	src/analyses/CMS_13TeV/cms_1711_00431.cc \
+	include/analyses/ATLAS_13TeV/atlas_1712_02304.h \
+	src/analyses/ATLAS_13TeV/atlas_1712_02304.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
@@ -1251,6 +1257,12 @@ src/analyses/ATLAS_13TeV/atlas_1709_07242_13.lo:  \
 src/analyses/CMS_13TeV/cms_1709_08908.lo:  \
 	src/analyses/CMS_13TeV/$(am__dirstamp) \
 	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_13TeV/cms_1711_00431.lo:  \
+	src/analyses/CMS_13TeV/$(am__dirstamp) \
+	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1712_02304.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
 
 libanalyses.la: $(libanalyses_la_OBJECTS) $(libanalyses_la_DEPENDENCIES) $(EXTRA_libanalyses_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libanalyses_la_LINK) -rpath $(mylibdir) $(libanalyses_la_OBJECTS) $(libanalyses_la_LIBADD) $(LIBS)
@@ -1299,6 +1311,7 @@ include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1708_07875.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1709_04183.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1709_07242_13.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1709_07703_13.Plo
+include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_02304.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_02332.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo
@@ -1369,6 +1382,7 @@ include src/analyses/ATLAS_8TeV/$(DEPDIR)/atlas_conf_2015_004.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_1701_02042.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_1709_08601_13.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_1709_08908.Plo
+include src/analyses/CMS_13TeV/$(DEPDIR)/cms_1711_00431.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_pas_sus_15_011.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_sus_16_025.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_sus_16_039.Plo

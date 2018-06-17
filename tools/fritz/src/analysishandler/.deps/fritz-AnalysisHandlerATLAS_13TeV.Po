@@ -396,7 +396,8 @@ src/analysishandler/fritz-AnalysisHandlerATLAS_13TeV.o: \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_conf_2017_060.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1706_03731.h \
  /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1709_07703_13.h \
- /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1709_07242_13.h
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1709_07242_13.h \
+ /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1712_02304.h
 
 /usr/include/stdc-predef.h:
 
@@ -1495,3 +1496,5 @@ include/global/FritzConfig.h:
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1709_07703_13.h:
 
 /home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1709_07242_13.h:
+
+/home/shadowquark/code/github/checkmate/tools/analysis/include/analyses/ATLAS_13TeV/atlas_1712_02304.h:

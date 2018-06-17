@@ -60,18 +60,19 @@ void Cms_1709_08908::analyze() {
   
 
 // code by yyFish ###################################################
-	muonsCombined = filterPhaseSpace( muonsCombined , 8 , -2.4 , 2.4 );
+	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
 	if ( muonsCombined.size() < 2 )	return;
 	if ( muonsCombined[0]->PT <= 17 )	return;
+	if ( muonsCombined[1]->PT <= 8 )	return;
 	jets = filterPhaseSpace( jets , 35 , -2.4 , 2.4 );
 	jets = overlapRemoval( jets , muonsCombined , 0.4 );
 	if ( jets.size() < 2 )	return;
 	vector<Muon*> muons = filterPhaseSpace\
-				( muonsCombined , 8 , -1.4 , 1.4 );
+				( muonsCombined , 5 , -1.4 , 1.4 );
 	vector<Muon*> muonsTemp1 = filterPhaseSpace\
-					( muonsCombined , 8 , 1.6 , 2.4 );
+					( muonsCombined , 5 , 1.6 , 2.4 );
 	vector<Muon*> muonsTemp2 = filterPhaseSpace\
-					( muonsCombined , 8 , -2.4 , -1.6 );
+					( muonsCombined , 5 , -2.4 , -1.6 );
 	muons.insert( muons.end() , muonsTemp1.begin() , muonsTemp1.end() );
 	muons.insert( muons.end() , muonsTemp2.begin() , muonsTemp2.end() );
 	sort( muons.begin() , muons.end() ,\
@@ -85,9 +86,12 @@ void Cms_1709_08908::analyze() {
 	if ( missingET->PT <= 100 )	return;
 	if ( abs( missingET->P4().DeltaPhi( jets[0]->P4() ) ) < 0.4 )	return;
 	if ( abs( missingET->P4().DeltaPhi( jets[1]->P4() ) ) < 0.4 )	return;
-	muons = filterPhaseSpace( muons , 10 , -2.4 , 2.4 );
-	muons = overlapRemoval( muons , 0.4 );
-	if ( muons.size() > 2 )	return;
+	if ( muons.size() > 2 )
+		for ( int i = 2 ; i < muons.size() ; ++ i )
+			if ( ( muons[i]->P4().DeltaR( muons[0]->P4() ) < 0.4 ||\
+				muons[i]->P4().DeltaR( muons[1]->P4() ) < 0.4 )\
+				&& muons[i]->PT > 10 )
+				return;
 	if ( mT2( muons[0]->P4() , muons[1]->P4() , dimuon.M() ,\
 		missingET->P4() ) <= 80 )
 		return;

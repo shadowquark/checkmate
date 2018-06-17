@@ -37,6 +37,7 @@
 
 #include "atlas_1709_07703_13.h"
 #include "atlas_1709_07242_13.h"
+#include "atlas_1712_02304.h"
 //@extraheader@
 #include "AnalysisBase.h"
 

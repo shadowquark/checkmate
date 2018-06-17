@@ -7,5 +7,5 @@ Next:numberShowProcess = 1         ! print process record n times
 Next:numberShowEvent = 0           ! print event record n times
 
 Beams:frameType = 4
-Beams:LHEF = /home/shadowquark/code/checkmate/test/100test/2mu_2dm_8TeV.lhe
+Beams:LHEF = /mnt/c/Users/maxp4/Documents/code/github/checkmate/test/100test/2mu_2dm_8TeV.lhe
 
