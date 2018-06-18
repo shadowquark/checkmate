@@ -59,6 +59,7 @@ void Cms_1709_08601_13::analyze() {
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
 	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
 	muonsCombined = filterIsolation(muonsCombined);
+	muonsCombined = overlapRemoval( muonsCombined , 0.02 );
 	if ( muonsCombined.size() < 4 )	return;
 	int totCharge = 0;
 	for ( int i = 0 ; i < 4 ; ++ i )
@@ -66,9 +67,6 @@ void Cms_1709_08601_13::analyze() {
 	if (totCharge)	return;
 	if ( muonsCombined[0]->PT <= 20 )	return;
 	if ( muonsCombined[1]->PT <= 10 )	return;
-	for ( int i = 0 ; i < 3 ; ++ i )
-		if ( muonsCombined[i]->P4().DeltaR( muonsCombined[ i + 1 ]->P4() ) <= 0.02 )
-			return;
 	TLorentzVector dilepton1 , dilepton2;
 	double minMz = 100;
 	for ( int i = 0 ; i < 4 ; ++ i )

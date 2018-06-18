@@ -57,8 +57,36 @@ void Atlas_1712_02304::analyze() {
   // - If you need output to be stored in other files than the cutflow/signal files we provide, check the manual for how to do this conveniently.  
 
   missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
-//code by yyFish ##############################################################
-//############################################################################# 
+//code by yyFish ###############################################################
+	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.5 , 2.5 );
+	jets = filterPhaseSpace( jets , 30 , -4.5 , 4.5 );
+	if ( muonsCombined.size() < 4 )	return;
+	if ( muonsCombined[0]->PT < 20 || muonsCombined[1]->PT < 15 ||\
+		muonsCombined[2]->PT < 10 ||\
+		( muonsCombined[0]->Charge + muonsCombined[1]->Charge +\
+			muonsCombined[2]->Charge + muonsCombined[3]->Charge ) )
+		return;
+	TLorentzVector lep4 = muonsCombined[0]->P4() , dilep[2];
+	int lepCount = 0;
+	for ( int i = 1 ; i < 4 ; ++ i )
+	{
+		lep4 += muonsCombined[i]->P4();
+		if ( muonsCombined[i]->Charge + muonsCombined[0]->Charge )
+			continue;
+		dilep[ lepCount ++ ] = muonsCombined[0]->P4() +\
+					muonsCombined[i]->P4();
+	}
+	if ( abs( dilep[0].M() - 91.1876 ) > abs( dilep[1].M() - 91.1876 ) )
+	{
+		dilep[0] = dilep[1];
+		dilep[1] = lep4 - dilep[0];
+	}
+	if ( dilep[0].DeltaR( dilep[1] ) <= 0.1 )	return;
+	if ( dilep[0].M() >= 106 || dilep[0].M() <= 50 )	return;
+	if ( dilep[1].M() >= 115 || dilep[1].M() <= 12 )	return;
+	if ( lep4.M() >= 129 || lep4.M() <= 118 )	return;
+	countSignalEvent( "4m" );
+//NOT Double Checked ###########################################################
 }
 
 void Atlas_1712_02304::finalize() {
