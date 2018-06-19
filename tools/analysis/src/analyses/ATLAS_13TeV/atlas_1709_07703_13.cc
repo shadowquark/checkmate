@@ -57,7 +57,6 @@ void Atlas_1709_07703_13::analyze() {
   // - If you need output to be stored in other files than the cutflow/signal files we provide, check the manual for how to do this conveniently.  
 
 	missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
-	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.7 , 2.7 );
 	if ( muonsCombined.size() < 4 )	return;
 	vector<TLorentzVector> muonsPhoton;
 	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
@@ -68,9 +67,17 @@ void Atlas_1709_07703_13::analyze() {
 				tmpVec4 += photons[j]->P4();
 		muonsPhoton.push_back( muonsCombined[i]->P4() + tmpVec4 );
 	}
+	bool muonsFlag[100];
+	memset( muonsFlag , 0 , sizeof(muonsFlag) );
+	for ( int i = 0 ; i < muonsPhoton.size() ; ++ i )
+		if ( muonsPhoton[i].Pt() <= 5 || abs( muonsPhoton.Eta() ) >= 2.7 )
+			muonsFlag[i] = 1;
 	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
+	{
+		if ( muonsFlag[i] )	continue;
 		for ( int j = i ; j < muonsCombined.size() ; ++ j )
 		{
+			if ( muonsFlag[j] ) 	continue;
 			if ( muonsCombined[i]->Charge + muonsCombined[j]->Charge == 0 )
 			{
 				double tmpMassll = ( muonsPhoton[i] + muonsPhoton[j] ).M();
@@ -78,6 +85,7 @@ void Atlas_1709_07703_13::analyze() {
 			}
 			if ( muonsPhoton[i].DeltaR( muonsPhoton[j] ) <= 0.1 )	return;
 		}
+	}
 	jets = filterPhaseSpace( jets , 30 , -4.5 , 4.5 );
 	for ( int i = 0 ; i < jets.size() ; ++ i )
 		for ( int j = 0 ; j < muonsPhoton.size() ; ++ j )
