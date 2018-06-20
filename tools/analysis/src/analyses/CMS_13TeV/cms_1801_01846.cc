@@ -68,7 +68,7 @@ void Cms_1801_01846::analyze() {
 	if ( missingET->PT / Ht < 0.6 || missingET->PT / Ht > 1.4 )	return;
 	muonsCombined = filterIsolation( muonsCombined , 0 );
 	muonsCombined = filterIsolation( muonsCombined , 1 );
-	muonsCombined = filterIsolation( muonsCombined , 3.5 , -2.4 , 2.4 );
+	muonsCombined = filterPhaseSpace( muonsCombined , 3.5 , -2.4 , 2.4 );
 	if ( muonsCombined.size() < 2 )	return;
 	if ( muonsCombined[0]->PT <= 5 )	return;
 	if ( muonsCombined[0]->PT >= 30 )	return;
@@ -80,11 +80,11 @@ void Cms_1801_01846::analyze() {
 	{
 		if ( muonsCombined[1]->PT <= 5 )	return;
 		if ( muonsCombined[0]->PT < 12 )
-			countSingalEvent( "tt125ll1" );
+			countSignalEvent( "tt125ll1" );
 		else if ( muonsCombined[0]->PT < 20 )
 			countSignalEvent( "tt125ll2" );
 		else if ( muonsCombined[0]->PT < 30 )
-			countSingalEvent( "tt125ll3" );
+			countSignalEvent( "tt125ll3" );
 		if ( mT( muonsCombined[0]->P4() , missingET->P4() ) >= 70 ||\
 			mT( muonsCombined[1]->P4() , missingET->P4() ) >= 70 )
 			return;
@@ -95,7 +95,7 @@ void Cms_1801_01846::analyze() {
 		else if ( dimuon.M() < 20 )
 			countSignalEvent( "EW125l2" );
 		else if ( dimuon.M() < 30 )
-			countSingalEvent( "EW125l3" );
+			countSignalEvent( "EW125l3" );
 		else if ( dimuon.M() < 50 )
 			countSignalEvent( "EW125l4" );
 	} else
@@ -104,19 +104,19 @@ void Cms_1801_01846::analyze() {
 		{
 			if ( muonsCombined[1]->PT <= 5 )	return;
 			if ( muonsCombined[0]->PT < 12 )
-				countSingalEvent( "tt200ll1" );
+				countSignalEvent( "tt200ll1" );
 			else if ( muonsCombined[0]->PT < 20 )
 				countSignalEvent( "tt200ll2" );
 			else if ( muonsCombined[0]->PT < 30 )
-				countSingalEvent( "tt200ll3" );
+				countSignalEvent( "tt200ll3" );
 		} else
 		{
 			if ( muonsCombined[0]->PT < 12 )
-				countSingalEvent( "tt300ll1" );
+				countSignalEvent( "tt300ll1" );
 			else if ( muonsCombined[0]->PT < 20 )
 				countSignalEvent( "tt300ll2" );
 			else if ( muonsCombined[0]->PT < 30 )
-				countSingalEvent( "tt300ll3" );
+				countSignalEvent( "tt300ll3" );
 		}
 		if ( mT( muonsCombined[0]->P4() , missingET->P4() ) >= 70 ||\
 			mT( muonsCombined[1]->P4() , missingET->P4() ) >= 70 ||\
@@ -131,7 +131,7 @@ void Cms_1801_01846::analyze() {
 			else if ( dimuon.M() < 20 )
 				countSignalEvent( "EW200l2" );
 			else if ( dimuon.M() < 30 )
-				countSingalEvent( "EW200l3" );
+				countSignalEvent( "EW200l3" );
 			else if ( dimuon.M() < 50 )
 				countSignalEvent( "EW200l4" );
 		} else
@@ -143,7 +143,7 @@ void Cms_1801_01846::analyze() {
 			else if ( dimuon.M() < 20 )
 				countSignalEvent( "EW250l2" );
 			else if ( dimuon.M() < 30 )
-				countSingalEvent( "EW250l3" );
+				countSignalEvent( "EW250l3" );
 			else if ( dimuon.M() < 50 )
 				countSignalEvent( "EW250l4" );
 		}

@@ -70,7 +70,7 @@ void Atlas_1709_07703_13::analyze() {
 	bool muonsFlag[100];
 	memset( muonsFlag , 0 , sizeof(muonsFlag) );
 	for ( int i = 0 ; i < muonsPhoton.size() ; ++ i )
-		if ( muonsPhoton[i].Pt() <= 5 || abs( muonsPhoton.Eta() ) >= 2.7 )
+		if ( muonsPhoton[i].Pt() <= 5 || abs( muonsPhoton[i].Eta() ) >= 2.7 )
 			muonsFlag[i] = 1;
 	for ( int i = 0 ; i < muonsCombined.size() ; ++ i )
 	{
