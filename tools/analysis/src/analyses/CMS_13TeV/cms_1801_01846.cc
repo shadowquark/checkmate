@@ -76,6 +76,18 @@ void Cms_1801_01846::analyze() {
 	TLorentzVector dimuon = muonsCombined[0]->P4() + muonsCombined[1]->P4();
 	if ( dimuon.Pt() <= 3 )	return;
 	if ( dimuon.M() < 4 )	return;
+	double rescale[2];
+	rescale[0] = ( muonsCombined[1]->P4().Py() * missingET->P4().Px() -\
+			muonsCombined[1]->P4().Px() * missingET->P4().Py() ) /\
+			( muonsCombined[0]->P4().Px() * muonsCombined[1]->P4().Py() -\
+				muonsCombined[0]->P4().Py() * muonsCombined[1]->P4().Px() );
+	rescale[1] = ( muonsCombined[0]->P4().Py() * missingET->P4().Px() -\
+			muonsCombined[0]->P4().Px() * missingET->P4().Py() ) /\
+			( muonsCombined[1]->P4().Px() * muonsCombined[0]->P4().Py() -\
+				muonsCombined[1]->P4().Py() * muonsCombined[0]->P4().Px() );
+	double diTauMass = ( ( 1 + rescale[0] ) * muonsCombined[0]->P4() +\
+				( 1 + rescale[1] ) * muonsCombined[1]->P4() ).M();
+	if ( 0 < diTauMass && diTauMass < 160 )	return;
 	if ( missingET->PT < 200 )
 	{
 		if ( muonsCombined[1]->PT <= 5 )	return;
