@@ -57,7 +57,245 @@ void Cms_1801_03957::analyze() {
   // - If you need output to be stored in other files than the cutflow/signal files we provide, check the manual for how to do this conveniently.  
 
   missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
-  
+// Coded by yyFish ############################################################# 
+	if ( missingET->PT < 50 )	return;
+	int flag3l = 2;
+	muonsCombined = filterPhaseSpace( muonsCombined , 0 , -2.5 , 2.5 );
+	electronsTight = filterPhaseSpace( electronsTight , 0 , -2.5 , 2.5 );
+	TLorentzVector dilep;
+	if ( muonsCombined.size() == 2 && electronsTight.size() == 1 &&\
+		! ( muonsCombined[0]->Charge + muonsCombined[1]->Charge ) )
+	{
+		flag3l = 0;
+		dilep = muonsCombined[0]->P4() + muonsCombined[1]->P4();
+	}
+	if ( muonsCombined.size() == 1 && electronsTight.size() == 2 &&\
+		! ( muonsCombined[0]->Charge + muonsCombined[1]->Charge ) )
+	{
+		flag3l = 1;
+		dilep = electronsTight[0]->P4() + electronsTight[1]->P4();
+	}
+	if ( flag3l == 2 )	return;
+	double Ht = 0 , Mt;
+	if (flag3l)
+		Mt = mT( muonsCombined[0]->P4() , missingET->P4() );
+	else
+		Mt = mT( electronsTight[0]->P4() , missingET->P4() );
+	jets = filterPhaseSpace( jets , 30 , -2.5 , 2.5 );
+	for ( auto i : jets )
+		Ht += i->PT;
+	if ( dilep.M() < 75 )
+	{
+		if( Mt < 100 )
+		{
+			if ( Ht < 200 )
+			{
+				if ( missingET->PT < 100 )
+					countSignalEvent( "SR01" );
+				else if ( missingET->PT < 150 )
+					countSignalEvent( "SR02" );
+				else if ( missingET->PT < 200 )
+					countSignalEvent( "SR03" );
+				else
+					countSignalEvent( "SR04" );
+			} else
+				countSignalEvent( "SR12" );
+		} else if ( Mt < 160 )
+		{
+			if ( Ht < 200 )
+			{
+				if ( missingET->PT < 100 )
+					countSignalEvent( "SR05" );
+				else if ( missingET->PT < 150 )
+					countSignalEvent( "SR06" );
+				else
+					countSignalEvent( "SR07" );
+			} else
+				countSignalEvent( "SR13" );
+		} else
+		{
+			if ( Ht < 200 )
+			{
+				if ( missingET->PT < 100 )
+					countSignalEvent( "SR08" );
+				else if ( missingET->PT < 150 )
+					countSignalEvent( "SR09" );
+				else if ( missingET->PT < 200 )
+					countSignalEvent( "SR10" );
+				else
+					countSignalEvent( "SR11" );
+			} else
+				countSignalEvent( "SR14" );
+		}
+	} else if ( dilep.M() < 105 )
+	{
+		if ( Mt < 100 )
+		{
+			if ( missingET->PT < 100 )
+			{
+				if ( Ht < 100 )
+					return;
+				else if ( Ht < 200 )
+					countSignalEvent( "SR27" );
+				else
+					countSignalEvent( "SR40" );
+			} else if ( missingET->PT < 150 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR15" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR28" );
+				else
+					countSignalEvent( "SR40" );
+			
+			} else if ( missingET->PT < 200 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR16" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR29" );
+				else
+					countSignalEvent( "SR41" );
+			} else if ( missingET->PT < 250 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR17" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR30" );
+				else
+					countSignalEvent( "SR41" );
+			} else if ( missingET->PT < 350 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR18" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR31" );
+				else
+					countSignalEvent( "SR42" );
+			} else
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR18" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR31" );
+				else
+					countSignalEvent( "SR43" );
+			}
+		} else if ( Mt < 160 )
+		{
+			if ( missingET->PT < 100 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR19" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR32" );
+				else
+					countSignalEvent( "SR44" );
+			} else if ( missingET->PT < 150 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR20" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR33" );
+				else
+					countSignalEvent( "SR45" );
+			
+			} else if ( missingET->PT < 200 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR21" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR34" );
+				else
+					countSignalEvent( "SR46" );
+			} else if ( missingET->PT < 250 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR22" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR35" );
+				else
+					countSignalEvent( "SR47" );
+			} else if ( missingET->PT < 300 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR22" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR35" );
+				else
+					countSignalEvent( "SR48" );
+			} else
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR22" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR35" );
+				else
+					countSignalEvent( "SR49" );
+			}
+		} else
+		{
+			if ( missingET->PT < 100 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR23" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR36" );
+				else
+					countSignalEvent( "SR50" );
+			} else if ( missingET->PT < 150 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR24" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR37" );
+				else
+					countSignalEvent( "SR51" );
+			
+			} else if ( missingET->PT < 200 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR25" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR38" );
+				else
+					countSignalEvent( "SR52" );
+			} else if ( missingET->PT < 250 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR26" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR39" );
+				else
+					countSignalEvent( "SR53" );
+			} else if ( missingET->PT < 300 )
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR26" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR39" );
+				else
+					countSignalEvent( "SR54" );
+			} else
+			{
+				if ( Ht < 100 )
+					countSignalEvent( "SR26" );
+				else if ( Ht < 200 )
+					countSignalEvent( "SR39" );
+				else
+					countSignalEvent( "SR55" );
+			}
+		}
+	} else
+	{
+		if ( Mt < 100 )
+			countSignalEvent( "SR56" );
+		else if ( Mt < 160 )
+			countSignalEvent( "SR57" );
+		else
+			countSignalEvent( "SR58" );
+	}	
+// NOT Double Checked ##########################################################
 }
 
 void Cms_1801_03957::finalize() {
