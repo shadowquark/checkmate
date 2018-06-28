@@ -78,6 +78,7 @@ void Cms_1709_08908::analyze() {
 	sort( muons.begin() , muons.end() ,\
 		[]( Muon *x , Muon *y ){ return x->PT > y->PT; } );
 	muons = overlapRemoval( muons , 0.1 );
+	if ( muons[0]->Charge + muons[1]->Charge )	return;
 	if ( muons[0]->PT <= 25 )	return;
 	if ( muons[1]->PT <= 20 )	return;
 	TLorentzVector dimuon = muons[0]->P4() + muons[1]->P4();
