@@ -93,6 +93,9 @@ void Cms_1803_06292::analyze() {
 	if ( electronsTight.size() == 2 &&\
 		electronsTight[0]->PT + electronsTight[1]->PT > 800 )
 	{
+		if ( abs( electronsTight[0]->Eta ) > 1.57 &&\
+			abs( electronsTight[1]->Eta ) < 1.57 )
+			return;
 		double ml2 = ( electronsTight[0]->P4() + electronsTight[1]->P4() ).M();
 		if ( ml2 > 1800 )
 			countSignalEvent( "ee1800" );

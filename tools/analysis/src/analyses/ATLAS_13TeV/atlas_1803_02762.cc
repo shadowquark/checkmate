@@ -177,6 +177,8 @@ void Atlas_1803_02762::analyze() {
 				{
 					if ( abs( temp.DeltaPhi( jets[i]->P4() ) ) < temp1 )
 					{
+						temp2 = abs( temp.DeltaPhi( jets[i]->P4() ) );
+						temp2p = temp1p;
 						temp1 = abs( temp.DeltaPhi( jets[i]->P4() ) );
 						temp1p = i;
 					} else
