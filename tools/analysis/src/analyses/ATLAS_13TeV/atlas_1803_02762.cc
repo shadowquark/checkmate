@@ -196,13 +196,13 @@ void Atlas_1803_02762::analyze() {
 			flags[0] = flags[1] = 1;
 		else if ( missingET->PT <= 250 )
 			flags[1] = 1;
-		if ( temp.Pt() <= 40 )
+		if ( diLep.Pt() <= 40 )
 			flags[0] = flags[1] = flags[2] = flags[3] = 1;
-		else if ( temp.Pt() <= 60 )
+		else if ( diLep.Pt() <= 60 )
 			flags[0] = flags[1] = flags[2] = 1;
-		else if ( temp.Pt() <= 80 )
+		else if ( diLep.Pt() <= 80 )
 			flags[0] = flags[1] = 1;
-		if ( tempJJ2.Pt() <= 100 || Mt2 <= 100)	flags[0] = flags[1] = 0;
+		if ( tempJJ2.Pt() <= 100 || Mt2 <= 100)	flags[0] = flags[1] = 1;
 		if ( jets[temp1p]->P4().DeltaR( jets[temp2p]->P4() ) >= 2.2 ) 
 			flags[3] = 1;
 		if ( jets[0]->P4().DeltaR( jets[1]->P4() ) >= 1.5 )
@@ -213,13 +213,13 @@ void Atlas_1803_02762::analyze() {
 		if ( llFlag == 2 &&\
 			electronsLoose[0]->P4().DeltaR( electronsLoose[1]->P4() ) >= 1.8 )
 			flags[0] = flags[1] = 1;
-		if ( abs( missingET->P4().DeltaPhi(temp) ) >= 0.8 )	flags[2] = 1;
+		if ( abs( missingET->P4().DeltaPhi(diLep) ) >= 0.8 )	flags[2] = 1;
 		if ( abs( missingET->P4().DeltaPhi(tempJJ1) ) >= 2.2 )	flags[3] = 1;
 		if ( abs( missingET->P4().DeltaPhi(tempJJ2) ) >= 1.5 )	flags[2] = 1;
 		if ( abs( missingET->P4().DeltaPhi(tempJJ2) ) <= 0.5 ||\
 			abs( missingET->P4().DeltaPhi(tempJJ2) ) >= 3.0 )	
 			flags[0] = flags[1] = 1;
-		if ( missingET->PT / temp.Pt() <= 0.6 || missingET->PT / temp.Pt() >= 1.6 )
+		if ( missingET->PT / diLep.Pt() <= 0.6 || missingET->PT / diLep.Pt() >= 1.6 )
 			flags[2] = 1;
 		if ( missingET->PT / tempJJ2.Pt() >= 0.8 )	flags[2] = 1;
 		TLorentzVector jetISR = - jets[temp1p]->P4() - jets[temp2p]->P4();
@@ -232,7 +232,7 @@ void Atlas_1803_02762::analyze() {
 			flags[3] = 1;
 		if ( abs( missingET->P4().DeltaPhi( jets[0]->P4() ) ) <= 2.6 )
 			flags[3] = 1;
-		if ( temp.Eta() >= 1.6 )	flags[3] = 1;
+		if ( diLep.Eta() >= 1.6 )	flags[3] = 1;
 		if ( jets.size() > 2 && jets[2]->PT <= 30 )	flags[3] = 1;
 		if ( !flags[0] )	countSignalEvent( "2int" );
 		if ( !flags[1] )	countSignalEvent( "2high" );
@@ -259,7 +259,7 @@ void Atlas_1803_02762::analyze() {
 					return;
 				else if ( missingET->PT < 200 )
 				{
-					if ( jets[0]->PT > 70 && ( diLep + l3 ).M() < 120 )
+					if ( jets[0]->PT > 70 && ( diLep + l3 ).Pt() < 120 )
 						countSignalEvent( "3a1J" );
 				} else
 				{
