@@ -106,7 +106,7 @@ void Atlas_1709_07242_13::analyze() {
 				}
 				if ( muonsCombined.size() &&\
 					tauHadl[i]->Charge + muonsCombined[0]->Charge == 0 &&\
-					abs( muonsCombined[i]->Eta ) < 2.4 )
+					abs( muonsCombined[0]->Eta ) < 2.4 )
 				{
 					TLorentzVector pTl = muonsCombined[0]->P4();
 					if ( pTl.DeltaPhi( tauHadl[i]->P4() ) <= 2.4 )	return;
