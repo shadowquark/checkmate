@@ -96,7 +96,7 @@ void Atlas_1709_07242_13::analyze() {
 				if ( electronsTight.size() &&\
 					tauHadl[i]->Charge + electronsTight[0]->Charge == 0 )
 				{
-					TLorentzVector pTl = electronsTight[j]->P4();
+					TLorentzVector pTl = electronsTight[0]->P4();
 					if ( pTl.DeltaPhi( tauHadl[i]->P4() ) <= 2.4 )	return;
 					if ( mT( pTl , missingET->P4() ) >= 40 )	return;
 					if (bFlag)
@@ -108,7 +108,7 @@ void Atlas_1709_07242_13::analyze() {
 					tauHadl[i]->Charge + muonsCombined[0]->Charge == 0 &&\
 					abs( muonsCombined[i]->Eta ) < 2.4 )
 				{
-					TLorentzVector pTl = muonsCombined[j]->P4();
+					TLorentzVector pTl = muonsCombined[0]->P4();
 					if ( pTl.DeltaPhi( tauHadl[i]->P4() ) <= 2.4 )	return;
 					if ( mT( pTl , missingET->P4() ) >= 40 )	return;
 					if (bFlag)

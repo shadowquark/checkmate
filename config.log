@@ -14,7 +14,7 @@ hostname = shadowquark
 uname -m = x86_64
 uname -r = 4.4.0-17134-Microsoft
 uname -s = Linux
-uname -v = #112-Microsoft Thu Jun 07 22:57:00 PST 2018
+uname -v = #137-Microsoft Thu Jun 14 18:46:00 PST 2018
 
 /usr/bin/uname -p = x86_64
 /bin/uname -X     = unknown
