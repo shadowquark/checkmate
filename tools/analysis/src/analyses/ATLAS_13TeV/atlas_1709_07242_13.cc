@@ -93,28 +93,29 @@ void Atlas_1709_07242_13::analyze() {
 		for ( int i = 0 ; i < tauHadl.size() ; ++ i )
 			if ( abs( tauHadl[i]->Eta ) < 2.3 )
 			{
-				for ( int j = 0 ; j < electronsTight.size() ; ++ j )
-					if ( tauHadl[i]->Charge + electronsTight[j]->Charge == 0 )
-					{
-						TLorentzVector pTl = electronsTight[j]->P4();
-						if ( pTl.DeltaPhi( tauHadl[i]->P4() ) <= 2.4 )	return;
-						if ( mT( pTl , missingET->P4() ) >= 40 )	return;
-						if (bFlag)
-							countSignalEvent( "lhb" );
-						else
-							countSignalEvent( "lhnb" );
-					}
-				for ( int j = 0 ; j < muonsCombined.size() ; ++ j )
-					if ( tauHadl[i]->Charge + muonsCombined[j]->Charge == 0 && abs( muonsCombined[i]->Eta ) < 2.4 )
-					{
-						TLorentzVector pTl = muonsCombined[j]->P4();
-						if ( pTl.DeltaPhi( tauHadl[i]->P4() ) <= 2.4 )	return;
-						if ( mT( pTl , missingET->P4() ) >= 40 )	return;
-						if (bFlag)
-							countSignalEvent( "lhb" );
-						else
-							countSignalEvent( "lhnb" );
-					}
+				if ( electronsTight.size() &&\
+					tauHadl[i]->Charge + electronsTight[0]->Charge == 0 )
+				{
+					TLorentzVector pTl = electronsTight[j]->P4();
+					if ( pTl.DeltaPhi( tauHadl[i]->P4() ) <= 2.4 )	return;
+					if ( mT( pTl , missingET->P4() ) >= 40 )	return;
+					if (bFlag)
+						countSignalEvent( "lhb" );
+					else
+						countSignalEvent( "lhnb" );
+				}
+				if ( muonsCombined.size() &&\
+					tauHadl[i]->Charge + muonsCombined[0]->Charge == 0 &&\
+					abs( muonsCombined[i]->Eta ) < 2.4 )
+				{
+					TLorentzVector pTl = muonsCombined[j]->P4();
+					if ( pTl.DeltaPhi( tauHadl[i]->P4() ) <= 2.4 )	return;
+					if ( mT( pTl , missingET->P4() ) >= 40 )	return;
+					if (bFlag)
+						countSignalEvent( "lhb" );
+					else
+						countSignalEvent( "lhnb" );
+				}
 			}
 	} else
 	{

@@ -78,6 +78,7 @@ void Cms_1709_08908::analyze() {
 	sort( muons.begin() , muons.end() ,\
 		[]( Muon *x , Muon *y ){ return x->PT > y->PT; } );
 	muons = overlapRemoval( muons , 0.1 );
+	if ( muons.size() < 2 )	return;
 	if ( muons[0]->Charge + muons[1]->Charge )	return;
 	if ( muons[0]->PT <= 25 )	return;
 	if ( muons[1]->PT <= 20 )	return;
@@ -93,8 +94,7 @@ void Cms_1709_08908::analyze() {
 				muons[i]->P4().DeltaR( muons[1]->P4() ) < 0.4 )\
 				&& muons[i]->PT > 10 )
 				return;
-	if ( mT2( muons[0]->P4() , muons[1]->P4() , dimuon.M() ,\
-		missingET->P4() ) <= 80 )
+	if ( mT2( muons[0]->P4() , muons[1]->P4() , 0 ) <= 80 )
 		return;
 	double Ht = 0;
 	for ( int i = 0 ; i < jets.size() ; ++ i )	Ht += jets[i]->PT;

@@ -76,8 +76,7 @@ void Atlas_1803_02762::analyze() {
 		llFlag = 1;
 		if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge )	return;
 		diLep = muonsCombined[0]->P4() + muonsCombined[1]->P4();
-		Mt2 = mT2( muonsCombined[0]->P4() , muonsCombined[1]->P4() ,\
-			missingET->P4().M() , missingET->P4() );
+		Mt2 = mT2( muonsCombined[0]->P4() , muonsCombined[1]->P4() , 0 );
 	}
 	if ( electronsLoose.size() == 2 && !muonsCombined.size() )
 	{
@@ -171,6 +170,7 @@ void Atlas_1803_02762::analyze() {
 		double	temp1 , temp2;
 		int	temp1p , temp2p;
 		temp1 = temp2 = 100;
+		temp1p = temp2p = 0;
 		if ( jets.size() > 2 )
 			for ( int i = 0 ; i < jets.size() ; ++ i )
 				if ( abs( temp.DeltaPhi( jets[i]->P4() ) ) < temp2 )
