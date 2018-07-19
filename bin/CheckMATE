@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys,os
 sys.path.append(os.path.join(os.path.split(os.path.split(os.path.realpath(__file__))[0])[0], "tools", "python"))
-sys.path.append('/usr/lib64/root/5.34')
+sys.path.append('/home/shadowquark/root/lib')
 from checkmate_core import CheckMATE2
 from advprint import AdvPrint
 from info import Info

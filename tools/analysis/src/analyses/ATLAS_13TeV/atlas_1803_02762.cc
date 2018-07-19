@@ -83,8 +83,7 @@ void Atlas_1803_02762::analyze() {
 		llFlag = 2;
 		if ( electronsLoose[0]->Charge + electronsLoose[1]->Charge )	return;
 		diLep = electronsLoose[0]->P4() + electronsLoose[1]->P4();
-		Mt2 = mT2( electronsLoose[0]->P4() , electronsLoose[1]->P4() ,\
-			missingET->P4().M() , missingET->P4() );
+		Mt2 = mT2( electronsLoose[0]->P4() , electronsLoose[1]->P4() , 0 );
 	}
 	if ( muonsCombined.size() == 3 )
 	{
