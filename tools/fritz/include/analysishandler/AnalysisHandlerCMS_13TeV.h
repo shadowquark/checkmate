@@ -27,6 +27,11 @@
 #include "cms_1801_03957.h"
 #include "cms_1803_05485.h"
 #include "cms_1803_06292.h"
+#include "cms_1806_05264.h"
+#include "cms_1806_05246.h"
+#include "cms_1806_04771.h"
+#include "cms_1805_04865.h"
+#include "cms_1807_02048.h"
 //@extraheader@
 
 
