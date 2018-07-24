@@ -58,6 +58,42 @@ void Cms_1806_05264::analyze() {
 
   missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
   
+// Coded by yyFish #############################################################
+	muonsCombined = filterIsolation( muonsCombined , 0 );
+	vector<Muon*> muons = filterPhaseSpace( muonsCombined , 20 , -1.4 , 1.4 );
+	vector<Muon*> muonsTmp1 = filterPhaseSpace( muonsCombined , 20 , 1.6 , 2.4 );
+	vector<Muon*> muonsTmp2 = filterPhaseSpace( muonsCombined , 20 , -2.4 , -1.6 );
+	muons.insert( muons.end() , mousTmp1.begin() , muonsTmp1.end() );
+	muons.insert( muons.end() , mousTmp2.begin() , muonsTmp2.end() );
+	sort( muons.begin() , muons.end() ,\
+		[]( Muon *x , Muon *y ){ return x->PT > y->PT; } );
+	if ( muons[0]->PT <= 50 )	return;
+	if ( muons[0]->Charge + muons[1]->Charge )	return;
+	if ( muons.size() > 2 )	return;
+	electronsLoose = filterIsolation( electronsLoose , 0 );
+	vector<Electron*> electrons\
+				= filterPhaseSpace( electronsLoose , 20 , -1.4 , 1.4 );
+	vector<Electron*> electronsTmp1\
+				= filterPhaseSpace( electronsLoose , 20 , 1.6 , 2.4 );
+	vector<Electron*> electronsTmp2\
+				= filterPhaseSpace( electronsLoose , 20 , -2.4 , -1.6 );
+	sort( electrons.begin() , electrons.end() ,\
+		[]( Electron *x , Electron *y ){ return x->PT > y->PT; } );
+	if ( electrons.size() )	return;
+	if ( jets.size() && jets[0]->PT > 25 )	return;
+	TLorentzVector dilep = muons[0]->P4() + muons[1]->P4();
+	if ( dilep.M() <= 20 )	return;
+	if ( 76 <= dilep.M() && dilep.M() <= 106 )	return;
+	if ( mT2( muons[0]->P4() , muons[1]->P4() , 0 ) <= 90 )	return;
+	if ( missingET->PT > 300 )
+		countSignalEvent( "2m300" );
+	else if ( missingET->PT > 225 )
+		countSignalEvent( "2m225" );
+	else if ( missingET->PT > 150 )
+		countSignalEvent( "2m150" );
+	else if ( missingET->PT > 100 )
+		countSignalEvent( "2m100" );
+// NOT Double Checked ##########################################################
 }
 
 void Cms_1806_05264::finalize() {
