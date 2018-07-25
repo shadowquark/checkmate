@@ -67,9 +67,9 @@ void Cms_1806_05264::analyze() {
 	muons.insert( muons.end() , muonsTmp2.begin() , muonsTmp2.end() );
 	sort( muons.begin() , muons.end() ,\
 		[]( Muon *x , Muon *y ){ return x->PT > y->PT; } );
+	if ( muons.size() != 2 )	return;
 	if ( muons[0]->PT <= 50 )	return;
 	if ( muons[0]->Charge + muons[1]->Charge )	return;
-	if ( muons.size() > 2 )	return;
 	electronsLoose = filterIsolation( electronsLoose , 0 );
 	vector<Electron*> electrons\
 				= filterPhaseSpace( electronsLoose , 20 , -1.4 , 1.4 );
