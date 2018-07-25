@@ -58,6 +58,116 @@ void Cms_1807_02048::analyze() {
 
   missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
   
+// Coded by yyFish ############################################################
+	bool flag[3] = {};
+	if ( filterPhaseSpace( muonsCombined , 10 , -2.4 , 2.4 ).size() )
+		flag[0] = 1;
+	if ( filterPhaseSpace( muonsCombined , 15 , -2.4 , 2.4 ).size() > 1 )
+		flag[1] = 1;
+	if ( filterPhaseSpace( muonsCombined , 20 , -2.4 , 2.4 ).size() )
+		flag[2] = 1;
+	if ( filterPhaseSpace( electronsTight , 10 , -2.5 , 2.5 ).size() )
+		flag[1] = 1;
+	if ( filterPhaseSpace( electronsTight , 15 , -2.5 , 2.5 ).size() > 1 )
+		flag[0] = 1;
+	if ( filterPhaseSpace( electronsTight , 20 , -2.5 , 2.5 ).size() )
+		flag[2] = 1;
+	if ( flag[0] && flag[1] && flag[2] )	return;
+	muonsCombined = filterPhaseSpace( muonsCombined , 25 , -2.4 , 2.4 );
+	electronsTight = filterPhaseSpace( electronsTight , 26 , -2.1 , 2.1 );
+	if ( muonsCombined.size() + electronsTight.size() > 1 )	return;
+	if ( muonsCombined.size() )	flag[0] = flag[2] = 1;
+	if ( electronsTight.size() )	flag[1] = flag[2] = 1;
+	vector<Jet*> tjets , njets;
+	for ( auto i : jets )
+		if ( checkTauTag( i , "tight" ) )
+			tjets.push_back(i);
+		else
+			njets.push_back(i);
+	tjets = filterPhaseSpace( tjets , 20 , -2.3 , 2.3 );
+	if ( !tjets.size() )	return;
+	if ( tjets.size() > 2 )	return;
+	if ( tjets.size() == 2 )	flag[0] = flag[1] = 1;
+	if ( tjets.size() == 1 )	flag[2] = 1;
+	if ( muonsCombined.size() + electronsTight.size() + tjets.size() != 2 )
+		return;
+	njets = filterPhaseSpace( njets , 20 , -2.4 , 2.4 );
+	njets = overlapRemoval( njets , electronsTight , 0.4 );
+	njets = overlapRemoval( njets , muonsCombined , 0.4 );
+	njets = overlapRemoval( njets , tjets , 0.4 );
+	if ( njets.size() )	flag[0] = flag[1] = 1;
+	if ( !flag[0] &&\
+		abs( electronsTight[0]->P4().DeltaPhi( tjets[0]->P4() ) ) >= 1.5 )
+		flag[0] = 1;
+	if ( !flag[1] &&\
+		abs( muonsCombined[0]->P4().DeltaPhi( tjets[0]->P4() ) ) >= 1.5 )
+		flag[1] = 1;
+	if ( !flag[2] &&\
+		abs( tjets[0]->P4().DeltaPhi( tjets[1]->P4() ) ) >= 1.5 )
+		flag[2] = 1;
+	if ( !flag[0] &&\
+		abs( electronsTight[0]->P4().Eta() - tjets[0]->P4().Eta() ) >= 2 )
+		flag[0] = 1;
+	if ( !flag[1] &&\
+		abs( muonsCombined[0]->P4().Eta() - tjets[0]->P4().Eta() ) >= 2 )
+		flag[1] = 1;
+	if ( !flag[0] && electronsTight[0]->P4().DeltaR( tjets[0]->P4() ) >= 3.5 )
+		flag[0] = 1;
+	if ( !flag[1] && muonsCombined[0]->P4().DeltaR( tjets[0]->P4() ) >= 3.5 )
+		flag[1] = 1;
+	if ( !flag[0] && ( electronsTight[0]->P4() + tjets[0]->P4() ).M() <= 50 )
+		flag[0] = 1;
+	if ( !flag[1] && ( muonsCombined[0]->P4() + tjets[0]->P4() ).M() <= 50 )
+		flag[1] = 1;
+	if ( missingET->PT <= 120 )	flag[0] = flag[1] = 1;
+	if ( missingET->PT <= 50 )	flag[2] = 1;
+	if ( !flag[0] )
+	{
+		double mTl1 = mT( electronsTight[0]->P4() , missingET->P4() );
+		if ( mTl1 < 20 || ( 60 < mTl1 && mTl1 <= 120 ) )
+			flag[0] = 1;
+		if ( mTl1 + mT( tjets[0]->P4() , missingET->P4() ) <= 50 )
+			flag[0] = 1;
+		TVector3 lep1 = electronsTight[0]->P4().Vect();
+		TVector3 lep2 = tjets[0]->P4().Vect();
+		TVector3 lepm = missingET->P4().Vect();
+		double Dl1l2 = ( lepm - ( lep1 + lep2 ) * 0.85 ) *\
+				( lep1.Unit() + lep2.Unit() ).Unit();
+		if ( Dl1l2 <= -500 )	flag[0] = 1;
+		if ( mT2( electronsTight[0]->P4() , tjets[0]->P4() , 0 ) <= 100 )
+			flag[0] = 1;
+	}
+	if ( !flag[1] )
+	{
+		double mTl1 = mT( muonsCombined[0]->P4() , missingET->P4() );
+		if ( mTl1 < 20 || ( 60 < mTl1 && mTl1 <= 120 ) )
+			flag[1] = 1;
+		if ( mTl1 + mT( tjets[0]->P4() , missingET->P4() ) <= 50 )
+			flag[1] = 1;
+		TVector3 lep1 = muonsCombined[0]->P4().Vect();
+		TVector3 lep2 = tjets[0]->P4().Vect();
+		TVector3 lepm = missingET->P4().Vect();
+		double Dl1l2 = ( lepm - ( lep1 + lep2 ) * 0.85 ) *\
+				( lep1.Unit() + lep2.Unit() ).Unit();
+		if ( Dl1l2 <= -500 )	flag[1] = 1;
+		if ( mT2( muonsCombined[0]->P4() , tjets[0]->P4() , 0 ) <= 100 )
+			flag[1] = 1;
+	}
+	if ( !flag[0] )	countSignalEvent( "et" );
+	if ( !flag[1] )	countSignalEvent( "mt" );
+	if ( flag[2] )	return;
+	double mT2tt = mT2( tjets[0]->P4() , tjets[1]->P4() , 0 );
+	double mTtt = mT( tjets[0]->P4() , missingET->P4() ) +\
+			mT( tjets[0]->P4() , missingET->P4() );
+	if ( mT2tt > 90 )
+		countSignalEvent( "SR1" );
+	else if ( mT2tt <= 40 )
+		return;
+	else if ( mTtt > 350 )
+		countSignalEvent( "SR2" );
+	else if ( mTtt > 300 )
+		countSignalEvent( "SR3" );
+// NOT Double Checked #########################################################
 }
 
 void Cms_1807_02048::finalize() {

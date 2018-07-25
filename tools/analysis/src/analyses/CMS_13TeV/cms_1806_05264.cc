@@ -63,8 +63,8 @@ void Cms_1806_05264::analyze() {
 	vector<Muon*> muons = filterPhaseSpace( muonsCombined , 20 , -1.4 , 1.4 );
 	vector<Muon*> muonsTmp1 = filterPhaseSpace( muonsCombined , 20 , 1.6 , 2.4 );
 	vector<Muon*> muonsTmp2 = filterPhaseSpace( muonsCombined , 20 , -2.4 , -1.6 );
-	muons.insert( muons.end() , mousTmp1.begin() , muonsTmp1.end() );
-	muons.insert( muons.end() , mousTmp2.begin() , muonsTmp2.end() );
+	muons.insert( muons.end() , muonsTmp1.begin() , muonsTmp1.end() );
+	muons.insert( muons.end() , muonsTmp2.begin() , muonsTmp2.end() );
 	sort( muons.begin() , muons.end() ,\
 		[]( Muon *x , Muon *y ){ return x->PT > y->PT; } );
 	if ( muons[0]->PT <= 50 )	return;
