@@ -3,14 +3,14 @@ PythiaHandler '4mu': Pythia8 output redirected to /mnt/c/Users/maxp4/Documents/c
 PythiaHandler '4mu': Initializing Pythia8 with /mnt/c/Users/maxp4/Documents/code/github/checkmate/results/100test/pythia/4mucard_0.in
 PythiaHandler '4mu': Pythia8 successfully initialized!
 PythiaHandler '4mu': Pythia8 successfully initialised!
-DelphesHandler 'cms8tev': Initialising Delphes via linking to PythiaHandler '4mu'
-DelphesHandler 'cms8tev': Initialising settings from /mnt/c/Users/maxp4/Documents/code/github/checkmate/data/cards/delphes_skimmed_CMS.tcl
-DelphesHandler 'cms8tev': Delphes successfully initialised!
-AnalysisHandler 'cms8tev': Initialising AnalysisHandler
-AnalysisHandler 'cms8tev': Loading Analysis cms_1701_02032_8_2mu2t
-AnalysisHandler 'cms8tev': Successfully loaded analysis cms_1701_02032_8_2mu2t
-AnalysisHandler 'cms8tev': Linking to DelphesHandler 'cms8tev' tree
-AnalysisHandler 'cms8tev': AnalysisHandler successfully linked to DelphesHandler 'cms8tev'
+DelphesHandler 'cms13tev': Initialising Delphes via linking to PythiaHandler '4mu'
+DelphesHandler 'cms13tev': Initialising settings from /mnt/c/Users/maxp4/Documents/code/github/checkmate/data/cards/delphes_skimmed_CMS_13TeV.tcl
+DelphesHandler 'cms13tev': Delphes successfully initialised!
+AnalysisHandler 'cms13tev': Initialising AnalysisHandler
+AnalysisHandler 'cms13tev': Loading Analysis cms_1805_04865
+AnalysisHandler 'cms13tev': Successfully loaded analysis cms_1805_04865
+AnalysisHandler 'cms13tev': Linking to DelphesHandler 'cms13tev' tree
+AnalysisHandler 'cms13tev': AnalysisHandler successfully linked to DelphesHandler 'cms13tev'
 Fritz: Fritz successfully loaded command line parameters!
 Fritz:  >> Successfully initialized and linked all handlers! <<
 Fritz: Starting event loop!
@@ -25,12 +25,12 @@ Fritz: Progress: 800 Events
 Fritz: Progress: 900 Events
 Fritz: Progress: 1000 Events
 Fritz:  >> Finalising after 1000 events. <<
-AnalysisHandler 'cms8tev': Asking DelphesHandler 'cms8tev' for cross section information
-DelphesHandler 'cms8tev': Asking PythiaHandler '4mu' for cross section information
+AnalysisHandler 'cms13tev': Asking DelphesHandler 'cms13tev' for cross section information
+DelphesHandler 'cms13tev': Asking PythiaHandler '4mu' for cross section information
 PythiaHandler '4mu': Pythia8 returned cross section of 1.81756 fb
 PythiaHandler '4mu': Pythia8 returned cross section error of 0 fb
-AnalysisHandler 'cms8tev': Analyses updated with sigma = 1.81756 fb and dSigma = 0 fb
-AnalysisHandler 'cms8tev': Analyses successfully finished!
-DelphesHandler 'cms8tev': Delphes successfully finished!
+AnalysisHandler 'cms13tev': Analyses updated with sigma = 1.81756 fb and dSigma = 0 fb
+AnalysisHandler 'cms13tev': Analyses successfully finished!
+DelphesHandler 'cms13tev': Delphes successfully finished!
 PythiaHandler '4mu': Pythia8 successfully finished!
 Fritz:  >> Done <<

@@ -38,8 +38,8 @@ void Cms_1805_04865::analyze() {
   //------------        For each object, if the user entered N isolation conditions, they can be
   //------------        checked individually be the second argument (running from 0 to N-1).
   // electronsMedium = filterIsolation(electronsMedium, 0)            Removes electrons that do not pass the first isolation condition entered into the AnalysisManager by the user
-  // std::vector<int> flags; flags.push_back(0); flags.push_back(2);
-  // electronsMedium = filterIsolation(electronsMedium, flags)        Same as above, but both the first and the third condition have to be fulfilled
+  // std::vector<int> triFlags; triFlags.push_back(0); triFlags.push_back(2);
+  // electronsMedium = filterIsolation(electronsMedium, triFlags)        Same as above, but both the first and the third condition have to be fulfilled
   // electronsMedium = filterIsolation(electronsMedium)               Same as above, but all conditions have to be fulfilled.
   
   //-----------Flavour Tag Checks (defined for jets only)
@@ -58,6 +58,87 @@ void Cms_1805_04865::analyze() {
 
   missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
   
+// Coded by yyFish ############################################################
+	jets = filterPhaseSpace( jets , 18.5 , -2.3 , 2.3 );
+	vector<Jet*> tjets;
+	for ( auto i : jets )
+		if ( checkTauTag( i , "tight" ) )
+			tjets.push_back(i);
+	if ( !tjets.size() )	return;
+	electronsLoose = filterPhaseSpace( electronsLoose , 7 , -2.5 , 2.5 );
+	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
+	bool triFlag[3] = {};
+	if ( muonsCombined.size() < 2 )	return;
+	if ( muonsCombined[0]->PT <= 24 )	triFlag[0] = 1;
+	if ( muonsCombined[0]->PT <= 17 || muonsCombined[1]->PT <= 8 )
+		triFlag[1] = 1;
+	if ( muonsCombined.size() > 2 &&\
+		( muonsCombined[0]->PT <= 12 || muonsCombined[1]->PT <= 10 ) )
+		triFlag[2] = 1;
+	if ( muonsCombined[0]->PT <= 18 )	return;
+	if ( triFlag[1] && triFlag[2] && muonsCombined[0]->PT <= 25 )	return;
+	if ( muonsCombined[1]->PT <= 9 )	return;
+	if ( triFlag[0] && triFlag[1] && muonsCombined[1]->PT <= 11 )	return;
+	if ( triFlag[0] && triFlag[1] )	
+		muonsCombined = filterPhaseSpace( muonsCombined , 6 , -2.4 , 2.4 );
+	bool flag[3] = {};
+	if ( muonsCombined.size() == 3 && tjets.size() == 1 )
+	{
+		int totCharge = 0;
+		for ( auto i : muonsCombined )
+			totCharge += i->Charge;
+		if ( totCharge - 1 )	flag[1] = 1;	
+		TLorentzVector dilep = muonsCombined[0]->P4() , ditau = tjets[0]->P4();
+		if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge == 0 )
+		{
+			dilep += muonsCombined[1]->P4();
+			ditau += muonsCombined[2]->P4();
+			if ( muonsCombined[2]->Charge + tjets[0]->Charge )
+				flag[1] = 1;
+		} else
+		{
+			dilep += muonsCombined[2]->P4();
+			ditau += muonsCombined[1]->P4();
+			if ( muonsCombined[1]->Charge + tjets[0]->Charge )
+				flag[1] = 1;
+		}
+		if ( ( dilep + ditau ).M() >= 120 )	flag[1] = 1;
+		if ( ditau.M() >= dilep.M() )	flag[1] = 1;
+		if ( dilep.M() < 14 || dilep.M() > 64 )	flag[1] = 1;
+		muonsCombined = overlapRemoval( muonsCombined , 0.3 );
+		if ( muonsCombined.size() != 3 )	flag[1] = 1;
+	}
+	if ( muonsCombined.size() == 2 && tjets.size() == 2 )
+	{
+		if ( tjets[0]->Charge + tjets[1]->Charge )	flag[2] = 1;
+		if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge )	flag[2] = 1;
+		TLorentzVector dilep = muonsCombined[0]->P4() + muonsCombined[1]->P4();
+		TLorentzVector ditau = tjets[0]->P4() + tjets[1]->P4();
+		if ( ( dilep + ditau ).M() >= 130 )	flag[2] = 1;
+		if ( ditau.M() >= dilep.M() )	flag[2] = 1;
+		if ( dilep.M() < 14 || dilep.M() > 64 )	flag[2] = 1;
+		muonsCombined = overlapRemoval( muonsCombined , 0.3 );
+		muonsCombined = overlapRemoval( muonsCombined , tjets , 0.4 );
+		if ( muonsCombined.size() != 2 )	flag[2] = 1;
+	}
+	if ( muonsCombined.size() == 2 && electronsLoose.size() && tjets.size() == 1 )
+	{
+		if ( electronsLoose[0]->Charge + tjets[0]->Charge )	flag[0] = 1;
+		if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge )	flag[0] = 1;
+		TLorentzVector dilep = muonsCombined[0]->P4() + muonsCombined[1]->P4();
+		TLorentzVector ditau = tjets[0]->P4() + electronsLoose[0]->P4();
+		if ( ( dilep + ditau ).M() >= 120 )	flag[0] = 1;
+		if ( ditau.M() >= dilep.M() )	flag[0] = 1;
+		if ( dilep.M() < 14 || dilep.M() > 64 )	flag[0] = 1;
+		muonsCombined = overlapRemoval( muonsCombined , 0.3 );
+		muonsCombined = overlapRemoval( muonsCombined , electronsLoose , 0.3 );
+		muonsCombined = overlapRemoval( muonsCombined , tjets , 0.4 );
+		if ( muonsCombined.size() != 2 )	flag[0] = 1;
+	}
+	if ( !flag[0] )	countSignalEvent( "et" );
+	if ( !flag[1] )	countSignalEvent( "mt" );
+	if ( !flag[2] )	countSignalEvent( "2t" );
+// NOT Double Checked #########################################################
 }
 
 void Cms_1805_04865::finalize() {

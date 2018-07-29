@@ -1,0 +1,14 @@
+# cms 1805.04865 13TeV 35.9/fb
+
+Inputfile:
+XSect:           1.81756 fb
+ Error:          0 fb
+MCEvents:        1000
+ SumOfWeights:   1.81756
+ SumOfWeights2:  0.00330353
+ NormEvents:     65.2505
+
+SR  Sum_W  Sum_W2  Acc  N_Norm  
+2t  0      0       0    0       
+et  0      0       0    0       
+mt  0      0       0    0       

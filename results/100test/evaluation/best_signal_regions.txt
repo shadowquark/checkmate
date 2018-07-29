@@ -1,2 +1,2 @@
-analysis                sr   o    b     db    s    ds             s95obs  s95exp  robscons  rexpcons  
-cms_1701_02032_8_2mu2t  muh  1.0  1.14  0.29  0.0  27.8600433714  3.32    3.84    0         0         
+analysis        sr  o    b    db    s    ds             s95obs  s95exp  robscons  rexpcons  
+cms_1805_04865  mt  6.0  5.2  1.22  0.0  50.7703020733  7.4     6.8     0         0         
