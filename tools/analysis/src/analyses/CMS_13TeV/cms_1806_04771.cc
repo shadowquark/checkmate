@@ -58,6 +58,45 @@ void Cms_1806_04771::analyze() {
 
   missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
   
+// Coded by yyFish ############################################################
+	muonsCombined = filterPhaseSpace( muonsCombined , 26 , -2.4 , 2.4 );
+	electronsLoose = filterPhaseSpace( electronsLoose , 26 , -2.1 , 2.1 );
+	jets = filterPhaseSpace( jets , 20 , -2.3 , 2.3 );
+	vector<Jet*> tjets , ttjets;
+	for ( auto i : jets )
+	{
+		if ( checkTauTag( i , "tight" ) )
+			tjets.push_back(i);
+		if ( checkTauTag( i , "loose" ) )
+			ttjets.push_back(i);
+	}
+	ttjets = filterPhaseSpace( ttjets , 40 , -2.1 , 2.1 );
+	if ( missingET->PT <= 105 )	return;
+	if ( ttjets.size() == 2 && ttjets[0]->Charge + ttjets[1]->Charge == 0 )
+	{
+		if ( ttjets[0]->PT <= 55 )	return;
+		if ( ( ttjets[0]->P4() + ttjets[1]->P4() ).M() <= 65 )	return;
+		if ( ( ttjets[0]->P4() + ttjets[1]->P4() ).M() >= 125 )	return;
+		if ( ttjets[0]->P4().DeltaR( ttjets[1]->P4() ) >= 2 )	return;
+		countSignalEvent( "tt" );
+	}
+	if ( tjets.size() == 1 && electronsLoose.size() == 1 && !muonsCombined.size()\
+		&& tjets[0]->Charge + electronsLoose[0]->Charge == 0 )
+	{
+		if ( ( ttjets[0]->P4() + electronsLoose[0]->P4() ).M() <= 65 )	return;
+		if ( ( ttjets[0]->P4() + electronsLoose[0]->P4() ).M() >= 125 )	return;
+		if ( ttjets[0]->P4().DeltaR( electronsLoose[0]->P4() ) >= 2 )	return;
+		countSignalEvent( "et" );
+	}
+	if ( tjets.size() == 1 && !electronsLoose.size() && muonsCombined.size() == 1\
+		&& tjets[0]->Charge + muonsCombined[0]->Charge == 0 )
+	{
+		if ( ( ttjets[0]->P4() + muonsCombined[0]->P4() ).M() <= 65 )	return;
+		if ( ( ttjets[0]->P4() + muonsCombined[0]->P4() ).M() >= 125 )	return;
+		if ( ttjets[0]->P4().DeltaR( muonsCombined[0]->P4() ) >= 2 )	return;
+		countSignalEvent( "mt" );
+	}
+// NOT Double Checked #########################################################
 }
 
 void Cms_1806_04771::finalize() {

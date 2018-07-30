@@ -84,60 +84,63 @@ void Cms_1805_04865::analyze() {
 	bool flag[3] = {};
 	if ( muonsCombined.size() == 3 && tjets.size() == 1 )
 	{
+		flag[1] = 1;
 		int totCharge = 0;
 		for ( auto i : muonsCombined )
 			totCharge += i->Charge;
-		if ( totCharge - 1 )	flag[1] = 1;	
+		if ( totCharge - 1 )	flag[1] = 0;	
 		TLorentzVector dilep = muonsCombined[0]->P4() , ditau = tjets[0]->P4();
 		if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge == 0 )
 		{
 			dilep += muonsCombined[1]->P4();
 			ditau += muonsCombined[2]->P4();
 			if ( muonsCombined[2]->Charge + tjets[0]->Charge )
-				flag[1] = 1;
+				flag[1] = 0;
 		} else
 		{
 			dilep += muonsCombined[2]->P4();
 			ditau += muonsCombined[1]->P4();
 			if ( muonsCombined[1]->Charge + tjets[0]->Charge )
-				flag[1] = 1;
+				flag[1] = 0;
 		}
-		if ( ( dilep + ditau ).M() >= 120 )	flag[1] = 1;
-		if ( ditau.M() >= dilep.M() )	flag[1] = 1;
-		if ( dilep.M() < 14 || dilep.M() > 64 )	flag[1] = 1;
+		if ( ( dilep + ditau ).M() >= 120 )	flag[1] = 0;
+		if ( ditau.M() >= dilep.M() )	flag[1] = 0;
+		if ( dilep.M() < 14 || dilep.M() > 64 )	flag[1] = 0;
 		muonsCombined = overlapRemoval( muonsCombined , 0.3 );
-		if ( muonsCombined.size() != 3 )	flag[1] = 1;
+		if ( muonsCombined.size() != 3 )	flag[1] = 0;
 	}
 	if ( muonsCombined.size() == 2 && tjets.size() == 2 )
 	{
-		if ( tjets[0]->Charge + tjets[1]->Charge )	flag[2] = 1;
-		if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge )	flag[2] = 1;
+		flag[2] = 1;
+		if ( tjets[0]->Charge + tjets[1]->Charge )	flag[2] = 0;
+		if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge )	flag[2] = 0;
 		TLorentzVector dilep = muonsCombined[0]->P4() + muonsCombined[1]->P4();
 		TLorentzVector ditau = tjets[0]->P4() + tjets[1]->P4();
-		if ( ( dilep + ditau ).M() >= 130 )	flag[2] = 1;
-		if ( ditau.M() >= dilep.M() )	flag[2] = 1;
-		if ( dilep.M() < 14 || dilep.M() > 64 )	flag[2] = 1;
+		if ( ( dilep + ditau ).M() >= 130 )	flag[2] = 0;
+		if ( ditau.M() >= dilep.M() )	flag[2] = 0;
+		if ( dilep.M() < 14 || dilep.M() > 64 )	flag[2] = 0;
 		muonsCombined = overlapRemoval( muonsCombined , 0.3 );
 		muonsCombined = overlapRemoval( muonsCombined , tjets , 0.4 );
-		if ( muonsCombined.size() != 2 )	flag[2] = 1;
+		if ( muonsCombined.size() != 2 )	flag[2] = 0;
 	}
 	if ( muonsCombined.size() == 2 && electronsLoose.size() && tjets.size() == 1 )
 	{
-		if ( electronsLoose[0]->Charge + tjets[0]->Charge )	flag[0] = 1;
-		if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge )	flag[0] = 1;
+		flag[0] = 1;
+		if ( electronsLoose[0]->Charge + tjets[0]->Charge )	flag[0] = 0;
+		if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge )	flag[0] = 0;
 		TLorentzVector dilep = muonsCombined[0]->P4() + muonsCombined[1]->P4();
 		TLorentzVector ditau = tjets[0]->P4() + electronsLoose[0]->P4();
-		if ( ( dilep + ditau ).M() >= 120 )	flag[0] = 1;
-		if ( ditau.M() >= dilep.M() )	flag[0] = 1;
-		if ( dilep.M() < 14 || dilep.M() > 64 )	flag[0] = 1;
+		if ( ( dilep + ditau ).M() >= 120 )	flag[0] = 0;
+		if ( ditau.M() >= dilep.M() )	flag[0] = 0;
+		if ( dilep.M() < 14 || dilep.M() > 64 )	flag[0] = 0;
 		muonsCombined = overlapRemoval( muonsCombined , 0.3 );
 		muonsCombined = overlapRemoval( muonsCombined , electronsLoose , 0.3 );
 		muonsCombined = overlapRemoval( muonsCombined , tjets , 0.4 );
-		if ( muonsCombined.size() != 2 )	flag[0] = 1;
+		if ( muonsCombined.size() != 2 )	flag[0] = 0;
 	}
-	if ( !flag[0] )	countSignalEvent( "et" );
-	if ( !flag[1] )	countSignalEvent( "mt" );
-	if ( !flag[2] )	countSignalEvent( "2t" );
+	if ( flag[0] )	countSignalEvent( "et" );
+	if ( flag[1] )	countSignalEvent( "mt" );
+	if ( flag[2] )	countSignalEvent( "2t" );
 // NOT Double Checked #########################################################
 }
 
