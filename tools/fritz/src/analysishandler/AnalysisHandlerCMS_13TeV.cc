@@ -71,6 +71,8 @@ void AnalysisHandlerCMS_13TeV::bookAnalysis(std::string analysisName,
         a = new Cms_1805_04865();
     else if(analysisName == "cms_1807_02048")
         a = new Cms_1807_02048();
+    else if(analysisName == "cms_1807_07799")
+        a = new Cms_1807_07799();
     else //@@extracode@@
         Global::abort(name,
                       "Cannot load analysis "+analysisName+
