@@ -58,6 +58,102 @@ void Cms_1807_07799::analyze() {
 
   missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
   
+// Coded by yyFish #############################################################
+	electronsTight = filterPhaseSpace( electronsTight , 15 , -2.4 , 2.4 );
+	muonsCombined = filterPhaseSpace( muonsCombined , 15 , -2.4 , 2.4 );
+	jets = filterPhaseSpace( jets , 20 , -2.4 , 2.4 );
+	jets = overlapRemoval( jets , muonsCombined , 0.4 );
+	if ( electronsTight.size() )	return;
+	if ( muonsCombined.size() != 2 )	return;
+	if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge  )	return;
+	if ( muonsCombined[0]->PT < 25 || muonsCombined[1]->PT < 20 )	return;
+	TLorentzVector dilep = muonsCombined[0]->P4() + muonsCombined[1]->P4();
+	if ( dilep.M() < 20 )	return;
+	if ( abs( dilep.M() - 91.1876 ) <= 15 )	return;
+	if ( missingET->PT < 140 )	return;
+	double MT2 = mT2( muonsCombined[0]->P4() , muonsCombined[1]->P4() , 0 );
+	if ( missingET->PT >= 300 )
+	{
+		if ( MT2 < 20 )
+			countSignalEvent( "c00SR3" );
+		else if ( MT2 < 40 )
+			countSignalEvent( "c20SR3" );
+		else if ( MT2 < 60 )
+			countSignalEvent( "c40SR3" );
+		else if ( MT2 < 80 )
+			countSignalEvent( "c60SR3" );
+		else if ( MT2 < 100 )
+			countSignalEvent( "c80SR3" );
+		else if ( MT2 < 120 )
+			countSignalEvent( "c100SR3" );
+		else
+			countSignalEvent( "c120SR3" );
+		
+	} else if ( missingET->PT > 200 )
+	{
+		if ( MT2 < 20 )
+			countSignalEvent( "t00SR2" );
+		else if ( MT2 < 40 )
+			countSignalEvent( "t20SR2" );
+		else if ( MT2 < 60 )
+			countSignalEvent( "t40SR2" );
+		else if ( MT2 < 80 )
+			countSignalEvent( "t60SR2" );
+		else if ( MT2 < 100 )
+			countSignalEvent( "t80SR2" );
+		else if ( MT2 < 120 )
+			countSignalEvent( "t100SR2" );
+		else
+			countSignalEvent( "t120SR2" );
+		if ( jets.size() )	return;
+		if ( MT2 < 20 )
+			countSignalEvent( "c00SR2" );
+		else if ( MT2 < 40 )
+			countSignalEvent( "c20SR2" );
+		else if ( MT2 < 60 )
+			countSignalEvent( "c40SR2" );
+		else if ( MT2 < 80 )
+			countSignalEvent( "c60SR2" );
+		else if ( MT2 < 100 )
+			countSignalEvent( "c80SR2" );
+		else if ( MT2 < 120 )
+			countSignalEvent( "c100SR2" );
+		else
+			countSignalEvent( "c120SR2" );
+		
+	} else if ( missingET->PT > 140 )
+	{
+		if ( MT2 < 20 )
+			countSignalEvent( "t00SR1" );
+		else if ( MT2 < 40 )
+			countSignalEvent( "t20SR1" );
+		else if ( MT2 < 60 )
+			countSignalEvent( "t40SR1" );
+		else if ( MT2 < 80 )
+			countSignalEvent( "t60SR1" );
+		else if ( MT2 < 100 )
+			countSignalEvent( "t80SR1" );
+		else if ( MT2 < 120 )
+			countSignalEvent( "t100SR1" );
+		else
+			countSignalEvent( "t120SR1" );
+		if ( jets.size() )	return;
+		if ( MT2 < 20 )
+			countSignalEvent( "c00SR1" );
+		else if ( MT2 < 40 )
+			countSignalEvent( "c20SR1" );
+		else if ( MT2 < 60 )
+			countSignalEvent( "c40SR1" );
+		else if ( MT2 < 80 )
+			countSignalEvent( "c60SR1" );
+		else if ( MT2 < 100 )
+			countSignalEvent( "c80SR1" );
+		else if ( MT2 < 120 )
+			countSignalEvent( "c100SR1" );
+		else
+			countSignalEvent( "c120SR1" );
+	}
+// NOT Double Checked ##########################################################
 }
 
 void Cms_1807_07799::finalize() {
