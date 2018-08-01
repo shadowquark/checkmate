@@ -83,17 +83,17 @@ void Cms_1806_04771::analyze() {
 	if ( tjets.size() == 1 && electronsLoose.size() == 1 && !muonsCombined.size()\
 		&& tjets[0]->Charge + electronsLoose[0]->Charge == 0 )
 	{
-		if ( ( ttjets[0]->P4() + electronsLoose[0]->P4() ).M() <= 65 )	return;
-		if ( ( ttjets[0]->P4() + electronsLoose[0]->P4() ).M() >= 125 )	return;
-		if ( ttjets[0]->P4().DeltaR( electronsLoose[0]->P4() ) >= 2 )	return;
+		if ( ( tjets[0]->P4() + electronsLoose[0]->P4() ).M() <= 65 )	return;
+		if ( ( tjets[0]->P4() + electronsLoose[0]->P4() ).M() >= 125 )	return;
+		if ( tjets[0]->P4().DeltaR( electronsLoose[0]->P4() ) >= 2 )	return;
 		countSignalEvent( "et" );
 	}
 	if ( tjets.size() == 1 && !electronsLoose.size() && muonsCombined.size() == 1\
 		&& tjets[0]->Charge + muonsCombined[0]->Charge == 0 )
 	{
-		if ( ( ttjets[0]->P4() + muonsCombined[0]->P4() ).M() <= 65 )	return;
-		if ( ( ttjets[0]->P4() + muonsCombined[0]->P4() ).M() >= 125 )	return;
-		if ( ttjets[0]->P4().DeltaR( muonsCombined[0]->P4() ) >= 2 )	return;
+		if ( ( tjets[0]->P4() + muonsCombined[0]->P4() ).M() <= 65 )	return;
+		if ( ( tjets[0]->P4() + muonsCombined[0]->P4() ).M() >= 125 )	return;
+		if ( tjets[0]->P4().DeltaR( muonsCombined[0]->P4() ) >= 2 )	return;
 		countSignalEvent( "mt" );
 	}
 // NOT Double Checked #########################################################

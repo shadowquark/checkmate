@@ -88,7 +88,7 @@ void Cms_1805_04865::analyze() {
 		int totCharge = 0;
 		for ( auto i : muonsCombined )
 			totCharge += i->Charge;
-		if ( totCharge - 1 )	flag[1] = 0;	
+		if ( abs(totCharge) - 1 )	flag[1] = 0;	
 		TLorentzVector dilep = muonsCombined[0]->P4() , ditau = tjets[0]->P4();
 		if ( muonsCombined[0]->Charge + muonsCombined[1]->Charge == 0 )
 		{
