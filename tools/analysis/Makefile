@@ -267,7 +267,8 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/CMS_13TeV/cms_1806_04771.lo \
 	src/analyses/CMS_13TeV/cms_1805_04865.lo \
 	src/analyses/CMS_13TeV/cms_1807_02048.lo \
-	src/analyses/CMS_13TeV/cms_1807_07799.lo
+	src/analyses/CMS_13TeV/cms_1807_07799.lo \
+	src/analyses/ATLAS_13TeV/atlas_1807_06573.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -791,7 +792,9 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	include/analyses/CMS_13TeV/cms_1807_02048.h \
 	src/analyses/CMS_13TeV/cms_1807_02048.cc \
 	include/analyses/CMS_13TeV/cms_1807_07799.h \
-	src/analyses/CMS_13TeV/cms_1807_07799.cc
+	src/analyses/CMS_13TeV/cms_1807_07799.cc \
+	include/analyses/ATLAS_13TeV/atlas_1807_06573.h \
+	src/analyses/ATLAS_13TeV/atlas_1807_06573.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
@@ -1339,6 +1342,9 @@ src/analyses/CMS_13TeV/cms_1807_02048.lo:  \
 src/analyses/CMS_13TeV/cms_1807_07799.lo:  \
 	src/analyses/CMS_13TeV/$(am__dirstamp) \
 	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1807_06573.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
 
 libanalyses.la: $(libanalyses_la_OBJECTS) $(libanalyses_la_DEPENDENCIES) $(EXTRA_libanalyses_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libanalyses_la_LINK) -rpath $(mylibdir) $(libanalyses_la_OBJECTS) $(libanalyses_la_LIBADD) $(LIBS)
@@ -1392,6 +1398,7 @@ include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_02332.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo
+include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2015_082.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_013.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_050.Plo
