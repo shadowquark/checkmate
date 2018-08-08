@@ -40,6 +40,8 @@
 #include "atlas_1712_02304.h"
 #include "atlas_1803_02762.h"
 #include "atlas_1807_06573.h"
+#include "atlas_1808_01191.h"
+#include "atlas_1808_01899.h"
 //@extraheader@
 #include "AnalysisBase.h"
 
