@@ -270,7 +270,8 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/CMS_13TeV/cms_1807_07799.lo \
 	src/analyses/ATLAS_13TeV/atlas_1807_06573.lo \
 	src/analyses/ATLAS_13TeV/atlas_1808_01191.lo \
-	src/analyses/ATLAS_13TeV/atlas_1808_01899.lo
+	src/analyses/ATLAS_13TeV/atlas_1808_01899.lo \
+	src/analyses/CMS_13TeV/cms_1808_03684.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -800,7 +801,9 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	include/analyses/ATLAS_13TeV/atlas_1808_01191.h \
 	src/analyses/ATLAS_13TeV/atlas_1808_01191.cc \
 	include/analyses/ATLAS_13TeV/atlas_1808_01899.h \
-	src/analyses/ATLAS_13TeV/atlas_1808_01899.cc
+	src/analyses/ATLAS_13TeV/atlas_1808_01899.cc \
+	include/analyses/CMS_13TeV/cms_1808_03684.h \
+	src/analyses/CMS_13TeV/cms_1808_03684.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
@@ -1357,6 +1360,9 @@ src/analyses/ATLAS_13TeV/atlas_1808_01191.lo:  \
 src/analyses/ATLAS_13TeV/atlas_1808_01899.lo:  \
 	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/CMS_13TeV/cms_1808_03684.lo:  \
+	src/analyses/CMS_13TeV/$(am__dirstamp) \
+	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
 
 libanalyses.la: $(libanalyses_la_OBJECTS) $(libanalyses_la_DEPENDENCIES) $(EXTRA_libanalyses_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libanalyses_la_LINK) -rpath $(mylibdir) $(libanalyses_la_OBJECTS) $(libanalyses_la_LIBADD) $(LIBS)
@@ -1491,6 +1497,7 @@ include src/analyses/CMS_13TeV/$(DEPDIR)/cms_1806_05246.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_1806_05264.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_1807_02048.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_1807_07799.Plo
+include src/analyses/CMS_13TeV/$(DEPDIR)/cms_1808_03684.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_pas_sus_15_011.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_sus_16_025.Plo
 include src/analyses/CMS_13TeV/$(DEPDIR)/cms_sus_16_039.Plo
