@@ -3,7 +3,6 @@ tools/madgraph
 tools/delphes
 tools/pythia
 tools/root
-test/MDM110_MZH200.lhe
-test/test.dat
+test
 code
 
