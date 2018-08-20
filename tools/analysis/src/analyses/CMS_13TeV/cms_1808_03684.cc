@@ -70,10 +70,11 @@ void Cms_1808_03684::analyze() {
 	for ( auto i : muonsCombined )
 		for ( auto j : muonsCombined )
 		{
+			if ( i->Charge + j->Charge )	continue;
 			double diM = ( i->P4() + j->P4() ).M();
 			if ( diM <= 4 || diM >= 120 )	continue;
 			double tmpZ = abs( 91.1876 - diM );
-			if ( i->Charge + j->Charge == 0 && tmpZ < minZ1 )
+			if ( tmpZ < minZ1 )
 			{
 				diZ1 = i->P4() + j->P4();
 				minZ1 = tmpZ;
@@ -84,10 +85,11 @@ void Cms_1808_03684::analyze() {
 	for ( auto i : muonsCombined )
 		for ( auto j : muonsCombined )
 		{
+			if ( i->Charge + j->Charge )	continue;
 			if ( i == m1 || i == m2 || j == m1 || j == m2 )	continue;
 			double diM = ( i->P4() + j->P4() ).M();
 			if ( diM <= 4 || diM >= 120 )	continue;
-			if ( i->Charge + j->Charge == 0 && i->PT + j->PT > maxZ2 )
+			if ( i->PT + j->PT > maxZ2 )
 			{
 				diZ2 = i->P4() + j->P4();
 				maxZ2 = i->PT + j->PT;
@@ -95,14 +97,14 @@ void Cms_1808_03684::analyze() {
 				m4 = j;
 			}
 		}	
-	if ( diZ1.M() <= 12 || diZ2.M() <= 4 )	return;
+	if ( diZ1.M() <= 12 )	return;
 	if ( m1->Charge + m3->Charge == 0 && ( m1->P4() + m3->P4() ).M() <= 4 )	return;
 	if ( m1->Charge + m4->Charge == 0 && ( m1->P4() + m4->P4() ).M() <= 4 )	return;
 	if ( m2->Charge + m3->Charge == 0 && ( m2->P4() + m3->P4() ).M() <= 4 )	return;
 	if ( m2->Charge + m4->Charge == 0 && ( m2->P4() + m4->P4() ).M() <= 4 )	return;
 	if ( ( diZ1 + diZ2 ).M() <= 80 || ( diZ1 + diZ2 ).M() >= 100 )	return;
 	countSignalEvent( "SR1" );
-	if ( 4.9 < diZ2.M() && diZ2.M() < 5.1 )	countSignalEvent( "SR2" );
+	if ( 4.9 < diZ2.M() && diZ2.M() < 5.1 )		countSignalEvent( "SR2" );
 	if ( 14.7 < diZ2.M() && diZ2.M() < 15.3 )	countSignalEvent( "SR3" );
 	if ( 68.6 < diZ1.M() && diZ1.M() < 71.4 )	countSignalEvent( "SR4" );
 // NOT Double Checked ##########################################################
