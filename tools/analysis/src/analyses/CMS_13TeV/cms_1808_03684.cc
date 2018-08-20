@@ -60,13 +60,14 @@ void Cms_1808_03684::analyze() {
   
 // Coded by yyFish #############################################################
 	muonsCombined = filterPhaseSpace( muonsCombined , 5 , -2.4 , 2.4 );
+	muonsCombined = overlapRemoval( muonsCombined , 0.02 );
 	if ( muonsCombined.size() < 4 )	return;
 	if ( muonsCombined[0]->PT <= 20 )	return;
 	if ( muonsCombined[1]->PT <= 10 )	return;
-	muonsCombined = overlapRemoval( muonsCombined , 0.02 );
 	double minZ1 = 13000 , maxZ2 = 0;
 	TLorentzVector diZ1 , diZ2;
 	Muon *m1 , *m2 , *m3 , *m4;
+	m1 = m2 = m3 = m4 = 0;
 	for ( auto i : muonsCombined )
 		for ( auto j : muonsCombined )
 		{
@@ -97,6 +98,7 @@ void Cms_1808_03684::analyze() {
 				m4 = j;
 			}
 		}	
+	if ( !m1 || !m2 || !m3 || !m4 )	return;
 	if ( diZ1.M() <= 12 )	return;
 	if ( m1->Charge + m3->Charge == 0 && ( m1->P4() + m3->P4() ).M() <= 4 )	return;
 	if ( m1->Charge + m4->Charge == 0 && ( m1->P4() + m4->P4() ).M() <= 4 )	return;

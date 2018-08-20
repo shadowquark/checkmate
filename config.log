@@ -27,6 +27,7 @@ uname -v = #137-Microsoft Thu Jun 14 18:46:00 PST 2018
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
+PATH: /home/shadowquark/anaconda2/bin
 PATH: /home/shadowquark/root/bin
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
@@ -569,21 +570,21 @@ configure:15101: checking for Pythia8/Pythia.h
 configure:15101: result: yes
 configure:15170: checking for python
 configure:15180: checking for python
-configure:15198: found /usr/bin/python
-configure:15211: result: /usr/bin/python
-configure:15219: result: /usr/bin/python
-configure:15231: checking whether /usr/bin/python version is >= 2.7.3
-configure:15242: /usr/bin/python -c import sys # split strings by '.' and convert to numeric. Append some zeros # because we need at least 4 digits for the hex conversion. # map returns an iterator in Python 3.0 and a list in 2.x minver = list(map(int, '2.7.3'.split('.'))) + [0, 0, 0] minverhex = 0 # xrange is not present in Python 3.0 and range returns an iterator for i in list(range(0, 4)): minverhex = (minverhex << 8) + minver[i] sys.exit(sys.hexversion < minverhex)
+configure:15198: found /home/shadowquark/anaconda2/bin/python
+configure:15211: result: /home/shadowquark/anaconda2/bin/python
+configure:15219: result: /home/shadowquark/anaconda2/bin/python
+configure:15231: checking whether /home/shadowquark/anaconda2/bin/python version is >= 2.7.3
+configure:15242: /home/shadowquark/anaconda2/bin/python -c import sys # split strings by '.' and convert to numeric. Append some zeros # because we need at least 4 digits for the hex conversion. # map returns an iterator in Python 3.0 and a list in 2.x minver = list(map(int, '2.7.3'.split('.'))) + [0, 0, 0] minverhex = 0 # xrange is not present in Python 3.0 and range returns an iterator for i in list(range(0, 4)): minverhex = (minverhex << 8) + minver[i] sys.exit(sys.hexversion < minverhex)
 configure:15245: $? = 0
 configure:15247: result: yes
-configure:15340: checking for /usr/bin/python version
+configure:15340: checking for /home/shadowquark/anaconda2/bin/python version
 configure:15347: result: 2.7
-configure:15359: checking for /usr/bin/python platform
+configure:15359: checking for /home/shadowquark/anaconda2/bin/python platform
 configure:15366: result: linux2
-configure:15392: checking for /usr/bin/python script directory
-configure:15427: result: ${prefix}/lib/python2.7/dist-packages
-configure:15436: checking for /usr/bin/python extension module directory
-configure:15471: result: ${exec_prefix}/lib/python2.7/dist-packages
+configure:15392: checking for /home/shadowquark/anaconda2/bin/python script directory
+configure:15427: result: ${prefix}/lib/python2.7/site-packages
+configure:15436: checking for /home/shadowquark/anaconda2/bin/python extension module directory
+configure:15471: result: ${exec_prefix}/lib/python2.7/site-packages
 configure:15502: checking for root-config
 configure:15520: found /home/shadowquark/root/bin/root-config
 configure:15533: result: /home/shadowquark/root/bin/root-config
@@ -696,7 +697,7 @@ ac_cv_objext=o
 ac_cv_path_EGREP='/bin/grep -E'
 ac_cv_path_FGREP='/bin/grep -F'
 ac_cv_path_GREP=/bin/grep
-ac_cv_path_PYTHON=/usr/bin/python
+ac_cv_path_PYTHON=/home/shadowquark/anaconda2/bin/python
 ac_cv_path_ROOTCINT=/home/shadowquark/root/bin/rootcint
 ac_cv_path_ROOTCONF=/home/shadowquark/root/bin/root-config
 ac_cv_path_ROOTEXEC=/home/shadowquark/root/bin/root
@@ -721,8 +722,8 @@ am_cv_CXX_dependencies_compiler_type=gcc3
 am_cv_make_support_nested_variables=yes
 am_cv_prog_cc_c_o=yes
 am_cv_python_platform=linux2
-am_cv_python_pyexecdir='${exec_prefix}/lib/python2.7/dist-packages'
-am_cv_python_pythondir='${prefix}/lib/python2.7/dist-packages'
+am_cv_python_pyexecdir='${exec_prefix}/lib/python2.7/site-packages'
+am_cv_python_pythondir='${prefix}/lib/python2.7/site-packages'
 am_cv_python_version=2.7
 ax_cv_cxx_compile_cxx11=yes
 lt_cv_deplibs_check_method=pass_all
@@ -846,7 +847,7 @@ PATH_SEPARATOR=':'
 PYTHIAINCLUDE='-I/home/shadowquark/code/github/checkmate/tools/pythia/include'
 PYTHIALIBDIR='/home/shadowquark/code/github/checkmate/tools/pythia/lib'
 PYTHIALIBS='-L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz'
-PYTHON='/usr/bin/python'
+PYTHON='/home/shadowquark/anaconda2/bin/python'
 PYTHON_EXEC_PREFIX='${exec_prefix}'
 PYTHON_PLATFORM='linux2'
 PYTHON_PREFIX='${prefix}'
@@ -923,8 +924,8 @@ pkgpythondir='${pythondir}/checkmate'
 prefix='/usr/local'
 program_transform_name='s,x,x,'
 psdir='${docdir}'
-pyexecdir='${exec_prefix}/lib/python2.7/dist-packages'
-pythondir='${prefix}/lib/python2.7/dist-packages'
+pyexecdir='${exec_prefix}/lib/python2.7/site-packages'
+pythondir='${prefix}/lib/python2.7/site-packages'
 runstatedir='${localstatedir}/run'
 sbindir='${exec_prefix}/sbin'
 sharedstatedir='${prefix}/com'
