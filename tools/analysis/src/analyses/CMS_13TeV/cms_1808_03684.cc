@@ -59,17 +59,17 @@ void Cms_1808_03684::analyze() {
   missingET->addMuons(muonsCombined);  // Adds muons to missing ET. This should almost always be done which is why this line is not commented out.
   
 // Coded by yyFish #############################################################
-	muonsCombinedPlus = filterPhaseSpace( muonsCombinedPlus , 5 , -2.4 , 2.4 );
-	muonsCombinedPlus = overlapRemoval( muonsCombinedPlus , 0.02 );
-	if ( muonsCombinedPlus.size() < 4 )	return;
-	if ( muonsCombinedPlus[0]->PT <= 20 )	return;
-	if ( muonsCombinedPlus[1]->PT <= 10 )	return;
+	muons = filterPhaseSpace( muons , 5 , -2.4 , 2.4 );
+	muons = overlapRemoval( muons , 0.02 );
+	if ( muons.size() < 4 )	return;
+	if ( muons[0]->PT <= 20 )	return;
+	if ( muons[1]->PT <= 10 )	return;
 	double minZ1 = 13000 , maxZ2 = 0;
 	TLorentzVector diZ1 , diZ2;
 	Muon *m1 , *m2 , *m3 , *m4;
 	m1 = m2 = m3 = m4 = 0;
-	for ( auto i : muonsCombinedPlus )
-		for ( auto j : muonsCombinedPlus )
+	for ( auto i : muons )
+		for ( auto j : muons )
 		{
 			if ( i->Charge + j->Charge )	continue;
 			double diM = ( i->P4() + j->P4() ).M();
@@ -83,8 +83,8 @@ void Cms_1808_03684::analyze() {
 				m2 = j;
 			} 
 		}
-	for ( auto i : muonsCombinedPlus )
-		for ( auto j : muonsCombinedPlus )
+	for ( auto i : muons )
+		for ( auto j : muons )
 		{
 			if ( i->Charge + j->Charge )	continue;
 			if ( i == m1 || i == m2 || j == m1 || j == m2 )	continue;
