@@ -70,7 +70,7 @@ void Cms_1801_03957::analyze() {
 		dilep = muonsCombined[0]->P4() + muonsCombined[1]->P4();
 	}
 	if ( muonsCombined.size() == 1 && electronsTight.size() == 2 &&\
-		! ( muonsCombined[0]->Charge + muonsCombined[1]->Charge ) )
+		! ( electronsTight[0]->Charge + electronsTight[1]->Charge ) )
 	{
 		flag3l = 1;
 		dilep = electronsTight[0]->P4() + electronsTight[1]->P4();

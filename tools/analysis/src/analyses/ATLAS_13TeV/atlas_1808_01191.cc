@@ -77,27 +77,29 @@ void Atlas_1808_01191::analyze() {
 		[]( L4 x , L4 y ){ return x.p4.Pt() > y.p4.Pt(); } );
 	jets = filterPhaseSpace( jets , 20 , -2.5 , 2.5 );
 	bool flag[2] = {};
-	if ( mu2l.size() > 2 )	flag[1] = 1;
-	if ( mu2l[0]->PT <= 30 || mu2l[1]->PT <= 20 )	flag[1] = 1;
-	if ( mu2l[0]->P4().DeltaR( mu2l[1]->P4() ) >= 1.8 )	flag[1] = 1;
-	if ( missingET->PT <= 175 )	flag[1] = 1;
-	TLorentzVector dilep = mu2l[0]->P4() + mu2l[1]->P4();
-	if ( dilep.M() <= 76 || dilep.M() >= 106 )	flag[1] = 1;
-	if ( abs( dilep.DeltaPhi( missingET->P4() ) ) <= 2.7 )	flag[1] = 1;
-	double Ht = mu2l[0]->PT + mu2l[1]->PT;
-	TLorentzVector missjet = missingET->P4();
-	for ( auto i : jets )
+	if ( mu2l.size() == 2 )	
 	{
-		missjet += i->P4();
-		Ht += i->PT;
+		if ( mu2l[0]->PT <= 30 || mu2l[1]->PT <= 20 )	flag[1] = 1;
+		if ( mu2l[0]->P4().DeltaR( mu2l[1]->P4() ) >= 1.8 )	flag[1] = 1;
+		if ( missingET->PT <= 175 )	flag[1] = 1;
+		TLorentzVector dilep = mu2l[0]->P4() + mu2l[1]->P4();
+		if ( dilep.M() <= 76 || dilep.M() >= 106 )	flag[1] = 1;
+		if ( abs( dilep.DeltaPhi( missingET->P4() ) ) <= 2.7 )	flag[1] = 1;
+		double Ht = mu2l[0]->PT + mu2l[1]->PT;
+		TLorentzVector missjet = missingET->P4();
+		for ( auto i : jets )
+		{
+			missjet += i->P4();
+			Ht += i->PT;
+		}
+		if ( missingET->PT / Ht <= 0.33 )	flag[1] = 1;
+		if ( abs( dilep.Pt() - missjet.Pt() ) / dilep.Pt() >= 0.2 )	flag[1] = 1;
+		if ( !flag[1] && sqrt( pow( sqrt( pow( 91.1876 , 2 ) + dilep.Perp2() ) +\
+						sqrt( pow( 91.1876 , 2 ) + missingET->P4().Perp2() ) , 2 )\
+					- ( dilep + missingET->P4() ).Vect().Mag2() ) > 250 )
+			countSignalEvent( "SR2l1" );
 	}
-	if ( missingET->PT / Ht <= 0.33 )	flag[1] = 1;
-	if ( abs( dilep.Pt() - missjet.Pt() ) / dilep.Pt() >= 0.2 )	flag[1] = 1;
-	if ( !flag[1] && sqrt( pow( sqrt( pow( 91.1876 , 2 ) + dilep.Perp2() ) +\
-					sqrt( pow( 91.1876 , 2 ) + missingET->P4().Perp2() ) , 2 )\
-				- ( dilep + missingET->P4() ).Vect().Mag2() ) > 250 )
-		countSignalEvent( "SR2l1" );
-	if ( l4.size() != 4 )	flag[0] = 1;
+	if ( l4.size() != 4 )	return;
 	if ( l4[0].p4.Pt() <= 20 || l4[1].p4.Pt() <= 15 || l4[2].p4.Pt() <= 10 )
 		flag[0] = 1;
 	double mZ1 , mZ2;
