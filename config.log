@@ -14,7 +14,7 @@ hostname = shadowquark
 uname -m = x86_64
 uname -r = 4.4.0-17134-Microsoft
 uname -s = Linux
-uname -v = #137-Microsoft Thu Jun 14 18:46:00 PST 2018
+uname -v = #345-Microsoft Wed Sep 19 17:47:00 PST 2018
 
 /usr/bin/uname -p = unknown
 /bin/uname -X     = unknown
@@ -51,11 +51,11 @@ PATH: /mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT
 PATH: /mnt/c/Program Files/Intel/WiFi/bin
 PATH: /mnt/c/Program Files/Common Files/Intel/WirelessCommon
 PATH: /mnt/c/Program Files (x86)/Wolfram Research/WolframScript
-PATH: /mnt/c/Program Files/Git/cmd
-PATH: /mnt/c/Program Files/Microsoft VS Code/bin
 PATH: /mnt/c/Program Files/Calibre2
+PATH: /mnt/c/Program Files/Git/cmd
 PATH: /mnt/c/Users/maxp4/AppData/Local/Microsoft/WindowsApps
 PATH: /mnt/c/texlive/2018/bin/win32
+PATH: /mnt/c/Users/maxp4/AppData/Local/Programs/Microsoft VS Code/bin
 PATH: /snap/bin
 
 
