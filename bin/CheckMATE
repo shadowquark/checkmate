@@ -1,7 +1,7 @@
-#!/home/shadowquark/anaconda2/bin/python
+#!/usr/bin/python
 import sys,os
 sys.path.append(os.path.join(os.path.split(os.path.split(os.path.realpath(__file__))[0])[0], "tools", "python"))
-sys.path.append('/home/shadowquark/root/lib')
+sys.path.append('/home/shadowquark/code/root/lib')
 from checkmate_core import CheckMATE2
 from advprint import AdvPrint
 from info import Info

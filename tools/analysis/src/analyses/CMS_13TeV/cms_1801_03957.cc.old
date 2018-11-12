@@ -20,7 +20,7 @@ void Cms_1801_03957::analyze() {
   // All std::vector members and etmiss have the common properties PT, Eta, Phi and P4() with the latter giving access to the full ROOT TLorentzVector.
   // Within a std::vector, all members are ordered with highest pt coming first.
 
-  // electronsLoose, electronsMedium, electronsTight   are list of electrons that passed respective efficiency and reconstruction cuts
+  // electronsLoose, electronsMedium, electronsLoose   are list of electrons that passed respective efficiency and reconstruction cuts
   // muonsCombinedPlus, muonsCombined                  as above for muons
   // photonsMedium                                     as above for photons
   // jets are all reconstructed jets                   as above for jets. Note that electrons are most certainly also reconstructed as a jet -> overlap removal do avoid double counting necessary!
@@ -60,28 +60,35 @@ void Cms_1801_03957::analyze() {
 // Coded by yyFish ############################################################# 
 	if ( missingET->PT < 50 )	return;
 	int flag3l = 2;
-	muonsCombined = filterPhaseSpace( muonsCombined , 0 , -2.5 , 2.5 );
-	electronsTight = filterPhaseSpace( electronsTight , 0 , -2.5 , 2.5 );
+	muonsCombined = filterPhaseSpace( muonsCombined , 10 , -2.4 , 2.4 );
+	electronsLoose = filterPhaseSpace( electronsLoose , 10 , -2.5 , 2.5 );
+	electronsLoose = overlapRemoval( electronsLoose , 0.1 );
 	TLorentzVector dilep;
-	if ( muonsCombined.size() == 2 && electronsTight.size() == 1 &&\
+	if ( muonsCombined.size() == 2 && electronsLoose.size() == 1 &&\
 		! ( muonsCombined[0]->Charge + muonsCombined[1]->Charge ) )
 	{
+		if ( muonsCombined[0]->PT < 20 || muonsCombined[1]->PT < 10 ||\
+			electronsLoose[0]->PT < 25 )	return;
 		flag3l = 0;
 		dilep = muonsCombined[0]->P4() + muonsCombined[1]->P4();
 	}
-	if ( muonsCombined.size() == 1 && electronsTight.size() == 2 &&\
-		! ( electronsTight[0]->Charge + electronsTight[1]->Charge ) )
+	if ( muonsCombined.size() == 1 && electronsLoose.size() == 2 &&\
+		! ( electronsLoose[0]->Charge + electronsLoose[1]->Charge ) )
 	{
+		if ( muonsCombined[0]->PT < 20 || electronsLoose[1]->PT < 15 ||\
+			electronsLoose[0]->PT < 25 )	return;
 		flag3l = 1;
-		dilep = electronsTight[0]->P4() + electronsTight[1]->P4();
+		dilep = electronsLoose[0]->P4() + electronsLoose[1]->P4();
 	}
 	if ( flag3l == 2 )	return;
 	double Ht = 0 , Mt;
 	if (flag3l)
 		Mt = mT( muonsCombined[0]->P4() , missingET->P4() );
 	else
-		Mt = mT( electronsTight[0]->P4() , missingET->P4() );
+		Mt = mT( electronsLoose[0]->P4() , missingET->P4() );
 	jets = filterPhaseSpace( jets , 30 , -2.5 , 2.5 );
+	jets = overlapRemoval( jets , electronsLoose , 0.4 );
+	jets = overlapRemoval( jets , muonsCombined , 0.4 );
 	for ( auto i : jets )
 		Ht += i->PT;
 	if ( dilep.M() < 75 )

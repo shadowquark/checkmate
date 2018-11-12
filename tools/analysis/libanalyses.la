@@ -17,7 +17,7 @@ old_library=''
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/home/shadowquark/root/lib -L/home/shadowquark/code/github/checkmate/tools/delphes -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lz -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lEG -lDelphes'
+dependency_libs=' -L/home/shadowquark/code/root/lib -L/home/shadowquark/code/github/checkmate/tools/delphes -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lz -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lEG -lDelphes'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
