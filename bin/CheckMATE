@@ -1,14 +1,14 @@
-#!/usr/bin/python
+#!/usr/local/bin/python
 import sys,os
 sys.path.append(os.path.join(os.path.split(os.path.split(os.path.realpath(__file__))[0])[0], "tools", "python"))
-sys.path.append('/home/shadowquark/code/root/lib')
+sys.path.append('/usr/local/Cellar/root/6.14.04_2/lib/root')
 from checkmate_core import CheckMATE2
 from advprint import AdvPrint
 from info import Info
 
 config_paths = dict()
 config_paths['mg5_source_path']=''
-config_paths['pythia8_lib_path']='/home/shadowquark/code/github/checkmate/tools/pythia/lib'
+config_paths['pythia8_lib_path']='/Users/shadowquark/code/github/checkmate/tools/pythia/lib'
 
 global Info, AdvPrint
 Info.init(config_paths)

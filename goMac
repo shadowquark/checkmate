@@ -1,4 +1,4 @@
 autoreconf
-./configure --with-delphes=/Users/shadowquark/code/github/checkmate/tools/delphes 
-make -j4
+./configure --with-delphes=/Users/shadowquark/code/github/checkmate/tools/delphes --with-pythia=/Users/shadowquark/code/github/checkmate/tools/pythia
+make -j12
 
