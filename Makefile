@@ -85,8 +85,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = i386-apple-darwin18.2.0
-host_triplet = i386-apple-darwin18.2.0
+build_triplet = x86_64-unknown-linux-gnu
+host_triplet = x86_64-unknown-linux-gnu
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/cpp11.m4 \
@@ -213,34 +213,34 @@ AR = ar
 AUTOCONF = autoconf
 AUTOHEADER = autoheader
 AUTOMAKE = automake-1.16
-AWK = awk
+AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPP = gcc -E
-CPPFLAGS =  -I/Users/shadowquark/code/github/checkmate/tools/pythia/include  -I/Users/shadowquark/code/github/checkmate/tools/delphes -I/Users/shadowquark/code/github/checkmate/tools/delphes/external -I/usr/local/Cellar/root/6.14.04_2/include/root
+CPPFLAGS =  -I/home/shadowquark/code/github/checkmate/tools/pythia/include  -I/home/shadowquark/code/github/checkmate/tools/delphes -I/home/shadowquark/code/github/checkmate/tools/delphes/external -I/home/shadowquark/code/root/include
 CREATE_HEPMC = 
 CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -g -O2 -std=gnu++11
+CXXFLAGS = -g -O2
 CYGPATH_W = echo
 DEFS = -DPACKAGE_NAME=\"CheckMATE\" -DPACKAGE_TARNAME=\"checkmate\" -DPACKAGE_VERSION=\"2.0.0\" -DPACKAGE_STRING=\"CheckMATE\ 2.0.0\" -DPACKAGE_BUGREPORT=\"daschm@uni-bonn.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"checkmate\" -DVERSION=\"2.0.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DSTDC_HEADERS=1 -DHAVE_IOSTREAM=1 -DHAVE_OSTREAM=1 -DHAVE_FSTREAM=1 -DHAVE_PYTHIA8_PYTHIA_H=1 -DHAVE_CLASSES_DELPHESCLASSES_H=1
-DELPHESCFLAGS = -I/Users/shadowquark/code/github/checkmate/tools/delphes -I/Users/shadowquark/code/github/checkmate/tools/delphes/external
+DELPHESCFLAGS = -I/home/shadowquark/code/github/checkmate/tools/delphes -I/home/shadowquark/code/github/checkmate/tools/delphes/external
 DELPHESINCLUDE = 
-DELPHESLIBDIR = /Users/shadowquark/code/github/checkmate/tools/delphes
+DELPHESLIBDIR = /home/shadowquark/code/github/checkmate/tools/delphes
 DELPHESLIBS = -lEG -lDelphes
 DEPDIR = .deps
-DSYMUTIL = dsymutil
+DSYMUTIL = 
 DUMPBIN = 
-DYLD_LIBRARY_PATH = :/usr/local/Cellar/root/6.14.04_2/lib/root
-ECHO_C = \c
-ECHO_N = 
+DYLD_LIBRARY_PATH = /home/shadowquark/code/root/lib:/home/shadowquark/code/root/lib
+ECHO_C = 
+ECHO_N = -n
 ECHO_T = 
-EGREP = /usr/bin/grep -E
+EGREP = /bin/grep -E
 EXEEXT = 
-FGREP = /usr/bin/grep -F
-GREP = /usr/bin/grep
+FGREP = /bin/grep -F
+GREP = /bin/grep
 GZIPINC = 
 GZIPLIB = 
 HEPMCINCLUDE = 
@@ -251,28 +251,28 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
-LD_LIBRARY_PATH = :/usr/local/Cellar/root/6.14.04_2/lib/root
+LD_LIBRARY_PATH = /home/shadowquark/code/root/lib:/home/shadowquark/code/root/lib
 # TODO: Check if these are still needed, they were originally introduced
 #       to easily compile Delphes
-LD_RUN_PATH = :/usr/local/Cellar/root/6.14.04_2/lib/root
+LD_RUN_PATH = :/home/shadowquark/code/root/lib
 LIBOBJS = 
-LIBS =   -L/Users/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz -L/Users/shadowquark/code/github/checkmate/tools/delphes -L/usr/local/Cellar/root/6.14.04_2/lib/root -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lEG -lDelphes
+LIBS =   -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz -L/home/shadowquark/code/github/checkmate/tools/delphes -L/home/shadowquark/code/root/lib -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lEG -lDelphes
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIPO = lipo
+LIPO = 
 LN_S = ln -s
 LOAD_HEPMC = 
 LTLIBOBJS = 
 MADGRAPHDIR = 
 MAKEINFO = makeinfo
-MKDIR_P = ./install-sh -c -d
+MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
-NMEDIT = nmedit
+NMEDIT = 
 OBJDUMP = objdump
 OBJEXT = o
-OTOOL = otool
-OTOOL64 = :
+OTOOL = 
+OTOOL64 = 
 PACKAGE = checkmate
 PACKAGE_BUGREPORT = daschm@uni-bonn.de
 PACKAGE_NAME = CheckMATE
@@ -281,40 +281,40 @@ PACKAGE_TARNAME = checkmate
 PACKAGE_URL = 
 PACKAGE_VERSION = 2.0.0
 PATH_SEPARATOR = :
-PYTHIAINCLUDE = -I/Users/shadowquark/code/github/checkmate/tools/pythia/include
-PYTHIALIBDIR = /Users/shadowquark/code/github/checkmate/tools/pythia/lib
-PYTHIALIBS = -L/Users/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz
-PYTHON = /usr/local/bin/python
+PYTHIAINCLUDE = -I/home/shadowquark/code/github/checkmate/tools/pythia/include
+PYTHIALIBDIR = /home/shadowquark/code/github/checkmate/tools/pythia/lib
+PYTHIALIBS = -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz
+PYTHON = /usr/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
-PYTHON_PLATFORM = darwin
+PYTHON_PLATFORM = linux2
 PYTHON_PREFIX = ${prefix}
 PYTHON_VERSION = 2.7
 RANLIB = ranlib
-ROOTAUXCFLAGS = -pthread -stdlib=libc++ -std=c++11 -m64
-ROOTAUXLIBS = -lpthread -stdlib=libc++ -lm -ldl
-ROOTCFLAGS = -I/usr/local/Cellar/root/6.14.04_2/include/root
-ROOTCINT = /usr/local/bin/rootcint
-ROOTCONF = /usr/local/bin/root-config
-ROOTETCDIR = /usr/local/Cellar/root/6.14.04_2/etc/root
-ROOTEXEC = /usr/local/bin/root
+ROOTAUXCFLAGS = -pthread -std=c++11 -m64
+ROOTAUXLIBS = -pthread -lm -ldl -rdynamic
+ROOTCFLAGS = -I/home/shadowquark/code/root/include
+ROOTCINT = /home/shadowquark/code/root/bin/rootcint
+ROOTCONF = /home/shadowquark/code/root/bin/root-config
+ROOTETCDIR = /home/shadowquark/code/root/etc
+ROOTEXEC = /home/shadowquark/code/root/bin/root
 ROOTGLIBS = -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc
-ROOTINCDIR = /usr/local/Cellar/root/6.14.04_2/include/root
-ROOTLIBDIR = /usr/local/Cellar/root/6.14.04_2/lib/root
+ROOTINCDIR = /home/shadowquark/code/root/include
+ROOTLIBDIR = /home/shadowquark/code/root/lib
 ROOTLIBS = -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc
-ROOTRPATH = /usr/local/Cellar/root/6.14.04_2/lib/root
+ROOTRPATH = /home/shadowquark/code/root/lib
 ROOTSOVERSION = 6.14
-ROOTSYS = /usr/local/Cellar/root/6.14.04_2
-ROOTSYSTEM = /usr/local/Cellar/root/6.14.04_2
+ROOTSYS = /home/shadowquark/code/root
+ROOTSYSTEM = /home/shadowquark/code/root
 ROOTVERSION = 6.14/04
-SED = /usr/bin/sed
+SED = /bin/sed
 SET_MAKE = 
-SHELL = /bin/sh
+SHELL = /bin/bash
 STRIP = strip
 VERSION = 2.0.0
-abs_builddir = /Users/shadowquark/code/github/checkmate
-abs_srcdir = /Users/shadowquark/code/github/checkmate
-abs_top_builddir = /Users/shadowquark/code/github/checkmate
-abs_top_srcdir = /Users/shadowquark/code/github/checkmate
+abs_builddir = /home/shadowquark/code/github/checkmate
+abs_srcdir = /home/shadowquark/code/github/checkmate
+abs_top_builddir = /home/shadowquark/code/github/checkmate
+abs_top_srcdir = /home/shadowquark/code/github/checkmate
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 ac_ct_DUMPBIN = 
@@ -324,31 +324,31 @@ am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
-build = i386-apple-darwin18.2.0
+build = x86_64-unknown-linux-gnu
 build_alias = 
-build_cpu = i386
-build_os = darwin18.2.0
-build_vendor = apple
+build_cpu = x86_64
+build_os = linux-gnu
+build_vendor = unknown
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i386-apple-darwin18.2.0
+host = x86_64-unknown-linux-gnu
 host_alias = 
-host_cpu = i386
-host_os = darwin18.2.0
-host_vendor = apple
+host_cpu = x86_64
+host_os = linux-gnu
+host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/shadowquark/code/github/checkmate/install-sh
+install_sh = ${SHELL} /home/shadowquark/code/github/checkmate/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
-lt_ECHO = /bin/echo
+lt_ECHO = echo
 mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
@@ -358,8 +358,9 @@ pkgpythondir = ${pythondir}/checkmate
 prefix = /usr/local
 program_transform_name = s,x,x,
 psdir = ${docdir}
-pyexecdir = ${exec_prefix}/lib/python2.7/site-packages
-pythondir = ${prefix}/lib/python2.7/site-packages
+pyexecdir = ${exec_prefix}/lib/python2.7/dist-packages
+pythondir = ${prefix}/lib/python2.7/dist-packages
+runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
@@ -846,35 +847,35 @@ export DYLD_LIBRARY_PATH
 
 all:
 	@rm -f bin/CheckMATE;
-	@sed 's,sys\.path\.append.*,sys\.path\.append("/usr/local/Cellar/root/6.14.04_2/lib/root"),g' tools/python/calculate_zsig.py.raw | \
-        sed 's,cdll\.LoadLibrary(.*/libCint.so\"),cdll\.LoadLibrary("/usr/local/Cellar/root/6.14.04_2/lib/root/libCint.so\"),' | \
-        sed 's,os\.path\.isfile(.*/libCint.so\"),os\.path\.isfile("/usr/local/Cellar/root/6.14.04_2/lib/root/libCint.so\"),' | \
-        sed 's,cdll\.LoadLibrary(.*/libCore.so\"),cdll\.LoadLibrary("/usr/local/Cellar/root/6.14.04_2/lib/root/libCore.so\"),' | \
-        sed 's,os\.path\.isfile(.*/libCore.so\"),os\.path\.isfile("/usr/local/Cellar/root/6.14.04_2/lib/root/libCore.so\"),' | \
-        sed 's,cdll\.LoadLibrary(.*/libThread.so\"),cdll\.LoadLibrary("/usr/local/Cellar/root/6.14.04_2/lib/root/libThread.so\"),' | \
-        sed 's,os\.path\.isfile(.*/libThread.so\"),os\.path\.isfile("/usr/local/Cellar/root/6.14.04_2/lib/root/libThread.so\"),' | \
-        sed 's,cdll\.LoadLibrary(.*/libRIO.so\"),cdll\.LoadLibrary("/usr/local/Cellar/root/6.14.04_2/lib/root/libRIO.so\"),' | \
-        sed 's,os\.path\.isfile(.*/libRIO.so\"),os\.path\.isfile("/usr/local/Cellar/root/6.14.04_2/lib/root/libRIO.so\"),' | \
-        sed 's,cdll\.LoadLibrary(.*/libMathCore.so\"),cdll\.LoadLibrary("/usr/local/Cellar/root/6.14.04_2/lib/root/libMathCore.so\"),'  | \
-        sed 's,os\.path\.isfile(.*/libMathCore.so\"),os\.path\.isfile("/usr/local/Cellar/root/6.14.04_2/lib/root/libMathCore.so\"),'  | \
-        sed 's,cdll\.LoadLibrary(.*/libNet.so\"),cdll\.LoadLibrary("/usr/local/Cellar/root/6.14.04_2/lib/root/libNet.so\"),'  | \
-        sed 's,os\.path\.isfile(.*/libNet.so\"),os\.path\.isfile("/usr/local/Cellar/root/6.14.04_2/lib/root/libNet.so\"),'  | \
-        sed 's,cdll\.LoadLibrary(.*/libTree.so\"),cdll\.LoadLibrary("/usr/local/Cellar/root/6.14.04_2/lib/root/libTree.so\"),'  | \
-        sed 's,os\.path\.isfile(.*/libTree.so\"),os\.path\.isfile("/usr/local/Cellar/root/6.14.04_2/lib/root/libTree.so\"),' > tools/python/calculate_zsig.py;
+	@sed 's,sys\.path\.append.*,sys\.path\.append("/home/shadowquark/code/root/lib"),g' tools/python/calculate_zsig.py.raw | \
+        sed 's,cdll\.LoadLibrary(.*/libCint.so\"),cdll\.LoadLibrary("/home/shadowquark/code/root/lib/libCint.so\"),' | \
+        sed 's,os\.path\.isfile(.*/libCint.so\"),os\.path\.isfile("/home/shadowquark/code/root/lib/libCint.so\"),' | \
+        sed 's,cdll\.LoadLibrary(.*/libCore.so\"),cdll\.LoadLibrary("/home/shadowquark/code/root/lib/libCore.so\"),' | \
+        sed 's,os\.path\.isfile(.*/libCore.so\"),os\.path\.isfile("/home/shadowquark/code/root/lib/libCore.so\"),' | \
+        sed 's,cdll\.LoadLibrary(.*/libThread.so\"),cdll\.LoadLibrary("/home/shadowquark/code/root/lib/libThread.so\"),' | \
+        sed 's,os\.path\.isfile(.*/libThread.so\"),os\.path\.isfile("/home/shadowquark/code/root/lib/libThread.so\"),' | \
+        sed 's,cdll\.LoadLibrary(.*/libRIO.so\"),cdll\.LoadLibrary("/home/shadowquark/code/root/lib/libRIO.so\"),' | \
+        sed 's,os\.path\.isfile(.*/libRIO.so\"),os\.path\.isfile("/home/shadowquark/code/root/lib/libRIO.so\"),' | \
+        sed 's,cdll\.LoadLibrary(.*/libMathCore.so\"),cdll\.LoadLibrary("/home/shadowquark/code/root/lib/libMathCore.so\"),'  | \
+        sed 's,os\.path\.isfile(.*/libMathCore.so\"),os\.path\.isfile("/home/shadowquark/code/root/lib/libMathCore.so\"),'  | \
+        sed 's,cdll\.LoadLibrary(.*/libNet.so\"),cdll\.LoadLibrary("/home/shadowquark/code/root/lib/libNet.so\"),'  | \
+        sed 's,os\.path\.isfile(.*/libNet.so\"),os\.path\.isfile("/home/shadowquark/code/root/lib/libNet.so\"),'  | \
+        sed 's,cdll\.LoadLibrary(.*/libTree.so\"),cdll\.LoadLibrary("/home/shadowquark/code/root/lib/libTree.so\"),'  | \
+        sed 's,os\.path\.isfile(.*/libTree.so\"),os\.path\.isfile("/home/shadowquark/code/root/lib/libTree.so\"),' > tools/python/calculate_zsig.py;
 	@$(MAKE) install;
 
 # only create CheckMATE with make install to ensure that fritz was properly compiled  
 install-exec-local:
-	@sed 's,\#!.*,\#!/usr/local/bin/python,;/sys.path.append/s,ROOT_LIB_DIR,/usr/local/Cellar/root/6.14.04_2/lib/root,' tools/python/CheckMATE.raw | \
+	@sed 's,\#!.*,\#!/usr/bin/python,;/sys.path.append/s,ROOT_LIB_DIR,/home/shadowquark/code/root/lib,' tools/python/CheckMATE.raw | \
 	sed "s,config_paths\['mg5_source_path'\]='MADGRAPH_DIR',config_paths\['mg5_source_path'\]=''," | \
-	sed "s,config_paths\['pythia8_lib_path'\]='PYTHIA_DIR',config_paths\['pythia8_lib_path'\]='/Users/shadowquark/code/github/checkmate/tools/pythia/lib',"  > bin/CheckMATE;
+	sed "s,config_paths\['pythia8_lib_path'\]='PYTHIA_DIR',config_paths\['pythia8_lib_path'\]='/home/shadowquark/code/github/checkmate/tools/pythia/lib',"  > bin/CheckMATE;
 	@sed "s,mg5_path = 'MADGRAPH_DIR',mg5_path = ," data/cards/mg5_default_me5_configuration.txt.raw > data/cards/mg5_default_me5_configuration.txt;
 	@if [ "" != "" ]; then echo "- setup link to MG5_aMC@NLO "; fi;
-	@if [ "/Users/shadowquark/code/github/checkmate/tools/pythia/lib" != "" ]; then echo "- setup link to Pythia "; fi;
+	@if [ "/home/shadowquark/code/github/checkmate/tools/pythia/lib" != "" ]; then echo "- setup link to Pythia "; fi;
 	@chmod +x bin/CheckMATE;
 
 AnalysisManager:
-	@sed 's,\#!.*,\#!/usr/local/bin/python,' tools/python/AnalysisManager.raw | \
+	@sed 's,\#!.*,\#!/usr/bin/python,' tools/python/AnalysisManager.raw | \
 	sed "s,config_paths\['mg5_source_path'\]='MADGRAPH_DIR',config_paths\['mg5_source_path'\]='',"  > bin/AnalysisManager;
 	@chmod +x bin/AnalysisManager;
 
