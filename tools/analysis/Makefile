@@ -272,7 +272,8 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/ATLAS_13TeV/atlas_1808_01899.lo \
 	src/analyses/CMS_13TeV/cms_1808_03684.lo \
 	src/analyses/CMS_13TeV/cms_1801_03957.lo \
-	src/analyses/CMS_13TeV/cms_1704_03366.lo
+	src/analyses/CMS_13TeV/cms_1704_03366.lo \
+	src/analyses/ATLAS_13TeV/atlas_1805_09299.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -317,6 +318,7 @@ am__depfiles_remade =  \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo \
@@ -947,7 +949,9 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	include/analyses/CMS_13TeV/cms_1801_03957.h \
 	src/analyses/CMS_13TeV/cms_1801_03957.cc \
 	include/analyses/CMS_13TeV/cms_1704_03366.h \
-	src/analyses/CMS_13TeV/cms_1704_03366.cc
+	src/analyses/CMS_13TeV/cms_1704_03366.cc \
+	include/analyses/ATLAS_13TeV/atlas_1805_09299.h \
+	src/analyses/ATLAS_13TeV/atlas_1805_09299.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
@@ -1510,6 +1514,9 @@ src/analyses/CMS_13TeV/cms_1801_03957.lo:  \
 src/analyses/CMS_13TeV/cms_1704_03366.lo:  \
 	src/analyses/CMS_13TeV/$(am__dirstamp) \
 	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_1805_09299.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
 
 libanalyses.la: $(libanalyses_la_OBJECTS) $(libanalyses_la_DEPENDENCIES) $(EXTRA_libanalyses_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libanalyses_la_LINK) -rpath $(mylibdir) $(libanalyses_la_OBJECTS) $(libanalyses_la_LIBADD) $(LIBS)
@@ -1563,6 +1570,7 @@ include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_02332.Plo # am--include-ma
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo # am--include-marker
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo # am--include-marker
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo # am--include-marker
+include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo # am--include-marker
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo # am--include-marker
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo # am--include-marker
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo # am--include-marker
@@ -1905,6 +1913,7 @@ distclean: distclean-am
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo
+	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo
@@ -2091,6 +2100,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo
+	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo
