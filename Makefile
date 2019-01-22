@@ -284,11 +284,11 @@ PATH_SEPARATOR = :
 PYTHIAINCLUDE = -I/home/shadowquark/code/github/checkmate/tools/pythia/include
 PYTHIALIBDIR = /home/shadowquark/code/github/checkmate/tools/pythia/lib
 PYTHIALIBS = -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz
-PYTHON = /usr/bin/python
+PYTHON = /home/shadowquark/code/anaconda3/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
-PYTHON_PLATFORM = linux2
+PYTHON_PLATFORM = linux
 PYTHON_PREFIX = ${prefix}
-PYTHON_VERSION = 2.7
+PYTHON_VERSION = 3.7
 RANLIB = ranlib
 ROOTAUXCFLAGS = -pthread -std=c++11 -m64
 ROOTAUXLIBS = -pthread -lm -ldl -rdynamic
@@ -358,8 +358,8 @@ pkgpythondir = ${pythondir}/checkmate
 prefix = /usr/local
 program_transform_name = s,x,x,
 psdir = ${docdir}
-pyexecdir = ${exec_prefix}/lib/python2.7/dist-packages
-pythondir = ${prefix}/lib/python2.7/dist-packages
+pyexecdir = ${exec_prefix}/lib/python3.7/site-packages
+pythondir = ${prefix}/lib/python3.7/site-packages
 runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
@@ -866,7 +866,7 @@ all:
 
 # only create CheckMATE with make install to ensure that fritz was properly compiled  
 install-exec-local:
-	@sed 's,\#!.*,\#!/usr/bin/python,;/sys.path.append/s,ROOT_LIB_DIR,/home/shadowquark/code/root/lib,' tools/python/CheckMATE.raw | \
+	@sed 's,\#!.*,\#!/home/shadowquark/code/anaconda3/bin/python,;/sys.path.append/s,ROOT_LIB_DIR,/home/shadowquark/code/root/lib,' tools/python/CheckMATE.raw | \
 	sed "s,config_paths\['mg5_source_path'\]='MADGRAPH_DIR',config_paths\['mg5_source_path'\]=''," | \
 	sed "s,config_paths\['pythia8_lib_path'\]='PYTHIA_DIR',config_paths\['pythia8_lib_path'\]='/home/shadowquark/code/github/checkmate/tools/pythia/lib',"  > bin/CheckMATE;
 	@sed "s,mg5_path = 'MADGRAPH_DIR',mg5_path = ," data/cards/mg5_default_me5_configuration.txt.raw > data/cards/mg5_default_me5_configuration.txt;
@@ -875,7 +875,7 @@ install-exec-local:
 	@chmod +x bin/CheckMATE;
 
 AnalysisManager:
-	@sed 's,\#!.*,\#!/usr/bin/python,' tools/python/AnalysisManager.raw | \
+	@sed 's,\#!.*,\#!/home/shadowquark/code/anaconda3/bin/python,' tools/python/AnalysisManager.raw | \
 	sed "s,config_paths\['mg5_source_path'\]='MADGRAPH_DIR',config_paths\['mg5_source_path'\]='',"  > bin/AnalysisManager;
 	@chmod +x bin/AnalysisManager;
 

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/home/shadowquark/code/anaconda3/bin/python
 import sys,os
 sys.path.append(os.path.join(os.path.split(os.path.split(os.path.realpath(__file__))[0])[0], "tools", "python"))
 sys.path.append('/home/shadowquark/code/root/lib')
