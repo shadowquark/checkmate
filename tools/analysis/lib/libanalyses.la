@@ -5,19 +5,19 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname='libanalyses.so'
+dlname='libanalyses.dylib'
 
 # Names of this library.
-library_names='libanalyses.so libanalyses.so libanalyses.so'
+library_names='libanalyses.dylib libanalyses.dylib'
 
 # The name of the static archive.
 old_library=''
 
 # Linker flags that can not go in dependency_libs.
-inherited_linker_flags=''
+inherited_linker_flags=' '
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/home/shadowquark/code/root/lib -L/home/shadowquark/code/github/checkmate/tools/delphes -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lz -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lEG -lDelphes'
+dependency_libs=' -L/usr/local/Cellar/root/6.14.04_2/lib/root -L/Users/shadowquark/code/github/checkmate/tools/delphes -L/Users/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lEG -lDelphes'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/shadowquark/code/github/checkmate/tools/analysis/lib'
+libdir='/Users/shadowquark/code/github/checkmate/tools/analysis/lib'

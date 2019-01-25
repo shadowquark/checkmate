@@ -86,8 +86,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = x86_64-unknown-linux-gnu
-host_triplet = x86_64-unknown-linux-gnu
+build_triplet = i386-apple-darwin18.2.0
+host_triplet = i386-apple-darwin18.2.0
 subdir = tools/analysis
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/cpp11.m4 \
@@ -273,7 +273,6 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/CMS_13TeV/cms_1808_03684.lo \
 	src/analyses/CMS_13TeV/cms_1801_03957.lo \
 	src/analyses/CMS_13TeV/cms_1704_03366.lo \
-	src/analyses/ATLAS_13TeV/atlas_1805_09299.lo \
 	src/analyses/ATLAS_13TeV/atlas_1708_09266.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
@@ -320,7 +319,6 @@ am__depfiles_remade =  \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo \
-	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo \
@@ -514,34 +512,34 @@ AR = ar
 AUTOCONF = autoconf
 AUTOHEADER = autoheader
 AUTOMAKE = automake-1.16
-AWK = mawk
+AWK = awk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPP = gcc -E
-CPPFLAGS =  -I/home/shadowquark/code/github/checkmate/tools/pythia/include  -I/home/shadowquark/code/github/checkmate/tools/delphes -I/home/shadowquark/code/github/checkmate/tools/delphes/external -I/home/shadowquark/code/root/include
+CPPFLAGS =  -I/Users/shadowquark/code/github/checkmate/tools/pythia/include  -I/Users/shadowquark/code/github/checkmate/tools/delphes -I/Users/shadowquark/code/github/checkmate/tools/delphes/external -I/usr/local/Cellar/root/6.14.04_2/include/root
 CREATE_HEPMC = 
 CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -g -O2
+CXXFLAGS = -g -O2 -std=gnu++11
 CYGPATH_W = echo
 DEFS = -DPACKAGE_NAME=\"CheckMATE\" -DPACKAGE_TARNAME=\"checkmate\" -DPACKAGE_VERSION=\"2.0.0\" -DPACKAGE_STRING=\"CheckMATE\ 2.0.0\" -DPACKAGE_BUGREPORT=\"daschm@uni-bonn.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"checkmate\" -DVERSION=\"2.0.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DSTDC_HEADERS=1 -DHAVE_IOSTREAM=1 -DHAVE_OSTREAM=1 -DHAVE_FSTREAM=1 -DHAVE_PYTHIA8_PYTHIA_H=1 -DHAVE_CLASSES_DELPHESCLASSES_H=1
-DELPHESCFLAGS = -I/home/shadowquark/code/github/checkmate/tools/delphes -I/home/shadowquark/code/github/checkmate/tools/delphes/external
+DELPHESCFLAGS = -I/Users/shadowquark/code/github/checkmate/tools/delphes -I/Users/shadowquark/code/github/checkmate/tools/delphes/external
 DELPHESINCLUDE = 
-DELPHESLIBDIR = /home/shadowquark/code/github/checkmate/tools/delphes
+DELPHESLIBDIR = /Users/shadowquark/code/github/checkmate/tools/delphes
 DELPHESLIBS = -lEG -lDelphes
 DEPDIR = .deps
-DSYMUTIL = 
+DSYMUTIL = dsymutil
 DUMPBIN = 
-DYLD_LIBRARY_PATH = /home/shadowquark/code/root/lib
-ECHO_C = 
-ECHO_N = -n
+DYLD_LIBRARY_PATH = 
+ECHO_C = \c
+ECHO_N = 
 ECHO_T = 
-EGREP = /bin/grep -E
+EGREP = /usr/bin/grep -E
 EXEEXT = 
-FGREP = /bin/grep -F
-GREP = /bin/grep
+FGREP = /usr/bin/grep -F
+GREP = /usr/bin/grep
 GZIPINC = 
 GZIPLIB = 
 HEPMCINCLUDE = 
@@ -552,26 +550,26 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/bin/ld -m elf_x86_64
+LD = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
 LDFLAGS = 
-LD_LIBRARY_PATH = /home/shadowquark/code/root/lib
-LD_RUN_PATH = /home/shadowquark/code/root/lib:/home/shadowquark/code/github/checkmate/tools/delphes
+LD_LIBRARY_PATH = 
+LD_RUN_PATH = /usr/local/Cellar/root/6.14.04_2/lib/root:/Users/shadowquark/code/github/checkmate/tools/delphes
 LIBOBJS = 
-LIBS =   -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz -L/home/shadowquark/code/github/checkmate/tools/delphes -L/home/shadowquark/code/root/lib -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lEG -lDelphes
+LIBS =   -L/Users/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz -L/Users/shadowquark/code/github/checkmate/tools/delphes -L/usr/local/Cellar/root/6.14.04_2/lib/root -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lEG -lDelphes
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIPO = 
+LIPO = lipo
 LN_S = ln -s
 LOAD_HEPMC = 
 LTLIBOBJS = 
 MADGRAPHDIR = 
 MAKEINFO = makeinfo
-MKDIR_P = /bin/mkdir -p
+MKDIR_P = ../.././install-sh -c -d
 NM = /usr/bin/nm -B
-NMEDIT = 
+NMEDIT = nmedit
 OBJDUMP = objdump
 OBJEXT = o
-OTOOL = 
-OTOOL64 = 
+OTOOL = otool
+OTOOL64 = :
 PACKAGE = checkmate
 PACKAGE_BUGREPORT = daschm@uni-bonn.de
 PACKAGE_NAME = CheckMATE
@@ -580,40 +578,40 @@ PACKAGE_TARNAME = checkmate
 PACKAGE_URL = 
 PACKAGE_VERSION = 2.0.0
 PATH_SEPARATOR = :
-PYTHIAINCLUDE = -I/home/shadowquark/code/github/checkmate/tools/pythia/include
-PYTHIALIBDIR = /home/shadowquark/code/github/checkmate/tools/pythia/lib
-PYTHIALIBS = -L/home/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz
-PYTHON = /home/shadowquark/code/anaconda3/bin/python
+PYTHIAINCLUDE = -I/Users/shadowquark/code/github/checkmate/tools/pythia/include
+PYTHIALIBDIR = /Users/shadowquark/code/github/checkmate/tools/pythia/lib
+PYTHIALIBS = -L/Users/shadowquark/code/github/checkmate/tools/pythia/lib -lpythia8 -ldl -lm -lz
+PYTHON = /usr/local/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
-PYTHON_PLATFORM = linux
+PYTHON_PLATFORM = darwin
 PYTHON_PREFIX = ${prefix}
-PYTHON_VERSION = 3.7
+PYTHON_VERSION = 2.7
 RANLIB = ranlib
-ROOTAUXCFLAGS = -pthread -std=c++11 -m64
-ROOTAUXLIBS = -pthread -lm -ldl -rdynamic
-ROOTCFLAGS = -I/home/shadowquark/code/root/include
-ROOTCINT = /home/shadowquark/code/root/bin/rootcint
-ROOTCONF = /home/shadowquark/code/root/bin/root-config
-ROOTETCDIR = /home/shadowquark/code/root/etc
-ROOTEXEC = /home/shadowquark/code/root/bin/root
+ROOTAUXCFLAGS = -pthread -stdlib=libc++ -std=c++11 -m64
+ROOTAUXLIBS = -lpthread -stdlib=libc++ -lm -ldl
+ROOTCFLAGS = -I/usr/local/Cellar/root/6.14.04_2/include/root
+ROOTCINT = /usr/local/bin/rootcint
+ROOTCONF = /usr/local/bin/root-config
+ROOTETCDIR = /usr/local/Cellar/root/6.14.04_2/etc/root
+ROOTEXEC = /usr/local/bin/root
 ROOTGLIBS = -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc
-ROOTINCDIR = /home/shadowquark/code/root/include
-ROOTLIBDIR = /home/shadowquark/code/root/lib
+ROOTINCDIR = /usr/local/Cellar/root/6.14.04_2/include/root
+ROOTLIBDIR = /usr/local/Cellar/root/6.14.04_2/lib/root
 ROOTLIBS = -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc
-ROOTRPATH = /home/shadowquark/code/root/lib
+ROOTRPATH = /usr/local/Cellar/root/6.14.04_2/lib/root
 ROOTSOVERSION = 6.14
-ROOTSYS = /home/shadowquark/code/root:
-ROOTSYSTEM = /home/shadowquark/code/root
+ROOTSYS = /usr/local/Cellar/root/6.14.04_2:
+ROOTSYSTEM = /usr/local/Cellar/root/6.14.04_2
 ROOTVERSION = 6.14/04
-SED = /bin/sed
+SED = /usr/bin/sed
 SET_MAKE = 
-SHELL = /bin/bash
+SHELL = /bin/sh
 STRIP = strip
 VERSION = 2.0.0
-abs_builddir = /home/shadowquark/code/github/checkmate/tools/analysis
-abs_srcdir = /home/shadowquark/code/github/checkmate/tools/analysis
-abs_top_builddir = /home/shadowquark/code/github/checkmate
-abs_top_srcdir = /home/shadowquark/code/github/checkmate
+abs_builddir = /Users/shadowquark/code/github/checkmate/tools/analysis
+abs_srcdir = /Users/shadowquark/code/github/checkmate/tools/analysis
+abs_top_builddir = /Users/shadowquark/code/github/checkmate
+abs_top_srcdir = /Users/shadowquark/code/github/checkmate
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 ac_ct_DUMPBIN = 
@@ -623,31 +621,31 @@ am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
-build = x86_64-unknown-linux-gnu
+build = i386-apple-darwin18.2.0
 build_alias = 
-build_cpu = x86_64
-build_os = linux-gnu
-build_vendor = unknown
+build_cpu = i386
+build_os = darwin18.2.0
+build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-unknown-linux-gnu
+host = i386-apple-darwin18.2.0
 host_alias = 
-host_cpu = x86_64
-host_os = linux-gnu
-host_vendor = unknown
+host_cpu = i386
+host_os = darwin18.2.0
+host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/shadowquark/code/github/checkmate/install-sh
+install_sh = ${SHELL} /Users/shadowquark/code/github/checkmate/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
-lt_ECHO = echo
+lt_ECHO = /bin/echo
 mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
@@ -657,9 +655,8 @@ pkgpythondir = ${pythondir}/checkmate
 prefix = /usr/local
 program_transform_name = s,x,x,
 psdir = ${docdir}
-pyexecdir = ${exec_prefix}/lib/python3.7/site-packages
-pythondir = ${prefix}/lib/python3.7/site-packages
-runstatedir = ${localstatedir}/run
+pyexecdir = ${exec_prefix}/lib/python2.7/site-packages
+pythondir = ${prefix}/lib/python2.7/site-packages
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
@@ -669,7 +666,7 @@ top_build_prefix = ../../
 top_builddir = ../..
 top_srcdir = ../..
 AUTOMAKE_OPTIONS = subdir-objects
-AM_CXXFLAGS = -I/home/shadowquark/code/root/include -I/home/shadowquark/code/github/checkmate/tools/delphes -I/home/shadowquark/code/github/checkmate/tools/delphes/external -Iinclude/base -Iinclude/kinematics -Iinclude/kinematics/mctlib \
+AM_CXXFLAGS = -I/usr/local/Cellar/root/6.14.04_2/include/root -I/Users/shadowquark/code/github/checkmate/tools/delphes -I/Users/shadowquark/code/github/checkmate/tools/delphes/external -Iinclude/base -Iinclude/kinematics -Iinclude/kinematics/mctlib \
              -Iinclude/kinematics/mt2family -Iinclude/kinematics/topness -Iinclude/global \
              -Iinclude/analyses/ATLAS_7TeV -Iinclude/analyses/ATLAS_8TeV -Iinclude/analyses/ATLAS_13TeV -Iinclude/analyses/ATLAS_14TeV_HighLumi \
              -Iinclude/analyses/CMS_7TeV -Iinclude/analyses/CMS_8TeV -Iinclude/analyses/CMS_13TeV -Iinclude/analyses/CMS_14TeV_HighLumi
@@ -952,14 +949,12 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	src/analyses/CMS_13TeV/cms_1801_03957.cc \
 	include/analyses/CMS_13TeV/cms_1704_03366.h \
 	src/analyses/CMS_13TeV/cms_1704_03366.cc \
-	include/analyses/ATLAS_13TeV/atlas_1805_09299.h \
-	src/analyses/ATLAS_13TeV/atlas_1805_09299.cc \
 	include/analyses/ATLAS_13TeV/atlas_1708_09266.h \
 	src/analyses/ATLAS_13TeV/atlas_1708_09266.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
-libanalyses_la_LIBADD = -L/home/shadowquark/code/root/lib -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -L/home/shadowquark/code/github/checkmate/tools/delphes -lEG -lDelphes
+libanalyses_la_LIBADD = -L/usr/local/Cellar/root/6.14.04_2/lib/root -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTDataFrame -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -L/Users/shadowquark/code/github/checkmate/tools/delphes -lEG -lDelphes
 all: all-am
 
 .SUFFIXES:
@@ -1518,9 +1513,6 @@ src/analyses/CMS_13TeV/cms_1801_03957.lo:  \
 src/analyses/CMS_13TeV/cms_1704_03366.lo:  \
 	src/analyses/CMS_13TeV/$(am__dirstamp) \
 	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
-src/analyses/ATLAS_13TeV/atlas_1805_09299.lo:  \
-	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
-	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
 src/analyses/ATLAS_13TeV/atlas_1708_09266.lo:  \
 	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
@@ -1578,7 +1570,6 @@ include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_02332.Plo # am--include-ma
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo # am--include-marker
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo # am--include-marker
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo # am--include-marker
-include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo # am--include-marker
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo # am--include-marker
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo # am--include-marker
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo # am--include-marker
@@ -1922,7 +1913,6 @@ distclean: distclean-am
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo
-	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo
@@ -2110,7 +2100,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo
-	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo

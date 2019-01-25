@@ -273,7 +273,6 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/CMS_13TeV/cms_1808_03684.lo \
 	src/analyses/CMS_13TeV/cms_1801_03957.lo \
 	src/analyses/CMS_13TeV/cms_1704_03366.lo \
-	src/analyses/ATLAS_13TeV/atlas_1805_09299.lo \
 	src/analyses/ATLAS_13TeV/atlas_1708_09266.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
@@ -320,7 +319,6 @@ am__depfiles_remade =  \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo \
-	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo \
@@ -659,7 +657,6 @@ program_transform_name = @program_transform_name@
 psdir = @psdir@
 pyexecdir = @pyexecdir@
 pythondir = @pythondir@
-runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -952,8 +949,6 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	src/analyses/CMS_13TeV/cms_1801_03957.cc \
 	include/analyses/CMS_13TeV/cms_1704_03366.h \
 	src/analyses/CMS_13TeV/cms_1704_03366.cc \
-	include/analyses/ATLAS_13TeV/atlas_1805_09299.h \
-	src/analyses/ATLAS_13TeV/atlas_1805_09299.cc \
 	include/analyses/ATLAS_13TeV/atlas_1708_09266.h \
 	src/analyses/ATLAS_13TeV/atlas_1708_09266.cc
 #@@extraanalysis@@
@@ -1518,9 +1513,6 @@ src/analyses/CMS_13TeV/cms_1801_03957.lo:  \
 src/analyses/CMS_13TeV/cms_1704_03366.lo:  \
 	src/analyses/CMS_13TeV/$(am__dirstamp) \
 	src/analyses/CMS_13TeV/$(DEPDIR)/$(am__dirstamp)
-src/analyses/ATLAS_13TeV/atlas_1805_09299.lo:  \
-	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
-	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
 src/analyses/ATLAS_13TeV/atlas_1708_09266.lo:  \
 	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
@@ -1578,7 +1570,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo@am__quote@ # am--include-marker
@@ -1922,7 +1913,6 @@ distclean: distclean-am
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo
-	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo
@@ -2110,7 +2100,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1803_02762.Plo
-	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1805_09299.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1807_06573.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01191.Plo
 	-rm -f src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1808_01899.Plo
