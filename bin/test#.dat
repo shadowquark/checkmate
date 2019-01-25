@@ -1,8 +1,0 @@
-# This is a minimal working example
-[Parameters]
-Name: My_New_Run
-Analyses: cms_1306_1126_WW
-
-[myprocess]
-Events: ../test/MDM110_MZH200.lhe
-

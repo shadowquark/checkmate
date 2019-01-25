@@ -1,6 +1,6 @@
 [Parameters]
 Name: 100test
-Analyses: cms_1805_04865
+Analyses: 13TeV
 
 [4mu]
 Events:../test/100test/4mu_8TeV.lhe
